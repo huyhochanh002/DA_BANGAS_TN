@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BANGAS_TN
 {
-    public partial class Form1 : Form
+    public partial class Giaodienchinh : Form
     {
-        public Form1()
+        public Giaodienchinh()
         {
             InitializeComponent();
         }
