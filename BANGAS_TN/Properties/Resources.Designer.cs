@@ -73,6 +73,16 @@ namespace BANGAS_TN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blue_Simple_Kid_Learning_Illustration_Zoom_Virtual_Background {
+            get {
+                object obj = ResourceManager.GetObject("Blue Simple Kid Learning Illustration Zoom Virtual Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fire_35px {
             get {
                 object obj = ResourceManager.GetObject("fire_35px", resourceCulture);

@@ -141,5 +141,8 @@
   <ItemGroup>
     <None Include="Resources\ql.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue Simple Kid Learning Illustration Zoom Virtual Background.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
