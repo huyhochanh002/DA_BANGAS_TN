@@ -21,7 +21,10 @@ namespace BANGAS_TN
         {
 
         }
+        public Giaodienchinh frm;
+        public delegate void _dongTap();
+        public _dongTap DongTap;
 
-     
+
     }
 }

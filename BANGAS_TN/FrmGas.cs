@@ -16,5 +16,9 @@ namespace BANGAS_TN
         {
             InitializeComponent();
         }
+        public Giaodienchinh frm;
+        public delegate void _dongTap();
+        public _dongTap DongTap;
+
     }
 }

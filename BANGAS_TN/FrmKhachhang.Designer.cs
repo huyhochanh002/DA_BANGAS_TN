@@ -31,6 +31,9 @@ namespace BANGAS_TN
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -42,9 +45,6 @@ namespace BANGAS_TN
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,6 +98,42 @@ namespace BANGAS_TN
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "KHÁCH HÀNG";
             // 
+            // buttonX3
+            // 
+            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX3.Image = global::BANGAS_TN.Properties.Resources.SUA;
+            this.buttonX3.Location = new System.Drawing.Point(979, 79);
+            this.buttonX3.Name = "buttonX3";
+            this.buttonX3.Size = new System.Drawing.Size(132, 42);
+            this.buttonX3.TabIndex = 12;
+            this.buttonX3.Text = "Sửa";
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX2.Image = global::BANGAS_TN.Properties.Resources.XOA;
+            this.buttonX2.Location = new System.Drawing.Point(979, 145);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(132, 42);
+            this.buttonX2.TabIndex = 11;
+            this.buttonX2.Text = "Xóa";
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonX1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonX1.Image = global::BANGAS_TN.Properties.Resources.THEM;
+            this.buttonX1.Location = new System.Drawing.Point(979, 16);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(132, 42);
+            this.buttonX1.TabIndex = 10;
+            this.buttonX1.Text = "Thêm";
+            // 
             // textBoxX5
             // 
             // 
@@ -105,7 +141,7 @@ namespace BANGAS_TN
             // 
             this.textBoxX5.Border.Class = "TextBoxBorder";
             this.textBoxX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX5.Location = new System.Drawing.Point(663, 17);
+            this.textBoxX5.Location = new System.Drawing.Point(624, 17);
             this.textBoxX5.Name = "textBoxX5";
             this.textBoxX5.Size = new System.Drawing.Size(290, 35);
             this.textBoxX5.TabIndex = 9;
@@ -192,7 +228,7 @@ namespace BANGAS_TN
             // 
             this.labelX2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(531, 29);
+            this.labelX2.Location = new System.Drawing.Point(492, 29);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(109, 23);
             this.labelX2.TabIndex = 1;
@@ -236,48 +272,12 @@ namespace BANGAS_TN
             this.dataGridViewX1.Size = new System.Drawing.Size(1262, 429);
             this.dataGridViewX1.TabIndex = 1;
             // 
-            // buttonX3
-            // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX3.Image = global::BANGAS_TN.Properties.Resources.SUA;
-            this.buttonX3.Location = new System.Drawing.Point(1076, 80);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(132, 42);
-            this.buttonX3.TabIndex = 12;
-            this.buttonX3.Text = "Sửa";
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Image = global::BANGAS_TN.Properties.Resources.XOA;
-            this.buttonX2.Location = new System.Drawing.Point(1076, 146);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(132, 42);
-            this.buttonX2.TabIndex = 11;
-            this.buttonX2.Text = "Xóa";
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.BackColor = System.Drawing.Color.SeaShell;
-            this.buttonX1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonX1.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.buttonX1.Location = new System.Drawing.Point(1076, 17);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(132, 42);
-            this.buttonX1.TabIndex = 10;
-            this.buttonX1.Text = "Thêm";
-            // 
             // MaKH
             // 
             this.MaKH.HeaderText = "Mã KH";
             this.MaKH.MinimumWidth = 6;
             this.MaKH.Name = "MaKH";
-            this.MaKH.Width = 150;
+            this.MaKH.Width = 200;
             // 
             // TenKH
             // 
@@ -298,7 +298,7 @@ namespace BANGAS_TN
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.MinimumWidth = 6;
             this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Width = 250;
+            this.DiaChi.Width = 280;
             // 
             // GhiChu
             // 
@@ -314,7 +314,7 @@ namespace BANGAS_TN
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.dataGridViewX1);
             this.Controls.Add(this.groupPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmKhachhang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmKhachhang";

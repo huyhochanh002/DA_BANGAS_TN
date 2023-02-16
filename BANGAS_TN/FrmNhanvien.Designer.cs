@@ -29,7 +29,7 @@ namespace BANGAS_TN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
@@ -103,7 +103,7 @@ namespace BANGAS_TN
             this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonX3.Image = global::BANGAS_TN.Properties.Resources.SUA;
-            this.buttonX3.Location = new System.Drawing.Point(1082, 80);
+            this.buttonX3.Location = new System.Drawing.Point(977, 89);
             this.buttonX3.Name = "buttonX3";
             this.buttonX3.Size = new System.Drawing.Size(132, 42);
             this.buttonX3.TabIndex = 25;
@@ -114,7 +114,7 @@ namespace BANGAS_TN
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonX2.Image = global::BANGAS_TN.Properties.Resources.XOA;
-            this.buttonX2.Location = new System.Drawing.Point(1082, 146);
+            this.buttonX2.Location = new System.Drawing.Point(977, 155);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(132, 42);
             this.buttonX2.TabIndex = 24;
@@ -128,7 +128,7 @@ namespace BANGAS_TN
             this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonX1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonX1.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.buttonX1.Location = new System.Drawing.Point(1082, 17);
+            this.buttonX1.Location = new System.Drawing.Point(977, 26);
             this.buttonX1.Name = "buttonX1";
             this.buttonX1.Size = new System.Drawing.Size(132, 42);
             this.buttonX1.TabIndex = 23;
@@ -141,7 +141,7 @@ namespace BANGAS_TN
             // 
             this.textBoxX5.Border.Class = "TextBoxBorder";
             this.textBoxX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX5.Location = new System.Drawing.Point(669, 17);
+            this.textBoxX5.Location = new System.Drawing.Point(615, 17);
             this.textBoxX5.Name = "textBoxX5";
             this.textBoxX5.Size = new System.Drawing.Size(290, 35);
             this.textBoxX5.TabIndex = 22;
@@ -153,7 +153,7 @@ namespace BANGAS_TN
             // 
             this.textBoxX4.Border.Class = "TextBoxBorder";
             this.textBoxX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX4.Location = new System.Drawing.Point(173, 169);
+            this.textBoxX4.Location = new System.Drawing.Point(162, 169);
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.Size = new System.Drawing.Size(290, 35);
             this.textBoxX4.TabIndex = 21;
@@ -165,7 +165,7 @@ namespace BANGAS_TN
             // 
             this.textBoxX3.Border.Class = "TextBoxBorder";
             this.textBoxX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX3.Location = new System.Drawing.Point(173, 119);
+            this.textBoxX3.Location = new System.Drawing.Point(162, 119);
             this.textBoxX3.Name = "textBoxX3";
             this.textBoxX3.Size = new System.Drawing.Size(290, 35);
             this.textBoxX3.TabIndex = 20;
@@ -177,7 +177,7 @@ namespace BANGAS_TN
             // 
             this.textBoxX2.Border.Class = "TextBoxBorder";
             this.textBoxX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX2.Location = new System.Drawing.Point(173, 68);
+            this.textBoxX2.Location = new System.Drawing.Point(162, 68);
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.Size = new System.Drawing.Size(290, 35);
             this.textBoxX2.TabIndex = 19;
@@ -189,7 +189,7 @@ namespace BANGAS_TN
             // 
             this.textBoxX1.Border.Class = "TextBoxBorder";
             this.textBoxX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(173, 17);
+            this.textBoxX1.Location = new System.Drawing.Point(162, 17);
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.Size = new System.Drawing.Size(290, 35);
             this.textBoxX1.TabIndex = 18;
@@ -198,7 +198,7 @@ namespace BANGAS_TN
             // 
             this.labelX5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(43, 80);
+            this.labelX5.Location = new System.Drawing.Point(32, 80);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(109, 23);
             this.labelX5.TabIndex = 17;
@@ -208,7 +208,7 @@ namespace BANGAS_TN
             // 
             this.labelX4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(43, 131);
+            this.labelX4.Location = new System.Drawing.Point(32, 131);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(109, 23);
             this.labelX4.TabIndex = 16;
@@ -218,7 +218,7 @@ namespace BANGAS_TN
             // 
             this.labelX3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(43, 181);
+            this.labelX3.Location = new System.Drawing.Point(32, 181);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(109, 23);
             this.labelX3.TabIndex = 15;
@@ -228,7 +228,7 @@ namespace BANGAS_TN
             // 
             this.labelX2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(537, 29);
+            this.labelX2.Location = new System.Drawing.Point(483, 29);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(109, 23);
             this.labelX2.TabIndex = 14;
@@ -238,7 +238,7 @@ namespace BANGAS_TN
             // 
             this.labelX1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(43, 29);
+            this.labelX1.Location = new System.Drawing.Point(32, 29);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(109, 23);
             this.labelX1.TabIndex = 13;
@@ -255,14 +255,14 @@ namespace BANGAS_TN
             this.DienThoai,
             this.DiaChi,
             this.GhiChu});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.Location = new System.Drawing.Point(0, 244);
@@ -277,7 +277,7 @@ namespace BANGAS_TN
             this.MaNV.HeaderText = "Mã NV";
             this.MaNV.MinimumWidth = 6;
             this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 150;
+            this.MaNV.Width = 200;
             // 
             // TenNV
             // 
@@ -298,7 +298,7 @@ namespace BANGAS_TN
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.MinimumWidth = 6;
             this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Width = 250;
+            this.DiaChi.Width = 280;
             // 
             // GhiChu
             // 
@@ -314,7 +314,7 @@ namespace BANGAS_TN
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.dataGridViewX1);
             this.Controls.Add(this.groupPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNhanvien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmNhanvien";
