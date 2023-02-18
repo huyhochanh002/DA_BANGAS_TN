@@ -21,6 +21,11 @@ namespace BANGAS_TN
         public delegate void _dongTap();
         public _dongTap DongTap;
 
+        private void FrmNhanvien_Load(object sender, EventArgs e)
+        {
+            ondataviewNV();
+        }
+
         // Khai báo các biến cần thiết;
         Khaibao kb = new Khaibao();
 
@@ -176,9 +181,6 @@ namespace BANGAS_TN
             ClearvaLoad();
         }
 
-        private void FrmNhanvien_Load(object sender, EventArgs e)
-        {
-            ondataviewNV();
-        }
+
     }
 }
