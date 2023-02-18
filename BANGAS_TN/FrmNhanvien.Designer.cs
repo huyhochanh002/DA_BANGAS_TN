@@ -29,43 +29,40 @@ namespace BANGAS_TN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btn_SuaNV = new DevComponents.DotNetBar.ButtonX();
+            this.btn_XoaNV = new DevComponents.DotNetBar.ButtonX();
+            this.btn_ThemNV = new DevComponents.DotNetBar.ButtonX();
+            this.txt_Ghichunv = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Diachinv = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Dienthoainv = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Tennv = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Manv = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_Nhanvien = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.btn_clearNV = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Nhanvien)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.buttonX3);
-            this.groupPanel1.Controls.Add(this.buttonX2);
-            this.groupPanel1.Controls.Add(this.buttonX1);
-            this.groupPanel1.Controls.Add(this.textBoxX5);
-            this.groupPanel1.Controls.Add(this.textBoxX4);
-            this.groupPanel1.Controls.Add(this.textBoxX3);
-            this.groupPanel1.Controls.Add(this.textBoxX2);
-            this.groupPanel1.Controls.Add(this.textBoxX1);
+            this.groupPanel1.Controls.Add(this.btn_clearNV);
+            this.groupPanel1.Controls.Add(this.btn_SuaNV);
+            this.groupPanel1.Controls.Add(this.btn_XoaNV);
+            this.groupPanel1.Controls.Add(this.btn_ThemNV);
+            this.groupPanel1.Controls.Add(this.txt_Ghichunv);
+            this.groupPanel1.Controls.Add(this.txt_Diachinv);
+            this.groupPanel1.Controls.Add(this.txt_Dienthoainv);
+            this.groupPanel1.Controls.Add(this.txt_Tennv);
+            this.groupPanel1.Controls.Add(this.txt_Manv);
             this.groupPanel1.Controls.Add(this.labelX5);
             this.groupPanel1.Controls.Add(this.labelX4);
             this.groupPanel1.Controls.Add(this.labelX3);
@@ -73,8 +70,9 @@ namespace BANGAS_TN
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
+            this.groupPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1262, 244);
+            this.groupPanel1.Size = new System.Drawing.Size(946, 198);
             // 
             // 
             // 
@@ -98,109 +96,122 @@ namespace BANGAS_TN
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "NHÂN VIÊN";
             // 
-            // buttonX3
+            // btn_SuaNV
             // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX3.Image = global::BANGAS_TN.Properties.Resources.SUA;
-            this.buttonX3.Location = new System.Drawing.Point(977, 89);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(132, 42);
-            this.buttonX3.TabIndex = 25;
-            this.buttonX3.Text = "Sửa";
+            this.btn_SuaNV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_SuaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SuaNV.Image = global::BANGAS_TN.Properties.Resources.SUA;
+            this.btn_SuaNV.Location = new System.Drawing.Point(733, 50);
+            this.btn_SuaNV.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_SuaNV.Name = "btn_SuaNV";
+            this.btn_SuaNV.Size = new System.Drawing.Size(99, 34);
+            this.btn_SuaNV.TabIndex = 25;
+            this.btn_SuaNV.Text = "Sửa";
+            this.btn_SuaNV.Click += new System.EventHandler(this.btn_SuaNV_Click);
             // 
-            // buttonX2
+            // btn_XoaNV
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Image = global::BANGAS_TN.Properties.Resources.XOA;
-            this.buttonX2.Location = new System.Drawing.Point(977, 155);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(132, 42);
-            this.buttonX2.TabIndex = 24;
-            this.buttonX2.Text = "Xóa";
+            this.btn_XoaNV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_XoaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XoaNV.Image = global::BANGAS_TN.Properties.Resources.XOA;
+            this.btn_XoaNV.Location = new System.Drawing.Point(733, 97);
+            this.btn_XoaNV.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_XoaNV.Name = "btn_XoaNV";
+            this.btn_XoaNV.Size = new System.Drawing.Size(99, 34);
+            this.btn_XoaNV.TabIndex = 24;
+            this.btn_XoaNV.Text = "Xóa";
+            this.btn_XoaNV.Click += new System.EventHandler(this.btn_XoaNV_Click);
             // 
-            // buttonX1
+            // btn_ThemNV
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.BackColor = System.Drawing.Color.SeaShell;
-            this.buttonX1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonX1.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.buttonX1.Location = new System.Drawing.Point(977, 26);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(132, 42);
-            this.buttonX1.TabIndex = 23;
-            this.buttonX1.Text = "Thêm";
+            this.btn_ThemNV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_ThemNV.BackColor = System.Drawing.Color.SeaShell;
+            this.btn_ThemNV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_ThemNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThemNV.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_ThemNV.Image = global::BANGAS_TN.Properties.Resources.THEM;
+            this.btn_ThemNV.Location = new System.Drawing.Point(733, 2);
+            this.btn_ThemNV.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ThemNV.Name = "btn_ThemNV";
+            this.btn_ThemNV.Size = new System.Drawing.Size(99, 34);
+            this.btn_ThemNV.TabIndex = 23;
+            this.btn_ThemNV.Text = "Thêm";
+            this.btn_ThemNV.Click += new System.EventHandler(this.btn_ThemNV_Click);
             // 
-            // textBoxX5
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX5.Location = new System.Drawing.Point(615, 17);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX5.TabIndex = 22;
-            // 
-            // textBoxX4
+            // txt_Ghichunv
             // 
             // 
             // 
             // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX4.Location = new System.Drawing.Point(162, 169);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX4.TabIndex = 21;
+            this.txt_Ghichunv.Border.Class = "TextBoxBorder";
+            this.txt_Ghichunv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Ghichunv.Location = new System.Drawing.Point(461, 14);
+            this.txt_Ghichunv.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Ghichunv.Name = "txt_Ghichunv";
+            this.txt_Ghichunv.Size = new System.Drawing.Size(218, 28);
+            this.txt_Ghichunv.TabIndex = 22;
             // 
-            // textBoxX3
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX3.Location = new System.Drawing.Point(162, 119);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX3.TabIndex = 20;
-            // 
-            // textBoxX2
+            // txt_Diachinv
             // 
             // 
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX2.Location = new System.Drawing.Point(162, 68);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX2.TabIndex = 19;
+            this.txt_Diachinv.Border.Class = "TextBoxBorder";
+            this.txt_Diachinv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Diachinv.Location = new System.Drawing.Point(122, 137);
+            this.txt_Diachinv.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Diachinv.Name = "txt_Diachinv";
+            this.txt_Diachinv.Size = new System.Drawing.Size(218, 28);
+            this.txt_Diachinv.TabIndex = 21;
             // 
-            // textBoxX1
+            // txt_Dienthoainv
             // 
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(162, 17);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX1.TabIndex = 18;
+            this.txt_Dienthoainv.Border.Class = "TextBoxBorder";
+            this.txt_Dienthoainv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Dienthoainv.Location = new System.Drawing.Point(122, 97);
+            this.txt_Dienthoainv.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Dienthoainv.Name = "txt_Dienthoainv";
+            this.txt_Dienthoainv.Size = new System.Drawing.Size(218, 28);
+            this.txt_Dienthoainv.TabIndex = 20;
+            // 
+            // txt_Tennv
+            // 
+            // 
+            // 
+            // 
+            this.txt_Tennv.Border.Class = "TextBoxBorder";
+            this.txt_Tennv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Tennv.Location = new System.Drawing.Point(122, 55);
+            this.txt_Tennv.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Tennv.Name = "txt_Tennv";
+            this.txt_Tennv.Size = new System.Drawing.Size(218, 28);
+            this.txt_Tennv.TabIndex = 19;
+            // 
+            // txt_Manv
+            // 
+            // 
+            // 
+            // 
+            this.txt_Manv.Border.Class = "TextBoxBorder";
+            this.txt_Manv.Enabled = false;
+            this.txt_Manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Manv.Location = new System.Drawing.Point(122, 14);
+            this.txt_Manv.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Manv.Name = "txt_Manv";
+            this.txt_Manv.Size = new System.Drawing.Size(218, 28);
+            this.txt_Manv.TabIndex = 18;
             // 
             // labelX5
             // 
             this.labelX5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(32, 80);
+            this.labelX5.Location = new System.Drawing.Point(24, 65);
+            this.labelX5.Margin = new System.Windows.Forms.Padding(2);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(109, 23);
+            this.labelX5.Size = new System.Drawing.Size(82, 19);
             this.labelX5.TabIndex = 17;
             this.labelX5.Text = "Tên NV";
             // 
@@ -208,9 +219,10 @@ namespace BANGAS_TN
             // 
             this.labelX4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(32, 131);
+            this.labelX4.Location = new System.Drawing.Point(24, 106);
+            this.labelX4.Margin = new System.Windows.Forms.Padding(2);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(109, 23);
+            this.labelX4.Size = new System.Drawing.Size(82, 19);
             this.labelX4.TabIndex = 16;
             this.labelX4.Text = "Điện Thoại";
             // 
@@ -218,9 +230,10 @@ namespace BANGAS_TN
             // 
             this.labelX3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(32, 181);
+            this.labelX3.Location = new System.Drawing.Point(24, 147);
+            this.labelX3.Margin = new System.Windows.Forms.Padding(2);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(109, 23);
+            this.labelX3.Size = new System.Drawing.Size(82, 19);
             this.labelX3.TabIndex = 15;
             this.labelX3.Text = "Địa Chỉ";
             // 
@@ -228,9 +241,10 @@ namespace BANGAS_TN
             // 
             this.labelX2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(483, 29);
+            this.labelX2.Location = new System.Drawing.Point(362, 24);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(2);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(109, 23);
+            this.labelX2.Size = new System.Drawing.Size(82, 19);
             this.labelX2.TabIndex = 14;
             this.labelX2.Text = "Ghi Chú";
             // 
@@ -238,88 +252,72 @@ namespace BANGAS_TN
             // 
             this.labelX1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(32, 29);
+            this.labelX1.Location = new System.Drawing.Point(24, 24);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(109, 23);
+            this.labelX1.Size = new System.Drawing.Size(82, 19);
             this.labelX1.TabIndex = 13;
             this.labelX1.Text = "Mã NV";
             // 
-            // dataGridViewX1
+            // data_Nhanvien
             // 
-            this.dataGridViewX1.AllowUserToOrderColumns = true;
-            this.dataGridViewX1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNV,
-            this.TenNV,
-            this.DienThoai,
-            this.DiaChi,
-            this.GhiChu});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(0, 244);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.RowHeadersWidth = 51;
-            this.dataGridViewX1.RowTemplate.Height = 24;
-            this.dataGridViewX1.Size = new System.Drawing.Size(1262, 429);
-            this.dataGridViewX1.TabIndex = 1;
+            this.data_Nhanvien.AllowUserToAddRows = false;
+            this.data_Nhanvien.AllowUserToDeleteRows = false;
+            this.data_Nhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_Nhanvien.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.data_Nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_Nhanvien.DefaultCellStyle = dataGridViewCellStyle1;
+            this.data_Nhanvien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.data_Nhanvien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.data_Nhanvien.Location = new System.Drawing.Point(0, 198);
+            this.data_Nhanvien.Margin = new System.Windows.Forms.Padding(2);
+            this.data_Nhanvien.Name = "data_Nhanvien";
+            this.data_Nhanvien.ReadOnly = true;
+            this.data_Nhanvien.RowHeadersWidth = 51;
+            this.data_Nhanvien.RowTemplate.Height = 24;
+            this.data_Nhanvien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_Nhanvien.Size = new System.Drawing.Size(946, 349);
+            this.data_Nhanvien.TabIndex = 1;
+            this.data_Nhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Nhanvien_CellClick);
             // 
-            // MaNV
+            // btn_clearNV
             // 
-            this.MaNV.HeaderText = "Mã NV";
-            this.MaNV.MinimumWidth = 6;
-            this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 200;
-            // 
-            // TenNV
-            // 
-            this.TenNV.HeaderText = "Tên NV";
-            this.TenNV.MinimumWidth = 6;
-            this.TenNV.Name = "TenNV";
-            this.TenNV.Width = 280;
-            // 
-            // DienThoai
-            // 
-            this.DienThoai.HeaderText = "Điện Thoại";
-            this.DienThoai.MinimumWidth = 6;
-            this.DienThoai.Name = "DienThoai";
-            this.DienThoai.Width = 250;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.MinimumWidth = 6;
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Width = 280;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.HeaderText = "Ghi Chú ";
-            this.GhiChu.MinimumWidth = 6;
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.Width = 200;
+            this.btn_clearNV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_clearNV.BackColor = System.Drawing.Color.SeaShell;
+            this.btn_clearNV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_clearNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clearNV.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_clearNV.Image = global::BANGAS_TN.Properties.Resources.THEM;
+            this.btn_clearNV.Location = new System.Drawing.Point(733, 142);
+            this.btn_clearNV.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_clearNV.Name = "btn_clearNV";
+            this.btn_clearNV.Size = new System.Drawing.Size(99, 34);
+            this.btn_clearNV.TabIndex = 26;
+            this.btn_clearNV.Text = "Làm Mới";
+            this.btn_clearNV.Click += new System.EventHandler(this.btn_clearNV_Click);
             // 
             // FrmNhanvien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.dataGridViewX1);
+            this.ClientSize = new System.Drawing.Size(946, 547);
+            this.Controls.Add(this.data_Nhanvien);
             this.Controls.Add(this.groupPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmNhanvien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmNhanvien";
+            this.Load += new System.EventHandler(this.FrmNhanvien_Load);
             this.groupPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Nhanvien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,24 +325,20 @@ namespace BANGAS_TN
         #endregion
 
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX data_Nhanvien;
+        private DevComponents.DotNetBar.ButtonX btn_SuaNV;
+        private DevComponents.DotNetBar.ButtonX btn_XoaNV;
+        private DevComponents.DotNetBar.ButtonX btn_ThemNV;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Ghichunv;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Diachinv;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Dienthoainv;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Tennv;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Manv;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        private DevComponents.DotNetBar.ButtonX btn_clearNV;
     }
 }

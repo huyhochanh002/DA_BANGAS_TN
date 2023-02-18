@@ -81,6 +81,7 @@ namespace BANGAS_TN
             txt_SdtKH.Text = "";
             txt_DiachiKH.Text = "";
             txt_GhichuKH.Text = "";
+            btn_themKH.Enabled=true;
             dt.Clear();
             da.Fill(dt);
         }
@@ -180,6 +181,11 @@ namespace BANGAS_TN
             catch (Exception e2)
             {
             }
+        }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            ClearvaLoad();
         }
     }
 }
