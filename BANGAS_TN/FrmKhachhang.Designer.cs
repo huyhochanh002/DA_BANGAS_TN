@@ -31,41 +31,36 @@ namespace BANGAS_TN
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btn_SuaKH = new DevComponents.DotNetBar.ButtonX();
+            this.btn_XoaKH = new DevComponents.DotNetBar.ButtonX();
+            this.btn_themKH = new DevComponents.DotNetBar.ButtonX();
+            this.txt_GhichuKH = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_DiachiKH = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_SdtKH = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_TenKH = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Makh = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_KhachHang = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.groupPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_KhachHang)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.buttonX3);
-            this.groupPanel1.Controls.Add(this.buttonX2);
-            this.groupPanel1.Controls.Add(this.buttonX1);
-            this.groupPanel1.Controls.Add(this.textBoxX5);
-            this.groupPanel1.Controls.Add(this.textBoxX4);
-            this.groupPanel1.Controls.Add(this.textBoxX3);
-            this.groupPanel1.Controls.Add(this.textBoxX2);
-            this.groupPanel1.Controls.Add(this.textBoxX1);
+            this.groupPanel1.Controls.Add(this.btn_SuaKH);
+            this.groupPanel1.Controls.Add(this.btn_XoaKH);
+            this.groupPanel1.Controls.Add(this.btn_themKH);
+            this.groupPanel1.Controls.Add(this.txt_GhichuKH);
+            this.groupPanel1.Controls.Add(this.txt_DiachiKH);
+            this.groupPanel1.Controls.Add(this.txt_SdtKH);
+            this.groupPanel1.Controls.Add(this.txt_TenKH);
+            this.groupPanel1.Controls.Add(this.txt_Makh);
             this.groupPanel1.Controls.Add(this.labelX5);
             this.groupPanel1.Controls.Add(this.labelX4);
             this.groupPanel1.Controls.Add(this.labelX3);
@@ -73,8 +68,9 @@ namespace BANGAS_TN
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
+            this.groupPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1262, 244);
+            this.groupPanel1.Size = new System.Drawing.Size(946, 198);
             // 
             // 
             // 
@@ -97,110 +93,124 @@ namespace BANGAS_TN
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "KHÁCH HÀNG";
+            this.groupPanel1.Click += new System.EventHandler(this.groupPanel1_Click);
             // 
-            // buttonX3
+            // btn_SuaKH
             // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX3.Image = global::BANGAS_TN.Properties.Resources.SUA;
-            this.buttonX3.Location = new System.Drawing.Point(979, 79);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(132, 42);
-            this.buttonX3.TabIndex = 12;
-            this.buttonX3.Text = "Sửa";
+            this.btn_SuaKH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_SuaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SuaKH.Image = global::BANGAS_TN.Properties.Resources.SUA;
+            this.btn_SuaKH.Location = new System.Drawing.Point(734, 64);
+            this.btn_SuaKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_SuaKH.Name = "btn_SuaKH";
+            this.btn_SuaKH.Size = new System.Drawing.Size(99, 34);
+            this.btn_SuaKH.TabIndex = 12;
+            this.btn_SuaKH.Text = "Sửa";
+            this.btn_SuaKH.Click += new System.EventHandler(this.btn_SuaKH_Click);
             // 
-            // buttonX2
+            // btn_XoaKH
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Image = global::BANGAS_TN.Properties.Resources.XOA;
-            this.buttonX2.Location = new System.Drawing.Point(979, 145);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(132, 42);
-            this.buttonX2.TabIndex = 11;
-            this.buttonX2.Text = "Xóa";
+            this.btn_XoaKH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_XoaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XoaKH.Image = global::BANGAS_TN.Properties.Resources.XOA;
+            this.btn_XoaKH.Location = new System.Drawing.Point(734, 118);
+            this.btn_XoaKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_XoaKH.Name = "btn_XoaKH";
+            this.btn_XoaKH.Size = new System.Drawing.Size(99, 34);
+            this.btn_XoaKH.TabIndex = 11;
+            this.btn_XoaKH.Text = "Xóa";
+            this.btn_XoaKH.Click += new System.EventHandler(this.btn_XoaKH_Click);
             // 
-            // buttonX1
+            // btn_themKH
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.BackColor = System.Drawing.Color.SeaShell;
-            this.buttonX1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonX1.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.buttonX1.Location = new System.Drawing.Point(979, 16);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(132, 42);
-            this.buttonX1.TabIndex = 10;
-            this.buttonX1.Text = "Thêm";
+            this.btn_themKH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_themKH.BackColor = System.Drawing.Color.SeaShell;
+            this.btn_themKH.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_themKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themKH.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_themKH.Image = global::BANGAS_TN.Properties.Resources.THEM;
+            this.btn_themKH.Location = new System.Drawing.Point(734, 13);
+            this.btn_themKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_themKH.Name = "btn_themKH";
+            this.btn_themKH.Size = new System.Drawing.Size(99, 34);
+            this.btn_themKH.TabIndex = 10;
+            this.btn_themKH.Text = "Thêm";
+            this.btn_themKH.Click += new System.EventHandler(this.btn_themKH_Click);
             // 
-            // textBoxX5
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX5.Location = new System.Drawing.Point(624, 17);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX5.TabIndex = 9;
-            // 
-            // textBoxX4
+            // txt_GhichuKH
             // 
             // 
             // 
             // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX4.Location = new System.Drawing.Point(167, 169);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX4.TabIndex = 8;
+            this.txt_GhichuKH.Border.Class = "TextBoxBorder";
+            this.txt_GhichuKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_GhichuKH.Location = new System.Drawing.Point(468, 14);
+            this.txt_GhichuKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_GhichuKH.Name = "txt_GhichuKH";
+            this.txt_GhichuKH.Size = new System.Drawing.Size(218, 28);
+            this.txt_GhichuKH.TabIndex = 9;
             // 
-            // textBoxX3
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX3.Location = new System.Drawing.Point(167, 119);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX3.TabIndex = 7;
-            // 
-            // textBoxX2
+            // txt_DiachiKH
             // 
             // 
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX2.Location = new System.Drawing.Point(167, 68);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX2.TabIndex = 6;
+            this.txt_DiachiKH.Border.Class = "TextBoxBorder";
+            this.txt_DiachiKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DiachiKH.Location = new System.Drawing.Point(125, 137);
+            this.txt_DiachiKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_DiachiKH.Name = "txt_DiachiKH";
+            this.txt_DiachiKH.Size = new System.Drawing.Size(218, 28);
+            this.txt_DiachiKH.TabIndex = 8;
             // 
-            // textBoxX1
+            // txt_SdtKH
             // 
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(167, 17);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(290, 35);
-            this.textBoxX1.TabIndex = 5;
+            this.txt_SdtKH.Border.Class = "TextBoxBorder";
+            this.txt_SdtKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SdtKH.Location = new System.Drawing.Point(125, 97);
+            this.txt_SdtKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_SdtKH.Name = "txt_SdtKH";
+            this.txt_SdtKH.Size = new System.Drawing.Size(218, 28);
+            this.txt_SdtKH.TabIndex = 7;
+            // 
+            // txt_TenKH
+            // 
+            // 
+            // 
+            // 
+            this.txt_TenKH.Border.Class = "TextBoxBorder";
+            this.txt_TenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenKH.Location = new System.Drawing.Point(125, 55);
+            this.txt_TenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_TenKH.Name = "txt_TenKH";
+            this.txt_TenKH.Size = new System.Drawing.Size(218, 28);
+            this.txt_TenKH.TabIndex = 6;
+            // 
+            // txt_Makh
+            // 
+            // 
+            // 
+            // 
+            this.txt_Makh.Border.Class = "TextBoxBorder";
+            this.txt_Makh.Enabled = false;
+            this.txt_Makh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Makh.Location = new System.Drawing.Point(125, 14);
+            this.txt_Makh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Makh.Name = "txt_Makh";
+            this.txt_Makh.Size = new System.Drawing.Size(218, 28);
+            this.txt_Makh.TabIndex = 5;
             // 
             // labelX5
             // 
             this.labelX5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(37, 80);
+            this.labelX5.Location = new System.Drawing.Point(28, 65);
+            this.labelX5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(109, 23);
+            this.labelX5.Size = new System.Drawing.Size(82, 19);
             this.labelX5.TabIndex = 4;
             this.labelX5.Text = "Tên KH";
             // 
@@ -208,9 +218,10 @@ namespace BANGAS_TN
             // 
             this.labelX4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(37, 131);
+            this.labelX4.Location = new System.Drawing.Point(28, 106);
+            this.labelX4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(109, 23);
+            this.labelX4.Size = new System.Drawing.Size(82, 19);
             this.labelX4.TabIndex = 3;
             this.labelX4.Text = "Điện Thoại";
             // 
@@ -218,9 +229,10 @@ namespace BANGAS_TN
             // 
             this.labelX3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(37, 181);
+            this.labelX3.Location = new System.Drawing.Point(28, 147);
+            this.labelX3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(109, 23);
+            this.labelX3.Size = new System.Drawing.Size(82, 19);
             this.labelX3.TabIndex = 2;
             this.labelX3.Text = "Địa Chỉ";
             // 
@@ -228,9 +240,10 @@ namespace BANGAS_TN
             // 
             this.labelX2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(492, 29);
+            this.labelX2.Location = new System.Drawing.Point(369, 24);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(109, 23);
+            this.labelX2.Size = new System.Drawing.Size(82, 19);
             this.labelX2.TabIndex = 1;
             this.labelX2.Text = "Ghi Chú";
             this.labelX2.Click += new System.EventHandler(this.labelX2_Click);
@@ -239,22 +252,20 @@ namespace BANGAS_TN
             // 
             this.labelX1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(37, 29);
+            this.labelX1.Location = new System.Drawing.Point(28, 24);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(109, 23);
+            this.labelX1.Size = new System.Drawing.Size(82, 19);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "Mã KH";
             // 
-            // dataGridViewX1
+            // data_KhachHang
             // 
-            this.dataGridViewX1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaKH,
-            this.TenKH,
-            this.DienThoai,
-            this.DiaChi,
-            this.GhiChu});
+            this.data_KhachHang.AllowUserToAddRows = false;
+            this.data_KhachHang.AllowUserToDeleteRows = false;
+            this.data_KhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_KhachHang.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.data_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,64 +273,34 @@ namespace BANGAS_TN
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(0, 244);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.RowHeadersWidth = 51;
-            this.dataGridViewX1.RowTemplate.Height = 24;
-            this.dataGridViewX1.Size = new System.Drawing.Size(1262, 429);
-            this.dataGridViewX1.TabIndex = 1;
-            // 
-            // MaKH
-            // 
-            this.MaKH.HeaderText = "Mã KH";
-            this.MaKH.MinimumWidth = 6;
-            this.MaKH.Name = "MaKH";
-            this.MaKH.Width = 200;
-            // 
-            // TenKH
-            // 
-            this.TenKH.HeaderText = "Tên KH";
-            this.TenKH.MinimumWidth = 6;
-            this.TenKH.Name = "TenKH";
-            this.TenKH.Width = 280;
-            // 
-            // DienThoai
-            // 
-            this.DienThoai.HeaderText = "Điện Thoại";
-            this.DienThoai.MinimumWidth = 6;
-            this.DienThoai.Name = "DienThoai";
-            this.DienThoai.Width = 250;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.MinimumWidth = 6;
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Width = 280;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.HeaderText = "Ghi Chú";
-            this.GhiChu.MinimumWidth = 6;
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.Width = 200;
+            this.data_KhachHang.DefaultCellStyle = dataGridViewCellStyle1;
+            this.data_KhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.data_KhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.data_KhachHang.Location = new System.Drawing.Point(0, 198);
+            this.data_KhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_KhachHang.Name = "data_KhachHang";
+            this.data_KhachHang.ReadOnly = true;
+            this.data_KhachHang.RowHeadersWidth = 51;
+            this.data_KhachHang.RowTemplate.Height = 24;
+            this.data_KhachHang.Size = new System.Drawing.Size(946, 349);
+            this.data_KhachHang.TabIndex = 1;
+            this.data_KhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_KhachHang_CellClick);
             // 
             // FrmKhachhang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.dataGridViewX1);
+            this.ClientSize = new System.Drawing.Size(946, 547);
+            this.Controls.Add(this.data_KhachHang);
             this.Controls.Add(this.groupPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmKhachhang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmKhachhang";
+            this.Load += new System.EventHandler(this.FrmKhachhang_Load);
             this.groupPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_KhachHang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,24 +308,19 @@ namespace BANGAS_TN
         #endregion
 
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX data_KhachHang;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Makh;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_GhichuKH;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_DiachiKH;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_SdtKH;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_TenKH;
+        private DevComponents.DotNetBar.ButtonX btn_SuaKH;
+        private DevComponents.DotNetBar.ButtonX btn_XoaKH;
+        private DevComponents.DotNetBar.ButtonX btn_themKH;
     }
 }

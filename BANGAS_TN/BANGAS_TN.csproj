@@ -74,6 +74,7 @@
     <Compile Include="Giaodienchinh.Designer.cs">
       <DependentUpon>Giaodienchinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Khaibao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmGas.resx">
