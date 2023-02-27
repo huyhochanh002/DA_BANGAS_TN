@@ -204,5 +204,34 @@ namespace BANGAS_TN
                 MessageBox.Show("Lỗi Khi Mở Tab Loại Gas !");
             }
         }
+
+        private void buttonItem7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.trangThai = true;
+                this.tentabmo = "CTHD";
+                if (!Kiemtramotab(tentabmo))
+                {
+                    TabItem t = tab_main.CreateTab(tentabmo);
+                    t.Name = "CTHD";
+
+                    FrmHoaDon hd = new FrmHoaDon()
+                    {
+                        DongTap = new FrmHoaDon._dongTap(DongTab),
+                        frm = this,
+                        TopLevel = false,
+                        Dock = DockStyle.Fill,
+                    };
+                    t.AttachedControl.Controls.Add(hd);
+                    hd.Show();
+                    tab_main.SelectedTabIndex = tab_main.Tabs.Count - 1;
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show("Lỗi Khi Mở Tab Hóa Đơn !");
+            }
+        }
     }
 }

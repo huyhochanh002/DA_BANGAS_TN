@@ -50,11 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTHD.Designer.cs">
+      <DependentUpon>CTHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmGas.Designer.cs">
       <DependentUpon>FrmGas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoaDon.Designer.cs">
+      <DependentUpon>FrmHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLoaiGas.cs">
       <SubType>Form</SubType>
@@ -80,6 +92,12 @@
     <Compile Include="FrmKhachhang.Designer.cs">
       <DependentUpon>FrmKhachhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmXemHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmXemHD.Designer.cs">
+      <DependentUpon>FrmXemHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Giaodienchinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,8 +107,14 @@
     <Compile Include="Khaibao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CTHD.resx">
+      <DependentUpon>CTHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGas.resx">
       <DependentUpon>FrmGas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoaDon.resx">
+      <DependentUpon>FrmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoaiGas.resx">
       <DependentUpon>FrmLoaiGas.cs</DependentUpon>
@@ -103,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKhachhang.resx">
       <DependentUpon>FrmKhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmXemHD.resx">
+      <DependentUpon>FrmXemHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giaodienchinh.resx">
       <DependentUpon>Giaodienchinh.cs</DependentUpon>
@@ -177,6 +204,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\round_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
