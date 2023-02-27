@@ -29,7 +29,7 @@ namespace BANGAS_TN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btn_cleargas = new DevComponents.DotNetBar.ButtonX();
             this.btn_Suagas = new DevComponents.DotNetBar.ButtonX();
@@ -92,7 +92,7 @@ namespace BANGAS_TN
             this.btn_cleargas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cleargas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_cleargas.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.btn_cleargas.Location = new System.Drawing.Point(1040, 175);
+            this.btn_cleargas.Location = new System.Drawing.Point(938, 173);
             this.btn_cleargas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cleargas.Name = "btn_cleargas";
             this.btn_cleargas.Size = new System.Drawing.Size(132, 42);
@@ -105,7 +105,7 @@ namespace BANGAS_TN
             this.btn_Suagas.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_Suagas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Suagas.Image = global::BANGAS_TN.Properties.Resources.SUA;
-            this.btn_Suagas.Location = new System.Drawing.Point(1040, 62);
+            this.btn_Suagas.Location = new System.Drawing.Point(938, 60);
             this.btn_Suagas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Suagas.Name = "btn_Suagas";
             this.btn_Suagas.Size = new System.Drawing.Size(132, 42);
@@ -118,7 +118,7 @@ namespace BANGAS_TN
             this.btn_Xoagas.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_Xoagas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoagas.Image = global::BANGAS_TN.Properties.Resources.XOA;
-            this.btn_Xoagas.Location = new System.Drawing.Point(1040, 119);
+            this.btn_Xoagas.Location = new System.Drawing.Point(938, 117);
             this.btn_Xoagas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Xoagas.Name = "btn_Xoagas";
             this.btn_Xoagas.Size = new System.Drawing.Size(132, 42);
@@ -134,7 +134,7 @@ namespace BANGAS_TN
             this.btn_ThemGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThemGas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_ThemGas.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.btn_ThemGas.Location = new System.Drawing.Point(1040, 2);
+            this.btn_ThemGas.Location = new System.Drawing.Point(938, 0);
             this.btn_ThemGas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ThemGas.Name = "btn_ThemGas";
             this.btn_ThemGas.Size = new System.Drawing.Size(132, 42);
@@ -149,7 +149,7 @@ namespace BANGAS_TN
             // 
             this.txtTenLoaiGas.Border.Class = "TextBoxBorder";
             this.txtTenLoaiGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenLoaiGas.Location = new System.Drawing.Point(588, 91);
+            this.txtTenLoaiGas.Location = new System.Drawing.Point(567, 91);
             this.txtTenLoaiGas.Name = "txtTenLoaiGas";
             this.txtTenLoaiGas.Size = new System.Drawing.Size(309, 35);
             this.txtTenLoaiGas.TabIndex = 4;
@@ -161,7 +161,7 @@ namespace BANGAS_TN
             this.labelX2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelX2.Location = new System.Drawing.Point(485, 95);
+            this.labelX2.Location = new System.Drawing.Point(464, 95);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(97, 31);
             this.labelX2.TabIndex = 3;
@@ -174,7 +174,7 @@ namespace BANGAS_TN
             // 
             this.txtMaLoaiGas.Border.Class = "TextBoxBorder";
             this.txtMaLoaiGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaLoaiGas.Location = new System.Drawing.Point(146, 91);
+            this.txtMaLoaiGas.Location = new System.Drawing.Point(125, 91);
             this.txtMaLoaiGas.Name = "txtMaLoaiGas";
             this.txtMaLoaiGas.Size = new System.Drawing.Size(309, 35);
             this.txtMaLoaiGas.TabIndex = 2;
@@ -186,7 +186,7 @@ namespace BANGAS_TN
             this.labelX1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelX1.Location = new System.Drawing.Point(43, 95);
+            this.labelX1.Location = new System.Drawing.Point(22, 95);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(97, 31);
             this.labelX1.TabIndex = 0;
@@ -196,14 +196,14 @@ namespace BANGAS_TN
             // 
             this.data_LoaiGas.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.data_LoaiGas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data_LoaiGas.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_LoaiGas.DefaultCellStyle = dataGridViewCellStyle2;
             this.data_LoaiGas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data_LoaiGas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.data_LoaiGas.Location = new System.Drawing.Point(0, 244);

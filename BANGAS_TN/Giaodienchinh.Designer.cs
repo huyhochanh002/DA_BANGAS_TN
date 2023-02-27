@@ -44,6 +44,8 @@
             this.btnKH = new DevComponents.DotNetBar.ButtonItem();
             this.btnNV = new DevComponents.DotNetBar.ButtonItem();
             this.btnGas = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
@@ -206,7 +208,8 @@
             this.buttonItem1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnKH,
             this.btnNV,
-            this.btnGas});
+            this.btnGas,
+            this.buttonItem4});
             this.buttonItem1.Text = "Chức năng";
             this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
             // 
@@ -231,8 +234,26 @@
             this.btnGas.Image = global::BANGAS_TN.Properties.Resources.fire_35px;
             this.btnGas.ImagePaddingHorizontal = 8;
             this.btnGas.Name = "btnGas";
+            this.btnGas.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem5});
             this.btnGas.Text = "Gas";
             this.btnGas.Click += new System.EventHandler(this.btnGas_Click);
+            // 
+            // buttonItem5
+            // 
+            this.buttonItem5.Image = global::BANGAS_TN.Properties.Resources.round_35px;
+            this.buttonItem5.ImagePaddingHorizontal = 8;
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.Text = "Loại Gas";
+            this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click);
+            // 
+            // buttonItem4
+            // 
+            this.buttonItem4.Image = global::BANGAS_TN.Properties.Resources.photo_booth_app_35px;
+            this.buttonItem4.ImagePaddingHorizontal = 8;
+            this.buttonItem4.Name = "buttonItem4";
+            this.buttonItem4.Text = "Nhà cung cấp";
+            this.buttonItem4.Click += new System.EventHandler(this.buttonItem4_Click);
             // 
             // buttonItem2
             // 
@@ -319,6 +340,8 @@
         private DevComponents.DotNetBar.ButtonItem btnGas;
         private DevComponents.DotNetBar.ButtonItem buttonItem7;
         private DevComponents.DotNetBar.ButtonItem buttonItem8;
+        private DevComponents.DotNetBar.ButtonItem buttonItem5;
+        private DevComponents.DotNetBar.ButtonItem buttonItem4;
     }
 }
 
