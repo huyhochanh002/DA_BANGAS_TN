@@ -56,6 +56,18 @@
     <Compile Include="FrmGas.Designer.cs">
       <DependentUpon>FrmGas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLoaiGas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoaiGas.Designer.cs">
+      <DependentUpon>FrmLoaiGas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNCC.Designer.cs">
+      <DependentUpon>FrmNCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +91,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmGas.resx">
       <DependentUpon>FrmGas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoaiGas.resx">
+      <DependentUpon>FrmLoaiGas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNCC.resx">
+      <DependentUpon>FrmNCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNhanvien.resx">
       <DependentUpon>FrmNhanvien.cs</DependentUpon>
@@ -144,6 +162,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Blue Simple Kid Learning Illustration Zoom Virtual Background.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_card_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home App_35px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

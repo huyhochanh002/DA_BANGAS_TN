@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BANGAS_TN
 {
-    public partial class FrmNhanvien : Form
+    public partial class FrmNCC : Form
     {
-        public FrmNhanvien()
+        public FrmNCC()
         {
             InitializeComponent();
         }
@@ -21,12 +21,11 @@ namespace BANGAS_TN
         public delegate void _dongTap();
         public _dongTap DongTap;
 
-        private void FrmNhanvien_Load(object sender, EventArgs e)
+        private void FrmNCC_Load(object sender, EventArgs e)
         {
-            ondataviewNV();
+            ondataviewNCC();
         }
 
-        // Khai báo các biến cần thiết;
         Khaibao kb = new Khaibao();
 
         SqlConnection cnn = new SqlConnection();
@@ -48,18 +47,18 @@ namespace BANGAS_TN
                 MessageBox.Show("Có Lỗi Khi Kết Nối Dữ Liệu Server ! ");
             }
         }
-        // On view data lên list
-        public void ondataviewNV()
+
+        public void ondataviewNCC()
         {
             try
             {
                 Runnow();
-                string s = "Select * From NhanVien";
+                string s = "Select * From NhaCungCap";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 da.SelectCommand = cmd;
                 da.Fill(dt);
                 bin.DataSource = dt;
-                data_Nhanvien.DataSource = bin;
+                data_NCC.DataSource = bin;
                 cnn.Close();
             }
             catch (Exception e2)
@@ -68,34 +67,30 @@ namespace BANGAS_TN
                 MessageBox.Show("Có Lỗi Khi Hiện thị Dữ Liệu Nhân Viên! ");
             }
         }
-        // CÁI HÀM NÀY SẼ CLEAR MẤY Ô KHI THÊM VÀ ĐỒNG THỜI LOAD LẠI LIST DỮ LIỆU
+
         public void ClearvaLoad()
         {
-            txt_Manv.Text = "";
-            txt_Tennv.Text = "";
-            txt_Dienthoainv.Text = "";
-            txt_Diachinv.Text = "";
-            txt_Ghichunv.Text = "";
-            if (btn_ThemNV.Enabled == false)
+            txt_Mancc.Text = "";
+            txt_Tencc.Text = "";
+            txt_Diachincc.Text = "";
+            if (btn_ThemNCC.Enabled == false)
             {
-                btn_ThemNV.Enabled = true;
+                btn_ThemNCC.Enabled = true;
             }
             dt.Clear();
             da.Fill(dt);
         }
 
-        private void btn_ThemNV_Click(object sender, EventArgs e)
+        private void btn_ThemNCC_Click(object sender, EventArgs e)
         {
             try
             {
                 Runnow();
-                string s = "insert into NhanVien (Tennv,Diachi,Dienthoai,Ghichu) values " +
-                    "(@Tennv,@Diachi,@Dienthoai,@Ghichu)";
+                string s = "insert into NhaCungCap (Tenncc,Diachi) values " +
+                    "(@Tenncc,@Diachi)";
                 SqlCommand cmd = new SqlCommand(s, cnn);
-                cmd.Parameters.Add("@Tennv", SqlDbType.NVarChar).Value = txt_Tennv.Text;
-                cmd.Parameters.Add("@Dienthoai", SqlDbType.Int).Value = int.Parse(txt_Dienthoainv.Text);
-                cmd.Parameters.Add("@Diachi", SqlDbType.NVarChar).Value = txt_Diachinv.Text;
-                cmd.Parameters.Add("@Ghichu", SqlDbType.NVarChar).Value = txt_Ghichunv.Text;
+                cmd.Parameters.Add("@Tenncc", SqlDbType.NVarChar).Value = txt_Tencc.Text;
+                cmd.Parameters.Add("@Diachi", SqlDbType.NVarChar).Value = txt_Diachincc.Text;
                 cmd.ExecuteNonQuery();
                 cnn.Close();
                 ClearvaLoad();
@@ -109,18 +104,16 @@ namespace BANGAS_TN
             }
         }
 
-        private void btn_SuaNV_Click(object sender, EventArgs e)
+        private void btn_SuaNCC_Click(object sender, EventArgs e)
         {
             try
             {
                 Runnow();
-                string s = "Update NhanVien set Tennv=@Tennv,Dienthoai=@Dienthoai,Diachi=@Diachi,Ghichu=@Ghichu where Manv=@Manv";
+                string s = "Update NhaCungCap set Tenncc=@Tennc,Diachi=@Diachi where Mancc=@Mancc";
                 SqlCommand cmd = new SqlCommand(s, cnn);
-                cmd.Parameters.Add("@Manv", SqlDbType.Int).Value = int.Parse(txt_Manv.Text);
-                cmd.Parameters.Add("@Tennv", SqlDbType.NVarChar).Value = txt_Tennv.Text;
-                cmd.Parameters.Add("@Dienthoai", SqlDbType.Int).Value = int.Parse(txt_Dienthoainv.Text);
-                cmd.Parameters.Add("@Diachi", SqlDbType.NVarChar).Value = txt_Diachinv.Text;
-                cmd.Parameters.Add("@Ghichu", SqlDbType.NVarChar).Value = txt_Ghichunv.Text;
+                cmd.Parameters.Add("@Mancc", SqlDbType.Int).Value = int.Parse(txt_Mancc.Text);
+                cmd.Parameters.Add("@Tenncc", SqlDbType.NVarChar).Value = txt_Tencc.Text;
+                cmd.Parameters.Add("@Diachi", SqlDbType.NVarChar).Value = txt_Diachincc.Text;
                 cmd.ExecuteNonQuery();
                 cnn.Close();
                 ClearvaLoad();
@@ -135,14 +128,14 @@ namespace BANGAS_TN
             }
         }
 
-        private void btn_XoaNV_Click(object sender, EventArgs e)
+        private void btn_XoaNCC_Click(object sender, EventArgs e)
         {
             try
             {
                 Runnow();
-                string s = "DELETE FROM NhanVien Where Manv = @Manv";
+                string s = "DELETE FROM NhaCungCap Where Mancc = @Mancc";
                 SqlCommand cmd = new SqlCommand(s, cnn);
-                cmd.Parameters.Add("@Manv", SqlDbType.Int).Value = int.Parse(txt_Manv.Text);
+                cmd.Parameters.Add("@Mancc", SqlDbType.Int).Value = int.Parse(txt_Mancc.Text);
                 cmd.ExecuteNonQuery();
                 cnn.Close();
                 ClearvaLoad();
@@ -157,33 +150,26 @@ namespace BANGAS_TN
             }
         }
 
-        private void data_Nhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_clearNCC_Click(object sender, EventArgs e)
+        {
+            ClearvaLoad();
+        }
+
+        private void data_NCC_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
-                    txt_Manv.Text = Convert.ToString(data_Nhanvien.CurrentRow.Cells["Manv"].Value);
-                    txt_Tennv.Text = Convert.ToString(data_Nhanvien.CurrentRow.Cells["Tennv"].Value);
-                    txt_Dienthoainv.Text = Convert.ToString(data_Nhanvien.CurrentRow.Cells["Dienthoai"].Value);
-                    txt_Diachinv.Text = Convert.ToString(data_Nhanvien.CurrentRow.Cells["Diachi"].Value);
-                    txt_Ghichunv.Text = Convert.ToString(data_Nhanvien.CurrentRow.Cells["Ghichu"].Value);
-                    btn_ThemNV.Enabled = false;
+                    txt_Mancc.Text = Convert.ToString(data_NCC.CurrentRow.Cells["Mancc"].Value);
+                    txt_Tencc.Text = Convert.ToString(data_NCC.CurrentRow.Cells["Tenncc"].Value);
+                    txt_Diachincc.Text = Convert.ToString(data_NCC.CurrentRow.Cells["Diachi"].Value);
+                    btn_ThemNCC.Enabled = false;
                 }
             }
             catch (Exception e2)
             {
             }
-        }
-
-        private void btn_clearNV_Click(object sender, EventArgs e)
-        {
-            ClearvaLoad();
-        }
-
-        private void data_Nhanvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
