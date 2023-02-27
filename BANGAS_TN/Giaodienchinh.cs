@@ -117,7 +117,7 @@ namespace BANGAS_TN
             }
         }
 
-        private void btnGas_Click(object sender, EventArgs e)
+        public void btnGas_Click(object sender, EventArgs e)
         {
             try
             {

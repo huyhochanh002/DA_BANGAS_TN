@@ -26,6 +26,7 @@ namespace BANGAS_TN
             ondataviewNCC();
         }
 
+        // Khai báo các biến cần thiết;
         Khaibao kb = new Khaibao();
 
         SqlConnection cnn = new SqlConnection();
@@ -33,6 +34,8 @@ namespace BANGAS_TN
         SqlDataAdapter da = new SqlDataAdapter();
         DataTable dt = new DataTable();
         BindingSource bin = new BindingSource();
+
+        FrmGas gasload = new FrmGas();
 
         public void Runnow()
         {
@@ -48,6 +51,7 @@ namespace BANGAS_TN
             }
         }
 
+        // On view data lên list
         public void ondataviewNCC()
         {
             try
@@ -67,7 +71,7 @@ namespace BANGAS_TN
                 MessageBox.Show("Có Lỗi Khi Hiện thị Dữ Liệu Nhân Viên! ");
             }
         }
-
+        // CÁI HÀM NÀY SẼ CLEAR MẤY Ô KHI THÊM VÀ ĐỒNG THỜI LOAD LẠI LIST DỮ LIỆU
         public void ClearvaLoad()
         {
             txt_Mancc.Text = "";
@@ -79,12 +83,18 @@ namespace BANGAS_TN
             }
             dt.Clear();
             da.Fill(dt);
+            
+           
         }
 
         private void btn_ThemNCC_Click(object sender, EventArgs e)
         {
             try
-            {
+            { if(txt_Mancc.Text==""&&txt_Diachincc.Text=="")
+                {
+                    MessageBox.Show("Vui Lòng Kiểm Tra Lại Dữ Liệu nhập ! ");
+                    return;
+                }
                 Runnow();
                 string s = "insert into NhaCungCap (Tenncc,Diachi) values " +
                     "(@Tenncc,@Diachi)";
@@ -109,7 +119,7 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "Update NhaCungCap set Tenncc=@Tennc,Diachi=@Diachi where Mancc=@Mancc";
+                string s = "Update NhaCungCap set Tenncc=@Tenncc,Diachi=@Diachi where Mancc=@Mancc";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 cmd.Parameters.Add("@Mancc", SqlDbType.Int).Value = int.Parse(txt_Mancc.Text);
                 cmd.Parameters.Add("@Tenncc", SqlDbType.NVarChar).Value = txt_Tencc.Text;
