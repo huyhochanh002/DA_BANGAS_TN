@@ -40,6 +40,7 @@ namespace BANGAS_TN
         {
             ondataviewLoaiGas();
         }
+        // Khai báo các biến cần thiết;
         Khaibao kb = new Khaibao();
 
         SqlConnection cnn = new SqlConnection();
@@ -61,7 +62,7 @@ namespace BANGAS_TN
                 MessageBox.Show("Có Lỗi Khi Kết Nối Dữ Liệu Server ! ");
             }
         }
-
+        // On view data lên list
         public void ondataviewLoaiGas()
         {
             try
@@ -81,7 +82,7 @@ namespace BANGAS_TN
                 MessageBox.Show("Có Lỗi Khi Hiện thị Dữ Liệu Loại Gas! ");
             }
         }
-
+        // CÁI HÀM NÀY SẼ CLEAR MẤY Ô KHI THÊM VÀ ĐỒNG THỜI LOAD LẠI LIST DỮ LIỆU
         public void ClearvaLoad()
         {
             txtMaLoaiGas.Text = "";
@@ -92,17 +93,23 @@ namespace BANGAS_TN
             }
             dt.Clear();
             da.Fill(dt);
+            
+            
         }
 
         private void btn_ThemGas_Click(object sender, EventArgs e)
         {
             try
             {
+                if(txtTenLoaiGas.Text=="")
+                {
+                    MessageBox.Show("Vui Lòng Kiểm Tra Lại Dữ Liệu nhập ! ");
+                    return;
+                }
                 Runnow();
-                string s = "insert into LoaiGas (MaLoai,TenLoai) values " +
-                    "(@MaLoai,@TenLoai)";
+                string s = "insert into LoaiGas (TenLoai) values " +
+                    "(@TenLoai)";
                 SqlCommand cmd = new SqlCommand(s, cnn);
-                cmd.Parameters.Add("@MaLoai", SqlDbType.Int).Value = int.Parse(txtMaLoaiGas.Text);
                 cmd.Parameters.Add("@TenLoai", SqlDbType.NVarChar).Value = txtTenLoaiGas.Text;
                 cmd.ExecuteNonQuery();
                 cnn.Close();

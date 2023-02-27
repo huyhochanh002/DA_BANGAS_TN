@@ -117,7 +117,7 @@ namespace BANGAS_TN
             }
         }
 
-        private void btnGas_Click(object sender, EventArgs e)
+        public void btnGas_Click(object sender, EventArgs e)
         {
             try
             {
@@ -145,6 +145,64 @@ namespace BANGAS_TN
                 MessageBox.Show("Lỗi Khi Mở Tab Gas !");
             }
 
+        }
+
+        private void buttonItem4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.trangThai = true;
+                this.tentabmo = "Nhà cung cấp";
+                if (!Kiemtramotab(tentabmo))
+                {
+                    TabItem t = tab_main.CreateTab(tentabmo);
+                    t.Name = "Nhacungcap";
+
+                    FrmNCC NCC = new FrmNCC()
+                    {
+                        DongTap = new FrmNCC._dongTap(DongTab),
+                        frm = this,
+                        TopLevel = false,
+                        Dock = DockStyle.Fill,
+                    };
+                    t.AttachedControl.Controls.Add(NCC);
+                    NCC.Show();
+                    tab_main.SelectedTabIndex = tab_main.Tabs.Count - 1;
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show("Lỗi Khi Mở Tab Nhà cung cấp !");
+            }
+        }
+
+        private void buttonItem5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.trangThai = true;
+                this.tentabmo = "Loại Gas";
+                if (!Kiemtramotab(tentabmo))
+                {
+                    TabItem t = tab_main.CreateTab(tentabmo);
+                    t.Name = "LoaiGas";
+
+                    FrmLoaiGas Lgas = new FrmLoaiGas()
+                    {
+                        DongTap = new FrmLoaiGas._dongTap(DongTab),
+                        frm = this,
+                        TopLevel = false,
+                        Dock = DockStyle.Fill,
+                    };
+                    t.AttachedControl.Controls.Add(Lgas);
+                    Lgas.Show();
+                    tab_main.SelectedTabIndex = tab_main.Tabs.Count - 1;
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show("Lỗi Khi Mở Tab Loại Gas !");
+            }
         }
     }
 }

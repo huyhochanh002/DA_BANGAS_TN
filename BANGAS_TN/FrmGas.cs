@@ -42,6 +42,10 @@ namespace BANGAS_TN
         SqlDataAdapter da = new SqlDataAdapter();
         DataTable dt = new DataTable();
         BindingSource bin = new BindingSource();
+
+
+        //n Load lai data loai gas va ncc
+       
         public void Runnow()
         {
             try
@@ -65,7 +69,7 @@ namespace BANGAS_TN
             daLoaiGas.Fill(dsLoaiGas);
             cmd.ExecuteNonQuery();
             cnn.Close();
-            cb_LoaiGas.Items.Clear();
+            cb_LoaiGas.DataSource = null;
             cb_LoaiGas.DataSource = dsLoaiGas.Tables[0];
             cb_LoaiGas.DisplayMember = "Tenloai";
             cb_LoaiGas.ValueMember = "Maloai";
@@ -80,11 +84,12 @@ namespace BANGAS_TN
             daNCC.Fill(dsNCC);
             cmd.ExecuteNonQuery();
             cnn.Close();
-            cb_Ncc.Items.Clear();
+            cb_Ncc.DataSource=null;
             cb_Ncc.DataSource = dsNCC.Tables[0];
             cb_Ncc.DisplayMember = "Tenncc";
             cb_Ncc.ValueMember = "Mancc";
         }
+
 
         // On view data lên list
         public void ondataviewGAS()
@@ -116,6 +121,8 @@ namespace BANGAS_TN
             btn_ThemGAS.Enabled = true;
             dt.Clear();
             da.Fill(dt);
+            ComboLoaiGas();
+            ComboNCC();
         }
 
         private void btn_ThemGAS_Click(object sender, EventArgs e)
