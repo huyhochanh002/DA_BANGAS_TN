@@ -42,6 +42,7 @@ namespace BANGAS_TN
                 MessageBox.Show("Có Lỗi Khi Kết Nối Dữ Liệu Server ! ");
             }
         }
+        // COMBOBOX 
         public void ComboMaGas()
         {
             Runnow();
@@ -57,13 +58,44 @@ namespace BANGAS_TN
             cb_Magas.ValueMember = "Magas";
 
         }
+        public void ComboKhachhang()
+        {
+            Runnow();
+            SqlCommand cmd = new SqlCommand("select * from KhachHang", cnn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            cb_khach.DataSource = null;
+            cb_khach.DataSource = ds.Tables[0];
+            cb_khach.DisplayMember = "Tenkh";
+            cb_khach.ValueMember = "Makh";
+
+        }
+        public void ComboNhanVien()
+        {
+            Runnow();
+            SqlCommand cmd = new SqlCommand("select * from NhanVien", cnn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            cb_nhanvien.DataSource = null;
+            cb_nhanvien.DataSource = ds.Tables[0];
+            cb_nhanvien.DisplayMember = "Tennv";
+            cb_nhanvien.ValueMember = "Manv";
+
+        }
+
         // On view data lên list
         public void ondataviewHoaDon()
         {
             try
             {
                 Runnow();
-                string s = "Select * From CTHD";
+                string s = "select * from CTHD LEFT JOIN HoaDon on CTHD.Mahd = HoaDon.Mahd";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 da.SelectCommand = cmd;
                 da.Fill(dt);
@@ -93,6 +125,8 @@ namespace BANGAS_TN
             check_travo .Checked = false;   
             check_trangthai .Checked = false;
             ComboMaGas();
+            ComboKhachhang();
+            ComboNhanVien();
             dt.Clear();
             da.Fill(dt);
             btn_suaHD.Enabled = true;
@@ -100,6 +134,22 @@ namespace BANGAS_TN
 
         private void btn_suaHD_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Runnow();
+                string s = "Update HoaDon set Manv=@Manv,Makh=@Makh Where Mahd=@Mahd ";
+                SqlCommand cmd = new SqlCommand(s, cnn);
+                cmd.Parameters.Add("@Mahd", SqlDbType.Int).Value = int.Parse(txt_MaHD.Text);
+                cmd.Parameters.Add("@Manv", SqlDbType.Int).Value = int.Parse(cb_nhanvien.SelectedValue.ToString());
+                cmd.Parameters.Add("@Makh", SqlDbType.Float).Value = int.Parse(cb_khach.SelectedValue.ToString());
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+            }
+            catch (Exception e2)
+            {
+                cnn.Close();
+                MessageBox.Show("Vui Lòng Kiểm Tra Lại Dữ Liệu nhập ! ");
+            }
             try
             {
                 Runnow();
@@ -121,7 +171,6 @@ namespace BANGAS_TN
                 cnn.Close();
                 ClearvaLoad();
                 MessageBox.Show("Đã Sữa Thành Công");
-
 
             }
             catch (Exception e2)
@@ -153,39 +202,42 @@ namespace BANGAS_TN
                 MessageBox.Show("Xóa Thất Bại ! ");
             }
         }
-
+        
         private void data_HD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
-
+                    
                     txt_MaHD.Text = Convert.ToString(data_HD.CurrentRow.Cells["Mahd"].Value);
                     txt_dongia.Text = Convert.ToString(data_HD.CurrentRow.Cells["Dgia"].Value);
                     txt_soluong.Text = Convert.ToString(data_HD.CurrentRow.Cells["Soluong"].Value);
                     txt_tongtien.Text = Convert.ToString(data_HD.CurrentRow.Cells["Tongtien"].Value);
                     txt_ghichu.Text = Convert.ToString(data_HD.CurrentRow.Cells["Ghichu"].Value);
-                    cb_Magas.SelectedItem = Convert.ToString(data_HD.CurrentRow.Cells["Magas"].Value);
+                    cb_Magas.SelectedValue = Convert.ToString(data_HD.CurrentRow.Cells["Magas"].Value);
                     check_notien.Checked = Convert.ToBoolean(data_HD.CurrentRow.Cells["Notien"].Value);
                     check_tratien.Checked = Convert.ToBoolean(data_HD.CurrentRow.Cells["Tratien"].Value);
                     check_novo.Checked = Convert.ToBoolean(data_HD.CurrentRow.Cells["Novo"].Value);
                     check_travo.Checked = Convert.ToBoolean(data_HD.CurrentRow.Cells["Travo"].Value);
                     check_trangthai.Checked = Convert.ToBoolean(data_HD.CurrentRow.Cells["Trangthai"].Value);
+                    cb_khach.SelectedValue= Convert.ToString(data_HD.CurrentRow.Cells["Makh"].Value);
+                    cb_nhanvien.SelectedValue= Convert.ToString(data_HD.CurrentRow.Cells["Manv"].Value);
                     bool check_isdelete = Convert.ToBoolean(data_HD.CurrentRow.Cells["isDelete"].Value);
-                    if (check_isdelete==true)
-                    {
-                        btn_suaHD.Enabled = false;
-                    }
-                    else
-                    {
-                        btn_suaHD.Enabled = true;
-                    }
+                    //if (check_isdelete==true)
+                    //{
+                    //    btn_suaHD.Enabled = false;
+                    //}
+                    //else if(check_isdelete== false)
+                    //{
+                    //    btn_suaHD.Enabled = true;
+                    //}
 
                 }
             }
             catch (Exception e2)
             {
+                
             }
         }
 
@@ -199,6 +251,8 @@ namespace BANGAS_TN
             try {
                 ondataviewHoaDon();
                 ComboMaGas();
+                ComboKhachhang();
+                ComboNhanVien();
             }
             catch(Exception e2)
             {

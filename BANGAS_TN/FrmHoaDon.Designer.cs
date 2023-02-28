@@ -29,8 +29,12 @@ namespace BANGAS_TN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.cb_nhanvien = new System.Windows.Forms.ComboBox();
+            this.cb_khach = new System.Windows.Forms.ComboBox();
+            this.labelX14 = new DevComponents.DotNetBar.LabelX();
+            this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.cb_Magas = new System.Windows.Forms.ComboBox();
             this.btn_lammoi = new DevComponents.DotNetBar.ButtonX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
@@ -67,6 +71,10 @@ namespace BANGAS_TN
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.cb_nhanvien);
+            this.groupPanel1.Controls.Add(this.cb_khach);
+            this.groupPanel1.Controls.Add(this.labelX14);
+            this.groupPanel1.Controls.Add(this.labelX13);
             this.groupPanel1.Controls.Add(this.cb_Magas);
             this.groupPanel1.Controls.Add(this.btn_lammoi);
             this.groupPanel1.Controls.Add(this.labelX12);
@@ -122,6 +130,44 @@ namespace BANGAS_TN
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "HÓA ĐƠN";
             // 
+            // cb_nhanvien
+            // 
+            this.cb_nhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_nhanvien.FormattingEnabled = true;
+            this.cb_nhanvien.Location = new System.Drawing.Point(500, 99);
+            this.cb_nhanvien.Name = "cb_nhanvien";
+            this.cb_nhanvien.Size = new System.Drawing.Size(140, 28);
+            this.cb_nhanvien.TabIndex = 32;
+            // 
+            // cb_khach
+            // 
+            this.cb_khach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_khach.FormattingEnabled = true;
+            this.cb_khach.Location = new System.Drawing.Point(500, 60);
+            this.cb_khach.Name = "cb_khach";
+            this.cb_khach.Size = new System.Drawing.Size(140, 28);
+            this.cb_khach.TabIndex = 31;
+            // 
+            // labelX14
+            // 
+            this.labelX14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX14.Location = new System.Drawing.Point(408, 99);
+            this.labelX14.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX14.Name = "labelX14";
+            this.labelX14.Size = new System.Drawing.Size(87, 26);
+            this.labelX14.TabIndex = 30;
+            this.labelX14.Text = "Nhân viên";
+            // 
+            // labelX13
+            // 
+            this.labelX13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX13.Location = new System.Drawing.Point(408, 60);
+            this.labelX13.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(87, 26);
+            this.labelX13.TabIndex = 29;
+            this.labelX13.Text = "Tên Khách";
+            // 
             // cb_Magas
             // 
             this.cb_Magas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,7 +182,7 @@ namespace BANGAS_TN
             this.btn_lammoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_lammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lammoi.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.btn_lammoi.Location = new System.Drawing.Point(735, 149);
+            this.btn_lammoi.Location = new System.Drawing.Point(808, 151);
             this.btn_lammoi.Margin = new System.Windows.Forms.Padding(2);
             this.btn_lammoi.Name = "btn_lammoi";
             this.btn_lammoi.Size = new System.Drawing.Size(103, 44);
@@ -147,7 +193,7 @@ namespace BANGAS_TN
             // labelX12
             // 
             this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.Location = new System.Drawing.Point(408, 99);
+            this.labelX12.Location = new System.Drawing.Point(408, 140);
             this.labelX12.Margin = new System.Windows.Forms.Padding(2);
             this.labelX12.Name = "labelX12";
             this.labelX12.Size = new System.Drawing.Size(76, 26);
@@ -159,7 +205,7 @@ namespace BANGAS_TN
             this.btn_xoaHD.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_xoaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoaHD.Image = global::BANGAS_TN.Properties.Resources.XOA;
-            this.btn_xoaHD.Location = new System.Drawing.Point(735, 100);
+            this.btn_xoaHD.Location = new System.Drawing.Point(808, 102);
             this.btn_xoaHD.Margin = new System.Windows.Forms.Padding(2);
             this.btn_xoaHD.Name = "btn_xoaHD";
             this.btn_xoaHD.Size = new System.Drawing.Size(103, 44);
@@ -172,7 +218,7 @@ namespace BANGAS_TN
             this.btn_suaHD.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_suaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_suaHD.Image = global::BANGAS_TN.Properties.Resources.SUA;
-            this.btn_suaHD.Location = new System.Drawing.Point(735, 51);
+            this.btn_suaHD.Location = new System.Drawing.Point(808, 53);
             this.btn_suaHD.Margin = new System.Windows.Forms.Padding(2);
             this.btn_suaHD.Name = "btn_suaHD";
             this.btn_suaHD.Size = new System.Drawing.Size(103, 44);
@@ -185,7 +231,7 @@ namespace BANGAS_TN
             this.btn_Banhang.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_Banhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Banhang.Image = global::BANGAS_TN.Properties.Resources.sale;
-            this.btn_Banhang.Location = new System.Drawing.Point(735, 2);
+            this.btn_Banhang.Location = new System.Drawing.Point(808, 4);
             this.btn_Banhang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Banhang.Name = "btn_Banhang";
             this.btn_Banhang.Size = new System.Drawing.Size(103, 44);
@@ -412,14 +458,14 @@ namespace BANGAS_TN
             this.data_HD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_HD.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.data_HD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data_HD.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_HD.DefaultCellStyle = dataGridViewCellStyle2;
             this.data_HD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data_HD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.data_HD.Location = new System.Drawing.Point(0, 275);
@@ -482,5 +528,9 @@ namespace BANGAS_TN
         private DevComponents.DotNetBar.Controls.DataGridViewX data_HD;
         private DevComponents.DotNetBar.ButtonX btn_lammoi;
         private System.Windows.Forms.ComboBox cb_Magas;
+        private DevComponents.DotNetBar.LabelX labelX14;
+        private DevComponents.DotNetBar.LabelX labelX13;
+        private System.Windows.Forms.ComboBox cb_nhanvien;
+        private System.Windows.Forms.ComboBox cb_khach;
     }
 }
