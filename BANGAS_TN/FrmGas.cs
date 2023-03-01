@@ -163,7 +163,7 @@ namespace BANGAS_TN
                 cmd.Parameters.Add("@Mancc", SqlDbType.Int).Value = int.Parse(cb_Ncc.SelectedValue.ToString());
                 cmd.Parameters.Add("@Size", SqlDbType.NVarChar).Value = txt_SizeGAS.Text;
                 cmd.Parameters.Add("@Slton", SqlDbType.Int).Value = int.Parse(txt_SltonGAS.Text);
-                cmd.Parameters.Add("@Dgia", SqlDbType.Float).Value = float.Parse(txt_SltonGAS.Text);
+                cmd.Parameters.Add("@Dgia", SqlDbType.Float).Value = float.Parse(txt_DgiaGAS.Text);
                 cmd.ExecuteNonQuery();
                 cnn.Close();
                 ClearvaLoad();

@@ -37,7 +37,7 @@ namespace BANGAS_TN
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.txt_Magas = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.btn_lammoi = new DevComponents.DotNetBar.ButtonX();
             this.btn_banhang = new DevComponents.DotNetBar.ButtonX();
             this.check_trangthai = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
@@ -78,7 +78,7 @@ namespace BANGAS_TN
             this.groupPanel1.Controls.Add(this.labelX5);
             this.groupPanel1.Controls.Add(this.txt_Magas);
             this.groupPanel1.Controls.Add(this.labelX4);
-            this.groupPanel1.Controls.Add(this.buttonX2);
+            this.groupPanel1.Controls.Add(this.btn_lammoi);
             this.groupPanel1.Controls.Add(this.btn_banhang);
             this.groupPanel1.Controls.Add(this.check_trangthai);
             this.groupPanel1.Controls.Add(this.labelX14);
@@ -179,17 +179,18 @@ namespace BANGAS_TN
             this.labelX4.TabIndex = 34;
             this.labelX4.Text = "Mã Gas";
             // 
-            // buttonX2
+            // btn_lammoi
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.buttonX2.Location = new System.Drawing.Point(810, 124);
-            this.buttonX2.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(115, 47);
-            this.buttonX2.TabIndex = 33;
-            this.buttonX2.Text = "Làm mới";
+            this.btn_lammoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_lammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lammoi.Image = global::BANGAS_TN.Properties.Resources.THEM;
+            this.btn_lammoi.Location = new System.Drawing.Point(810, 124);
+            this.btn_lammoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_lammoi.Name = "btn_lammoi";
+            this.btn_lammoi.Size = new System.Drawing.Size(115, 47);
+            this.btn_lammoi.TabIndex = 33;
+            this.btn_lammoi.Text = "Làm mới";
+            this.btn_lammoi.Click += new System.EventHandler(this.btn_lammoi_Click);
             // 
             // btn_banhang
             // 
@@ -315,6 +316,7 @@ namespace BANGAS_TN
             this.txt_Dgia.Name = "txt_Dgia";
             this.txt_Dgia.Size = new System.Drawing.Size(124, 26);
             this.txt_Dgia.TabIndex = 20;
+            this.txt_Dgia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Dgia_KeyPress);
             // 
             // labelX8
             // 
@@ -339,6 +341,7 @@ namespace BANGAS_TN
             this.txt_Soluong.Size = new System.Drawing.Size(124, 26);
             this.txt_Soluong.TabIndex = 18;
             this.txt_Soluong.TextChanged += new System.EventHandler(this.txt_Soluong_TextChanged);
+            this.txt_Soluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Soluong_KeyPress);
             // 
             // labelX9
             // 
@@ -582,7 +585,7 @@ namespace BANGAS_TN
         private DevComponents.DotNetBar.ButtonX btn_banhang;
         private DevComponents.DotNetBar.Controls.CheckBoxX check_trangthai;
         private DevComponents.DotNetBar.LabelX labelX14;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX btn_lammoi;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_Magas;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_ghichu;

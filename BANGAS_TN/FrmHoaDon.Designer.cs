@@ -29,8 +29,9 @@ namespace BANGAS_TN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.check_isDelete = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.cb_nhanvien = new System.Windows.Forms.ComboBox();
             this.cb_khach = new System.Windows.Forms.ComboBox();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
@@ -71,6 +72,7 @@ namespace BANGAS_TN
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.check_isDelete);
             this.groupPanel1.Controls.Add(this.cb_nhanvien);
             this.groupPanel1.Controls.Add(this.cb_khach);
             this.groupPanel1.Controls.Add(this.labelX14);
@@ -130,6 +132,15 @@ namespace BANGAS_TN
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "HÓA ĐƠN";
             // 
+            // check_isDelete
+            // 
+            this.check_isDelete.Location = new System.Drawing.Point(108, 214);
+            this.check_isDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.check_isDelete.Name = "check_isDelete";
+            this.check_isDelete.Size = new System.Drawing.Size(95, 32);
+            this.check_isDelete.TabIndex = 33;
+            this.check_isDelete.Text = "Đã Xóa";
+            // 
             // cb_nhanvien
             // 
             this.cb_nhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -176,6 +187,9 @@ namespace BANGAS_TN
             this.cb_Magas.Name = "cb_Magas";
             this.cb_Magas.Size = new System.Drawing.Size(140, 28);
             this.cb_Magas.TabIndex = 28;
+            this.cb_Magas.SelectedIndexChanged += new System.EventHandler(this.cb_Magas_SelectedIndexChanged);
+            this.cb_Magas.SelectionChangeCommitted += new System.EventHandler(this.cb_Magas_SelectionChangeCommitted);
+            this.cb_Magas.SelectedValueChanged += new System.EventHandler(this.cb_Magas_SelectedValueChanged);
             // 
             // btn_lammoi
             // 
@@ -350,6 +364,7 @@ namespace BANGAS_TN
             // 
             // 
             this.txt_dongia.Border.Class = "TextBoxBorder";
+            this.txt_dongia.Enabled = false;
             this.txt_dongia.Location = new System.Drawing.Point(108, 60);
             this.txt_dongia.Margin = new System.Windows.Forms.Padding(2);
             this.txt_dongia.Name = "txt_dongia";
@@ -377,6 +392,8 @@ namespace BANGAS_TN
             this.txt_soluong.Name = "txt_soluong";
             this.txt_soluong.Size = new System.Drawing.Size(124, 26);
             this.txt_soluong.TabIndex = 7;
+            this.txt_soluong.TextChanged += new System.EventHandler(this.txt_soluong_TextChanged);
+            this.txt_soluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_soluong_KeyPress);
             // 
             // labelX4
             // 
@@ -416,6 +433,7 @@ namespace BANGAS_TN
             // 
             // 
             this.txt_tongtien.Border.Class = "TextBoxBorder";
+            this.txt_tongtien.Enabled = false;
             this.txt_tongtien.Location = new System.Drawing.Point(108, 140);
             this.txt_tongtien.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tongtien.Name = "txt_tongtien";
@@ -458,14 +476,14 @@ namespace BANGAS_TN
             this.data_HD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_HD.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.data_HD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data_HD.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_HD.DefaultCellStyle = dataGridViewCellStyle6;
             this.data_HD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data_HD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.data_HD.Location = new System.Drawing.Point(0, 275);
@@ -505,7 +523,6 @@ namespace BANGAS_TN
         private DevComponents.DotNetBar.Controls.CheckBoxX check_travo;
         private DevComponents.DotNetBar.Controls.CheckBoxX check_notien;
         private DevComponents.DotNetBar.Controls.CheckBoxX check_tratien;
-        private DevComponents.DotNetBar.Controls.CheckBoxX check_trangthai;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.LabelX labelX10;
         private DevComponents.DotNetBar.LabelX labelX9;
@@ -532,5 +549,7 @@ namespace BANGAS_TN
         private DevComponents.DotNetBar.LabelX labelX13;
         private System.Windows.Forms.ComboBox cb_nhanvien;
         private System.Windows.Forms.ComboBox cb_khach;
+        private DevComponents.DotNetBar.Controls.CheckBoxX check_isDelete;
+        private DevComponents.DotNetBar.Controls.CheckBoxX check_trangthai;
     }
 }

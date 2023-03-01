@@ -35,7 +35,8 @@ namespace BANGAS_TN
                 ondataviewGas();
                 ondataviewKH();
                 ondataviewNV();
-            }catch(Exception e2)
+            }
+            catch (Exception e2)
             {
 
             }
@@ -84,6 +85,8 @@ namespace BANGAS_TN
             txt_Manv.Text = "";
             txt_Dgia.Text = "";
             txt_ghichu.Text = "";
+            txt_Soluong.Text = "";
+            txt_Tongtien.Text = "";
             check_notien.Checked = false;
             check_tratien.Checked = false;
             check_novo.Checked = false;
@@ -156,12 +159,44 @@ namespace BANGAS_TN
             }
         }
         /// <summary>
-        /// Biến lấy số hóa đơn
+        /// Biến lấy số hóa đơn ( KHI NHẤN BÁN HÀNG )
         /// </summary>
         int laysohoaodnmoi;
         private void btn_banhang_Click(object sender, EventArgs e)
         {
-            
+            // cập nhật số tồn của gas
+            try
+            {
+
+                Runnow();
+                string s = "Select MAX(Slton) From Gas where Magas = @Magas";
+                SqlCommand cmd = new SqlCommand(s, cnn);
+                cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(txt_Magas.Text);
+                int sltonkho = (int)cmd.ExecuteScalar();
+                cnn.Close();
+                // Kiểm tra đủ sl để bán không
+                int soluongmua = int.Parse(txt_Soluong.Text);
+                if (sltonkho < soluongmua)
+                {
+                    MessageBox.Show("Không đủ gas để bán ");
+                    return;
+                }
+                else
+                {
+                    Runnow();
+                    s = "Update Gas set Slton =" + (sltonkho - soluongmua) + " where Magas = @Magas ";
+                    cmd = new SqlCommand(s, cnn);
+                    cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(txt_Magas.Text);
+                    cmd.ExecuteNonQuery();
+                    cnn.Close();
+                }
+
+            }
+            catch (Exception e3)
+            {
+                cnn.Close();
+            }
+
             // ADD HÓA ĐƠN
             try
             {
@@ -169,7 +204,7 @@ namespace BANGAS_TN
                 string s = "insert into HoaDon (Manv,Makh,NgaylapHD) values " +
                     "(@Manv,@Makh,@NgaylapHD)";
                 SqlCommand cmd = new SqlCommand(s, cnn);
-                cmd.Parameters.Add("@Manv", SqlDbType.NVarChar).Value = int.Parse(txt_Manv.Text);
+                cmd.Parameters.Add("@Manv", SqlDbType.Int).Value = int.Parse(txt_Manv.Text);
                 cmd.Parameters.Add("@Makh", SqlDbType.Int).Value = int.Parse(txt_Makh.Text);
                 cmd.Parameters.Add("@NgaylapHD", SqlDbType.DateTime).Value = DateTime.Now;
                 cmd.ExecuteNonQuery();
@@ -180,14 +215,14 @@ namespace BANGAS_TN
                 cmd = new SqlCommand(s, cnn);
                 laysohoaodnmoi = (int)cmd.ExecuteScalar();
                 cnn.Close();
-                
+
 
             }
             catch (Exception e2)
             {
                 cnn.Close();
-                MessageBox.Show("Vui Lòng Kiểm Tra Lại Dữ Liệu nhập ! ");
             }
+
             //ADD CHI TIẾT HÓA ĐƠN
             try
             {
@@ -213,7 +248,7 @@ namespace BANGAS_TN
                 this.Close();
 
             }
-            catch (Exception e2)
+            catch (Exception e4)
             {
                 cnn.Close();
                 MessageBox.Show("Vui Lòng Kiểm Tra Lại Dữ Liệu nhập ! ");
@@ -227,7 +262,7 @@ namespace BANGAS_TN
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     txt_Makh.Text = Convert.ToString(data_khachang.CurrentRow.Cells["Makh"].Value);
- 
+
                 }
             }
             catch (Exception e2)
@@ -258,7 +293,7 @@ namespace BANGAS_TN
                 {
                     double thanhtien = 0;
                     txt_Magas.Text = Convert.ToString(data_gas.CurrentRow.Cells["Magas"].Value);
-                    txt_Dgia.Text= Convert.ToString(data_gas.CurrentRow.Cells["Dgia"].Value);
+                    txt_Dgia.Text = Convert.ToString(data_gas.CurrentRow.Cells["Dgia"].Value);
                     txt_Soluong.Text = "1";
                     thanhtien = 1000 * double.Parse(txt_Dgia.Text);
                     txt_Tongtien.Text = thanhtien.ToString();
@@ -277,11 +312,14 @@ namespace BANGAS_TN
             {
                 txt_Tongtien.Text = (int.Parse(txt_Soluong.Text) * (1000 * float.Parse(txt_Dgia.Text))).ToString();
 
-            }catch(Exception e2)
+            }
+            catch (Exception e2)
             {
 
             }
         }
+
+
         // các nút check
         private void check_tratien_CheckedChanged(object sender, EventArgs e)
         {
@@ -295,12 +333,49 @@ namespace BANGAS_TN
 
         private void check_travo_CheckedChanged(object sender, EventArgs e)
         {
-            check_novo.Checked= false;
+            check_novo.Checked = false;
         }
 
         private void check_novo_CheckedChanged(object sender, EventArgs e)
         {
             check_travo.Checked = false;
+        }
+
+
+        // chỉ cho nhập số 
+        private void txt_Dgia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+    (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_Soluong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+    (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btn_lammoi_Click(object sender, EventArgs e)
+        {
+            ClearvaLoad();
         }
     }
 }
