@@ -33,79 +33,80 @@ namespace BANGAS_TN
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.checkBoxX1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.txt_ghichu = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.txt_Magas = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.btn_lammoi = new DevComponents.DotNetBar.ButtonX();
+            this.btn_banhang = new DevComponents.DotNetBar.ButtonX();
+            this.check_trangthai = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.checkBoxX5 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.checkBoxX4 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.checkBoxX3 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.checkBoxX2 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.check_novo = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.check_travo = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.check_notien = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.check_tratien = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Dgia = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Soluong = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtDiachi = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Manv = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btn_Mahd = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Makh = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_Tongtien = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.dataGridViewX2 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.dataGridViewX3 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.data_khachang = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.data_nhanvien = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.data_gas = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.groupPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_khachang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_nhanvien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_gas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.textBoxX7);
+            this.groupPanel1.Controls.Add(this.txt_ghichu);
+            this.groupPanel1.Controls.Add(this.labelX5);
+            this.groupPanel1.Controls.Add(this.txt_Magas);
             this.groupPanel1.Controls.Add(this.labelX4);
-            this.groupPanel1.Controls.Add(this.buttonX2);
-            this.groupPanel1.Controls.Add(this.buttonX1);
-            this.groupPanel1.Controls.Add(this.checkBoxX1);
+            this.groupPanel1.Controls.Add(this.btn_lammoi);
+            this.groupPanel1.Controls.Add(this.btn_banhang);
+            this.groupPanel1.Controls.Add(this.check_trangthai);
             this.groupPanel1.Controls.Add(this.labelX14);
-            this.groupPanel1.Controls.Add(this.checkBoxX5);
-            this.groupPanel1.Controls.Add(this.checkBoxX4);
-            this.groupPanel1.Controls.Add(this.checkBoxX3);
-            this.groupPanel1.Controls.Add(this.checkBoxX2);
+            this.groupPanel1.Controls.Add(this.check_novo);
+            this.groupPanel1.Controls.Add(this.check_travo);
+            this.groupPanel1.Controls.Add(this.check_notien);
+            this.groupPanel1.Controls.Add(this.check_tratien);
             this.groupPanel1.Controls.Add(this.labelX10);
             this.groupPanel1.Controls.Add(this.labelX11);
             this.groupPanel1.Controls.Add(this.labelX12);
             this.groupPanel1.Controls.Add(this.labelX13);
-            this.groupPanel1.Controls.Add(this.textBoxX5);
+            this.groupPanel1.Controls.Add(this.txt_Dgia);
             this.groupPanel1.Controls.Add(this.labelX8);
-            this.groupPanel1.Controls.Add(this.textBoxX6);
+            this.groupPanel1.Controls.Add(this.txt_Soluong);
             this.groupPanel1.Controls.Add(this.labelX9);
-            this.groupPanel1.Controls.Add(this.textBoxX3);
-            this.groupPanel1.Controls.Add(this.textBoxX2);
-            this.groupPanel1.Controls.Add(this.textBoxX1);
-            this.groupPanel1.Controls.Add(this.textBoxX4);
-            this.groupPanel1.Controls.Add(this.txtDiachi);
+            this.groupPanel1.Controls.Add(this.txt_Manv);
+            this.groupPanel1.Controls.Add(this.btn_Mahd);
+            this.groupPanel1.Controls.Add(this.txt_Makh);
+            this.groupPanel1.Controls.Add(this.txt_Tongtien);
             this.groupPanel1.Controls.Add(this.labelX7);
-            this.groupPanel1.Controls.Add(this.labelX6);
             this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
+            this.groupPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1282, 258);
+            this.groupPanel1.Size = new System.Drawing.Size(1485, 210);
             // 
             // 
             // 
@@ -130,264 +131,333 @@ namespace BANGAS_TN
             this.groupPanel1.Text = "CHI TIẾT HÓA ĐƠN";
             this.groupPanel1.Click += new System.EventHandler(this.groupPanel1_Click);
             // 
-            // buttonX2
+            // txt_ghichu
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.buttonX2.Location = new System.Drawing.Point(1080, 152);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(125, 39);
-            this.buttonX2.TabIndex = 33;
-            this.buttonX2.Text = "Làm mới";
             // 
-            // buttonX1
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.Image = global::BANGAS_TN.Properties.Resources.sale1;
-            this.buttonX1.Location = new System.Drawing.Point(935, 152);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(139, 39);
-            this.buttonX1.TabIndex = 32;
-            this.buttonX1.Text = "Bán hàng";
             // 
-            // checkBoxX1
+            this.txt_ghichu.Border.Class = "TextBoxBorder";
+            this.txt_ghichu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ghichu.Location = new System.Drawing.Point(782, 61);
+            this.txt_ghichu.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ghichu.Name = "txt_ghichu";
+            this.txt_ghichu.Size = new System.Drawing.Size(181, 52);
+            this.txt_ghichu.TabIndex = 37;
             // 
-            this.checkBoxX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxX1.Location = new System.Drawing.Point(168, 179);
-            this.checkBoxX1.Name = "checkBoxX1";
-            this.checkBoxX1.Size = new System.Drawing.Size(24, 32);
-            this.checkBoxX1.TabIndex = 31;
+            // labelX5
+            // 
+            this.labelX5.Enabled = false;
+            this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX5.Location = new System.Drawing.Point(673, 61);
+            this.labelX5.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.Size = new System.Drawing.Size(94, 51);
+            this.labelX5.TabIndex = 36;
+            this.labelX5.Text = "Ghi chú";
+            // 
+            // txt_Magas
+            // 
+            // 
+            // 
+            // 
+            this.txt_Magas.Border.Class = "TextBoxBorder";
+            this.txt_Magas.Enabled = false;
+            this.txt_Magas.Location = new System.Drawing.Point(439, 26);
+            this.txt_Magas.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Magas.Name = "txt_Magas";
+            this.txt_Magas.Size = new System.Drawing.Size(126, 26);
+            this.txt_Magas.TabIndex = 35;
+            // 
+            // labelX4
+            // 
+            this.labelX4.Enabled = false;
+            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX4.Location = new System.Drawing.Point(351, 24);
+            this.labelX4.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(76, 26);
+            this.labelX4.TabIndex = 34;
+            this.labelX4.Text = "Mã Gas";
+            // 
+            // btn_lammoi
+            // 
+            this.btn_lammoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_lammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lammoi.Image = global::BANGAS_TN.Properties.Resources.THEM;
+            this.btn_lammoi.Location = new System.Drawing.Point(810, 124);
+            this.btn_lammoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_lammoi.Name = "btn_lammoi";
+            this.btn_lammoi.Size = new System.Drawing.Size(115, 47);
+            this.btn_lammoi.TabIndex = 33;
+            this.btn_lammoi.Text = "Làm mới";
+            this.btn_lammoi.Click += new System.EventHandler(this.btn_lammoi_Click);
+            // 
+            // btn_banhang
+            // 
+            this.btn_banhang.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_banhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_banhang.Image = global::BANGAS_TN.Properties.Resources.sale1;
+            this.btn_banhang.Location = new System.Drawing.Point(691, 124);
+            this.btn_banhang.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_banhang.Name = "btn_banhang";
+            this.btn_banhang.Size = new System.Drawing.Size(115, 47);
+            this.btn_banhang.TabIndex = 32;
+            this.btn_banhang.Text = "Bán hàng";
+            this.btn_banhang.Click += new System.EventHandler(this.btn_banhang_Click);
+            // 
+            // check_trangthai
+            // 
+            this.check_trangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_trangthai.Location = new System.Drawing.Point(126, 121);
+            this.check_trangthai.Margin = new System.Windows.Forms.Padding(2);
+            this.check_trangthai.Name = "check_trangthai";
+            this.check_trangthai.Size = new System.Drawing.Size(18, 26);
+            this.check_trangthai.TabIndex = 31;
             // 
             // labelX14
             // 
             this.labelX14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX14.Location = new System.Drawing.Point(22, 179);
+            this.labelX14.Location = new System.Drawing.Point(16, 121);
+            this.labelX14.Margin = new System.Windows.Forms.Padding(2);
             this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(99, 32);
+            this.labelX14.Size = new System.Drawing.Size(74, 26);
             this.labelX14.TabIndex = 30;
             this.labelX14.Text = "Trạng thái";
             // 
-            // checkBoxX5
+            // check_novo
             // 
-            this.checkBoxX5.Location = new System.Drawing.Point(801, 191);
-            this.checkBoxX5.Name = "checkBoxX5";
-            this.checkBoxX5.Size = new System.Drawing.Size(72, 32);
-            this.checkBoxX5.TabIndex = 29;
+            this.check_novo.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.check_novo.Location = new System.Drawing.Point(601, 155);
+            this.check_novo.Margin = new System.Windows.Forms.Padding(2);
+            this.check_novo.Name = "check_novo";
+            this.check_novo.Size = new System.Drawing.Size(54, 26);
+            this.check_novo.TabIndex = 29;
+            this.check_novo.CheckedChanged += new System.EventHandler(this.check_novo_CheckedChanged);
             // 
-            // checkBoxX4
+            // check_travo
             // 
-            this.checkBoxX4.Location = new System.Drawing.Point(801, 149);
-            this.checkBoxX4.Name = "checkBoxX4";
-            this.checkBoxX4.Size = new System.Drawing.Size(72, 32);
-            this.checkBoxX4.TabIndex = 28;
+            this.check_travo.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.check_travo.Location = new System.Drawing.Point(601, 121);
+            this.check_travo.Margin = new System.Windows.Forms.Padding(2);
+            this.check_travo.Name = "check_travo";
+            this.check_travo.Size = new System.Drawing.Size(54, 26);
+            this.check_travo.TabIndex = 28;
+            this.check_travo.CheckedChanged += new System.EventHandler(this.check_travo_CheckedChanged);
             // 
-            // checkBoxX3
+            // check_notien
             // 
-            this.checkBoxX3.Location = new System.Drawing.Point(589, 191);
-            this.checkBoxX3.Name = "checkBoxX3";
-            this.checkBoxX3.Size = new System.Drawing.Size(71, 32);
-            this.checkBoxX3.TabIndex = 27;
+            this.check_notien.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.check_notien.Location = new System.Drawing.Point(442, 155);
+            this.check_notien.Margin = new System.Windows.Forms.Padding(2);
+            this.check_notien.Name = "check_notien";
+            this.check_notien.Size = new System.Drawing.Size(53, 26);
+            this.check_notien.TabIndex = 27;
+            this.check_notien.CheckedChanged += new System.EventHandler(this.check_notien_CheckedChanged);
             // 
-            // checkBoxX2
+            // check_tratien
             // 
-            this.checkBoxX2.Location = new System.Drawing.Point(589, 149);
-            this.checkBoxX2.Name = "checkBoxX2";
-            this.checkBoxX2.Size = new System.Drawing.Size(71, 32);
-            this.checkBoxX2.TabIndex = 26;
+            this.check_tratien.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.check_tratien.Location = new System.Drawing.Point(442, 121);
+            this.check_tratien.Margin = new System.Windows.Forms.Padding(2);
+            this.check_tratien.Name = "check_tratien";
+            this.check_tratien.Size = new System.Drawing.Size(53, 26);
+            this.check_tratien.TabIndex = 26;
+            this.check_tratien.CheckedChanged += new System.EventHandler(this.check_tratien_CheckedChanged);
             // 
             // labelX10
             // 
             this.labelX10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX10.Location = new System.Drawing.Point(681, 191);
+            this.labelX10.Location = new System.Drawing.Point(511, 155);
+            this.labelX10.Margin = new System.Windows.Forms.Padding(2);
             this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(102, 32);
+            this.labelX10.Size = new System.Drawing.Size(76, 26);
             this.labelX10.TabIndex = 25;
             this.labelX10.Text = "Nợ vỏ";
             // 
             // labelX11
             // 
             this.labelX11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX11.Location = new System.Drawing.Point(681, 149);
+            this.labelX11.Location = new System.Drawing.Point(511, 121);
+            this.labelX11.Margin = new System.Windows.Forms.Padding(2);
             this.labelX11.Name = "labelX11";
-            this.labelX11.Size = new System.Drawing.Size(102, 32);
+            this.labelX11.Size = new System.Drawing.Size(76, 26);
             this.labelX11.TabIndex = 24;
             this.labelX11.Text = "Trả vỏ";
             // 
             // labelX12
             // 
             this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.Location = new System.Drawing.Point(468, 191);
+            this.labelX12.Location = new System.Drawing.Point(351, 155);
+            this.labelX12.Margin = new System.Windows.Forms.Padding(2);
             this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(102, 32);
+            this.labelX12.Size = new System.Drawing.Size(76, 26);
             this.labelX12.TabIndex = 23;
             this.labelX12.Text = "Nợ tiền";
             // 
             // labelX13
             // 
             this.labelX13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX13.Location = new System.Drawing.Point(468, 149);
+            this.labelX13.Location = new System.Drawing.Point(351, 121);
+            this.labelX13.Margin = new System.Windows.Forms.Padding(2);
             this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(102, 32);
+            this.labelX13.Size = new System.Drawing.Size(76, 26);
             this.labelX13.TabIndex = 22;
             this.labelX13.Text = "Trả tiền";
             // 
-            // textBoxX5
+            // txt_Dgia
             // 
             // 
             // 
             // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Enabled = false;
-            this.textBoxX5.Location = new System.Drawing.Point(585, 68);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.Size = new System.Drawing.Size(166, 32);
-            this.textBoxX5.TabIndex = 20;
+            this.txt_Dgia.Border.Class = "TextBoxBorder";
+            this.txt_Dgia.Enabled = false;
+            this.txt_Dgia.Location = new System.Drawing.Point(439, 55);
+            this.txt_Dgia.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Dgia.Name = "txt_Dgia";
+            this.txt_Dgia.Size = new System.Drawing.Size(124, 26);
+            this.txt_Dgia.TabIndex = 20;
+            this.txt_Dgia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Dgia_KeyPress);
             // 
             // labelX8
             // 
             this.labelX8.Enabled = false;
             this.labelX8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX8.Location = new System.Drawing.Point(468, 68);
+            this.labelX8.Location = new System.Drawing.Point(351, 55);
+            this.labelX8.Margin = new System.Windows.Forms.Padding(2);
             this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(102, 32);
+            this.labelX8.Size = new System.Drawing.Size(76, 26);
             this.labelX8.TabIndex = 19;
             this.labelX8.Text = "Đơn giá";
             // 
-            // textBoxX6
+            // txt_Soluong
             // 
             // 
             // 
             // 
-            this.textBoxX6.Border.Class = "TextBoxBorder";
-            this.textBoxX6.Enabled = false;
-            this.textBoxX6.Location = new System.Drawing.Point(585, 110);
-            this.textBoxX6.Name = "textBoxX6";
-            this.textBoxX6.Size = new System.Drawing.Size(166, 32);
-            this.textBoxX6.TabIndex = 18;
+            this.txt_Soluong.Border.Class = "TextBoxBorder";
+            this.txt_Soluong.Location = new System.Drawing.Point(439, 89);
+            this.txt_Soluong.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Soluong.Name = "txt_Soluong";
+            this.txt_Soluong.Size = new System.Drawing.Size(124, 26);
+            this.txt_Soluong.TabIndex = 18;
+            this.txt_Soluong.TextChanged += new System.EventHandler(this.txt_Soluong_TextChanged);
+            this.txt_Soluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Soluong_KeyPress);
             // 
             // labelX9
             // 
             this.labelX9.Enabled = false;
             this.labelX9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX9.Location = new System.Drawing.Point(467, 110);
+            this.labelX9.Location = new System.Drawing.Point(350, 89);
+            this.labelX9.Margin = new System.Windows.Forms.Padding(2);
             this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(102, 32);
+            this.labelX9.Size = new System.Drawing.Size(76, 26);
             this.labelX9.TabIndex = 17;
             this.labelX9.Text = "Số lượng";
             // 
-            // textBoxX3
+            // txt_Manv
             // 
             // 
             // 
             // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Enabled = false;
-            this.textBoxX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX3.Location = new System.Drawing.Point(168, 111);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.Size = new System.Drawing.Size(139, 29);
-            this.textBoxX3.TabIndex = 16;
+            this.txt_Manv.Border.Class = "TextBoxBorder";
+            this.txt_Manv.Enabled = false;
+            this.txt_Manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Manv.Location = new System.Drawing.Point(126, 90);
+            this.txt_Manv.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Manv.Name = "txt_Manv";
+            this.txt_Manv.Size = new System.Drawing.Size(104, 24);
+            this.txt_Manv.TabIndex = 16;
             // 
-            // textBoxX2
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Enabled = false;
-            this.textBoxX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX2.Location = new System.Drawing.Point(168, 38);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.Size = new System.Drawing.Size(139, 29);
-            this.textBoxX2.TabIndex = 15;
-            // 
-            // textBoxX1
+            // btn_Mahd
             // 
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Enabled = false;
-            this.textBoxX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(168, 74);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(139, 29);
-            this.textBoxX1.TabIndex = 14;
+            this.btn_Mahd.Border.Class = "TextBoxBorder";
+            this.btn_Mahd.Enabled = false;
+            this.btn_Mahd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mahd.Location = new System.Drawing.Point(126, 31);
+            this.btn_Mahd.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Mahd.Name = "btn_Mahd";
+            this.btn_Mahd.Size = new System.Drawing.Size(104, 24);
+            this.btn_Mahd.TabIndex = 15;
             // 
-            // textBoxX4
+            // txt_Makh
             // 
             // 
             // 
             // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Enabled = false;
-            this.textBoxX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX4.Location = new System.Drawing.Point(1043, 39);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.Size = new System.Drawing.Size(191, 29);
-            this.textBoxX4.TabIndex = 13;
+            this.txt_Makh.Border.Class = "TextBoxBorder";
+            this.txt_Makh.Enabled = false;
+            this.txt_Makh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Makh.Location = new System.Drawing.Point(126, 60);
+            this.txt_Makh.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Makh.Name = "txt_Makh";
+            this.txt_Makh.Size = new System.Drawing.Size(104, 24);
+            this.txt_Makh.TabIndex = 14;
             // 
-            // txtDiachi
+            // txt_Tongtien
             // 
-            this.txtDiachi.Enabled = false;
-            this.txtDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiachi.Location = new System.Drawing.Point(168, 145);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(269, 29);
-            this.txtDiachi.TabIndex = 12;
+            // 
+            // 
+            // 
+            this.txt_Tongtien.Border.Class = "TextBoxBorder";
+            this.txt_Tongtien.Enabled = false;
+            this.txt_Tongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Tongtien.Location = new System.Drawing.Point(782, 32);
+            this.txt_Tongtien.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Tongtien.Name = "txt_Tongtien";
+            this.txt_Tongtien.Size = new System.Drawing.Size(143, 24);
+            this.txt_Tongtien.TabIndex = 13;
             // 
             // labelX7
             // 
             this.labelX7.Enabled = false;
             this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX7.Location = new System.Drawing.Point(897, 39);
+            this.labelX7.Location = new System.Drawing.Point(673, 32);
+            this.labelX7.Margin = new System.Windows.Forms.Padding(2);
             this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(125, 28);
+            this.labelX7.Size = new System.Drawing.Size(94, 23);
             this.labelX7.TabIndex = 9;
             this.labelX7.Text = "Tổng tiền";
-            // 
-            // labelX6
-            // 
-            this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX6.Location = new System.Drawing.Point(22, 145);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(99, 28);
-            this.labelX6.TabIndex = 8;
-            this.labelX6.Text = "Địa chỉ";
             // 
             // labelX3
             // 
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(22, 38);
+            this.labelX3.Location = new System.Drawing.Point(16, 31);
+            this.labelX3.Margin = new System.Windows.Forms.Padding(2);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(99, 28);
+            this.labelX3.Size = new System.Drawing.Size(74, 23);
             this.labelX3.TabIndex = 2;
             this.labelX3.Text = "Mã HĐ";
             // 
             // labelX2
             // 
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(22, 110);
+            this.labelX2.Location = new System.Drawing.Point(16, 89);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(2);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(99, 28);
+            this.labelX2.Size = new System.Drawing.Size(74, 23);
             this.labelX2.TabIndex = 1;
             this.labelX2.Text = "Mã NV";
             // 
             // labelX1
             // 
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(22, 72);
+            this.labelX1.Location = new System.Drawing.Point(16, 58);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(99, 28);
+            this.labelX1.Size = new System.Drawing.Size(74, 23);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "Mã KH";
             // 
-            // dataGridViewX1
+            // data_khachang
             // 
-            this.dataGridViewX1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_khachang.AllowUserToAddRows = false;
+            this.data_khachang.AllowUserToDeleteRows = false;
+            this.data_khachang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_khachang.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.data_khachang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -395,20 +465,27 @@ namespace BANGAS_TN
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(0, 258);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.RowHeadersWidth = 51;
-            this.dataGridViewX1.RowTemplate.Height = 24;
-            this.dataGridViewX1.Size = new System.Drawing.Size(376, 545);
-            this.dataGridViewX1.TabIndex = 1;
+            this.data_khachang.DefaultCellStyle = dataGridViewCellStyle1;
+            this.data_khachang.Dock = System.Windows.Forms.DockStyle.Left;
+            this.data_khachang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.data_khachang.Location = new System.Drawing.Point(0, 210);
+            this.data_khachang.Margin = new System.Windows.Forms.Padding(2);
+            this.data_khachang.Name = "data_khachang";
+            this.data_khachang.ReadOnly = true;
+            this.data_khachang.RowHeadersWidth = 51;
+            this.data_khachang.RowTemplate.Height = 24;
+            this.data_khachang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_khachang.Size = new System.Drawing.Size(485, 402);
+            this.data_khachang.TabIndex = 1;
+            this.data_khachang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_khachang_CellClick);
             // 
-            // dataGridViewX2
+            // data_nhanvien
             // 
-            this.dataGridViewX2.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_nhanvien.AllowUserToAddRows = false;
+            this.data_nhanvien.AllowUserToDeleteRows = false;
+            this.data_nhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_nhanvien.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.data_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -416,20 +493,27 @@ namespace BANGAS_TN
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewX2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX2.Location = new System.Drawing.Point(376, 258);
-            this.dataGridViewX2.Name = "dataGridViewX2";
-            this.dataGridViewX2.RowHeadersWidth = 51;
-            this.dataGridViewX2.RowTemplate.Height = 24;
-            this.dataGridViewX2.Size = new System.Drawing.Size(458, 545);
-            this.dataGridViewX2.TabIndex = 2;
+            this.data_nhanvien.DefaultCellStyle = dataGridViewCellStyle2;
+            this.data_nhanvien.Dock = System.Windows.Forms.DockStyle.Left;
+            this.data_nhanvien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.data_nhanvien.Location = new System.Drawing.Point(485, 210);
+            this.data_nhanvien.Margin = new System.Windows.Forms.Padding(2);
+            this.data_nhanvien.Name = "data_nhanvien";
+            this.data_nhanvien.ReadOnly = true;
+            this.data_nhanvien.RowHeadersWidth = 51;
+            this.data_nhanvien.RowTemplate.Height = 24;
+            this.data_nhanvien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_nhanvien.Size = new System.Drawing.Size(557, 402);
+            this.data_nhanvien.TabIndex = 2;
+            this.data_nhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_nhanvien_CellClick);
             // 
-            // dataGridViewX3
+            // data_gas
             // 
-            this.dataGridViewX3.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridViewX3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_gas.AllowUserToAddRows = false;
+            this.data_gas.AllowUserToDeleteRows = false;
+            this.data_gas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_gas.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.data_gas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -437,53 +521,37 @@ namespace BANGAS_TN
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewX3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridViewX3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX3.Location = new System.Drawing.Point(833, 258);
-            this.dataGridViewX3.Name = "dataGridViewX3";
-            this.dataGridViewX3.RowHeadersWidth = 51;
-            this.dataGridViewX3.RowTemplate.Height = 24;
-            this.dataGridViewX3.Size = new System.Drawing.Size(449, 545);
-            this.dataGridViewX3.TabIndex = 3;
-            // 
-            // textBoxX7
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX7.Border.Class = "TextBoxBorder";
-            this.textBoxX7.Enabled = false;
-            this.textBoxX7.Location = new System.Drawing.Point(585, 32);
-            this.textBoxX7.Name = "textBoxX7";
-            this.textBoxX7.Size = new System.Drawing.Size(168, 32);
-            this.textBoxX7.TabIndex = 35;
-            // 
-            // labelX4
-            // 
-            this.labelX4.Enabled = false;
-            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(468, 30);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(102, 32);
-            this.labelX4.TabIndex = 34;
-            this.labelX4.Text = "Mã Gas";
+            this.data_gas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.data_gas.Dock = System.Windows.Forms.DockStyle.Right;
+            this.data_gas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.data_gas.Location = new System.Drawing.Point(1039, 210);
+            this.data_gas.Margin = new System.Windows.Forms.Padding(2);
+            this.data_gas.Name = "data_gas";
+            this.data_gas.ReadOnly = true;
+            this.data_gas.RowHeadersWidth = 51;
+            this.data_gas.RowTemplate.Height = 24;
+            this.data_gas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_gas.Size = new System.Drawing.Size(446, 402);
+            this.data_gas.TabIndex = 3;
+            this.data_gas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_gas_CellClick);
             // 
             // CTHD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 803);
-            this.Controls.Add(this.dataGridViewX3);
-            this.Controls.Add(this.dataGridViewX2);
-            this.Controls.Add(this.dataGridViewX1);
+            this.ClientSize = new System.Drawing.Size(1485, 612);
+            this.Controls.Add(this.data_gas);
+            this.Controls.Add(this.data_nhanvien);
+            this.Controls.Add(this.data_khachang);
             this.Controls.Add(this.groupPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CTHD";
             this.Text = "CTHD";
+            this.Load += new System.EventHandler(this.CTHD_Load);
             this.groupPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_khachang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_nhanvien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_gas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -491,36 +559,36 @@ namespace BANGAS_TN
         #endregion
 
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtDiachi;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Tongtien;
         private DevComponents.DotNetBar.LabelX labelX7;
-        private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX2;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
+        private DevComponents.DotNetBar.Controls.DataGridViewX data_khachang;
+        private DevComponents.DotNetBar.Controls.DataGridViewX data_nhanvien;
+        private DevComponents.DotNetBar.Controls.DataGridViewX data_gas;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Manv;
+        private DevComponents.DotNetBar.Controls.TextBoxX btn_Mahd;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Makh;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Dgia;
         private DevComponents.DotNetBar.LabelX labelX8;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Soluong;
         private DevComponents.DotNetBar.LabelX labelX9;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX5;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX4;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX3;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX2;
+        private DevComponents.DotNetBar.Controls.CheckBoxX check_novo;
+        private DevComponents.DotNetBar.Controls.CheckBoxX check_travo;
+        private DevComponents.DotNetBar.Controls.CheckBoxX check_notien;
+        private DevComponents.DotNetBar.Controls.CheckBoxX check_tratien;
         private DevComponents.DotNetBar.LabelX labelX10;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.LabelX labelX12;
         private DevComponents.DotNetBar.LabelX labelX13;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
+        private DevComponents.DotNetBar.ButtonX btn_banhang;
+        private DevComponents.DotNetBar.Controls.CheckBoxX check_trangthai;
         private DevComponents.DotNetBar.LabelX labelX14;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX7;
+        private DevComponents.DotNetBar.ButtonX btn_lammoi;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Magas;
         private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_ghichu;
+        private DevComponents.DotNetBar.LabelX labelX5;
     }
 }
