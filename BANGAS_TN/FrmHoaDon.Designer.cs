@@ -29,9 +29,11 @@ namespace BANGAS_TN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.check_isDelete = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.lb_delete = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.cb_nhanvien = new System.Windows.Forms.ComboBox();
             this.cb_khach = new System.Windows.Forms.ComboBox();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
@@ -73,6 +75,8 @@ namespace BANGAS_TN
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.check_isDelete);
+            this.groupPanel1.Controls.Add(this.lb_delete);
+            this.groupPanel1.Controls.Add(this.label1);
             this.groupPanel1.Controls.Add(this.cb_nhanvien);
             this.groupPanel1.Controls.Add(this.cb_khach);
             this.groupPanel1.Controls.Add(this.labelX14);
@@ -134,12 +138,32 @@ namespace BANGAS_TN
             // 
             // check_isDelete
             // 
-            this.check_isDelete.Location = new System.Drawing.Point(108, 214);
+            this.check_isDelete.Enabled = false;
+            this.check_isDelete.Location = new System.Drawing.Point(254, 220);
             this.check_isDelete.Margin = new System.Windows.Forms.Padding(2);
             this.check_isDelete.Name = "check_isDelete";
-            this.check_isDelete.Size = new System.Drawing.Size(95, 32);
-            this.check_isDelete.TabIndex = 33;
-            this.check_isDelete.Text = "Đã Xóa";
+            this.check_isDelete.Size = new System.Drawing.Size(28, 26);
+            this.check_isDelete.TabIndex = 36;
+            // 
+            // lb_delete
+            // 
+            this.lb_delete.AutoSize = true;
+            this.lb_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_delete.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lb_delete.Location = new System.Drawing.Point(287, 223);
+            this.lb_delete.Name = "lb_delete";
+            this.lb_delete.Size = new System.Drawing.Size(24, 20);
+            this.lb_delete.TabIndex = 35;
+            this.lb_delete.Text = "...";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "label1";
             // 
             // cb_nhanvien
             // 
@@ -476,14 +500,14 @@ namespace BANGAS_TN
             this.data_HD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_HD.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.data_HD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data_HD.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_HD.DefaultCellStyle = dataGridViewCellStyle1;
             this.data_HD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data_HD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.data_HD.Location = new System.Drawing.Point(0, 275);
@@ -510,6 +534,7 @@ namespace BANGAS_TN
             this.Text = "FrmHoaDon";
             this.Load += new System.EventHandler(this.FrmHoaDon_Load);
             this.groupPanel1.ResumeLayout(false);
+            this.groupPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_HD)).EndInit();
             this.ResumeLayout(false);
 
@@ -549,7 +574,9 @@ namespace BANGAS_TN
         private DevComponents.DotNetBar.LabelX labelX13;
         private System.Windows.Forms.ComboBox cb_nhanvien;
         private System.Windows.Forms.ComboBox cb_khach;
-        private DevComponents.DotNetBar.Controls.CheckBoxX check_isDelete;
         private DevComponents.DotNetBar.Controls.CheckBoxX check_trangthai;
+        private System.Windows.Forms.Label lb_delete;
+        private System.Windows.Forms.Label label1;
+        private DevComponents.DotNetBar.Controls.CheckBoxX check_isDelete;
     }
 }

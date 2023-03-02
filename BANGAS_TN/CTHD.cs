@@ -227,8 +227,8 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "insert into CTHD (Mahd,Magas,Dgia,Soluong,Tongtien,Ghichu,Tratien,Notien,Travo,Novo,Trangthai) values " +
-                    "(@Mahd,@Magas,@Dgia,@Soluong,@Tongtien,@Ghichu,@Tratien,@Notien,@Travo,@Novo,@Trangthai)";
+                string s = "insert into CTHD (Mahd,Magas,Dgia,Soluong,Tongtien,Ghichu,Tratien,Notien,Travo,Novo,Trangthai,isDelete) values " +
+                    "(@Mahd,@Magas,@Dgia,@Soluong,@Tongtien,@Ghichu,@Tratien,@Notien,@Travo,@Novo,@Trangthai,@isDelete)";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 cmd.Parameters.Add("@Mahd", SqlDbType.Int).Value = laysohoaodnmoi;
                 cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(txt_Magas.Text);
@@ -241,6 +241,7 @@ namespace BANGAS_TN
                 cmd.Parameters.Add("@Travo", SqlDbType.Bit).Value = check_travo.Checked;
                 cmd.Parameters.Add("@Novo", SqlDbType.Bit).Value = check_novo.Checked;
                 cmd.Parameters.Add("@Trangthai", SqlDbType.Bit).Value = check_trangthai.Checked;
+                cmd.Parameters.Add("@isDelete", SqlDbType.Bit).Value = false;
                 cmd.ExecuteNonQuery();
                 cnn.Close();
                 ClearvaLoad();

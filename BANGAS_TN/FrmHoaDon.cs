@@ -126,6 +126,7 @@ namespace BANGAS_TN
             check_travo.Checked = false;
             check_trangthai.Checked = false;
             check_isDelete.Checked = false;
+            lb_delete.Text = ". . .";
             ComboMaGas();
             ComboKhachhang();
             ComboNhanVien();
@@ -273,12 +274,16 @@ namespace BANGAS_TN
                     check_novo.Checked = Convert.ToBoolean(data_HD.CurrentRow.Cells["Novo"].Value);
                     check_travo.Checked = Convert.ToBoolean(data_HD.CurrentRow.Cells["Travo"].Value);
                     check_trangthai.Checked = Convert.ToBoolean(data_HD.CurrentRow.Cells["Trangthai"].Value);
+                    check_isDelete.Checked =  Convert.ToBoolean(data_HD.CurrentRow.Cells["isDelete"].Value);
+                    // MÓC TỪ BẢN KHÁC
                     cb_khach.SelectedValue = Convert.ToString(data_HD.CurrentRow.Cells["Makh"].Value);
                     cb_nhanvien.SelectedValue = Convert.ToString(data_HD.CurrentRow.Cells["Manv"].Value);
-                    check_isDelete.Checked = Convert.ToBoolean(data_HD.CurrentRow.Cells["isDelete"].Value);
+                    lb_delete.Text = "Hóa đơn này còn tồn tại!";
+
                     if (check_isDelete.Checked == true)
                     {
                         btn_suaHD.Enabled = false;
+                        lb_delete.Text = "Hóa đơn này đã bị xóa!";
                     }
                 }
             }
