@@ -127,12 +127,19 @@ namespace BANGAS_TN
             check_trangthai.Checked = false;
             check_isDelete.Checked = false;
             lb_delete.Text = ". . .";
+            txt_timkiem.Text = "";
             ComboMaGas();
             ComboKhachhang();
             ComboNhanVien();
             dt.Clear();
-            da.Fill(dt);
+            ondataviewHoaDon();
             btn_suaHD.Enabled = false;
+
+            // refresh Ngày lọc 
+            txt_ngay.Text = "";
+            txt_nam.Text = "";
+            txt_thang.Text = "";
+
         }
 
         // BIẾN GAS THU HỒI 
@@ -362,7 +369,7 @@ namespace BANGAS_TN
         }
 
 
-        // Khi các giá trị thay đổi
+        // Khi các giá trị số lượng thay đổi
         private void txt_soluong_TextChanged(object sender, EventArgs e)
         {
             try
@@ -406,6 +413,69 @@ namespace BANGAS_TN
             {
                 cnn.Close();
             }
+        }
+        // CHỨC NĂNG TÌM KIẾM
+        private void txt_timkiem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                try
+                {
+                    DataView dv = new DataView(dt);
+                    string value = "CONVERT(Makh, System.String) LIKE '%{0}%'";
+
+                    dv.RowFilter = string.Format(value, txt_timkiem.Text);
+                    data_HD.DataSource = dv;
+
+                }
+                catch (Exception e2)
+                {
+                    ClearvaLoad();
+                }
+            }
+        }
+
+        private void btn_locngay_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               if (txt_nam1.Text == "" || txt_ngay1.Text == "" || txt_thang1.Text == ""){
+                    Runnow();
+                    string s = "Select *  From CTHD LEFT JOIN HoaDon on CTHD.Mahd = HoaDon.Mahd Where (NgaylapHD>=" + "'" + txt_nam.Text + "-" + txt_thang.Text + "-" + txt_ngay.Text + " 00:00:00.000" + "'"
+                        + " )and " + "(NgaylapHD <= " + "'" + txt_nam.Text + "-" + txt_thang.Text + "-" + txt_ngay.Text + " 23:59:59.999" + "'"
+                        + " )";
+                    SqlCommand cmd = new SqlCommand(s, cnn);
+                    da.SelectCommand = cmd;
+                    dt.Clear();
+                    da.Fill(dt);
+                    bin.DataSource = dt;
+                    data_HD.DataSource = bin;
+                    cnn.Close();
+                }
+                else
+                {
+                    Runnow();
+                    string s1 = "Select *  From HoaDon Where (NgaylapHD>=" + "'" + txt_nam.Text + "-" + txt_thang.Text + "-" + txt_ngay.Text + " 00:00:00.00" + "'"
+                        + " )and " + "(NgaylapHD <= " + "'" + txt_nam1.Text + "-" + txt_thang1.Text + "-" + txt_ngay1.Text + " 23:59:59.999" + "'"
+                        + " )";
+                    SqlCommand cmd1 = new SqlCommand(s1, cnn);
+                    da.SelectCommand = cmd1;
+                    dt.Clear();
+                    da.Fill(dt);
+                    bin.DataSource = dt;
+                    data_HD.DataSource = bin;
+                    cnn.Close();
+                }
+            }
+            catch(Exception e2)
+            {
+                cnn.Close();
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

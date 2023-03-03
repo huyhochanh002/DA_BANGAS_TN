@@ -99,7 +99,7 @@ namespace BANGAS_TN
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1085, 281);
+            this.groupPanel1.Size = new System.Drawing.Size(1133, 281);
             // 
             // 
             // 
@@ -128,7 +128,7 @@ namespace BANGAS_TN
             this.lb_delete.AutoSize = true;
             this.lb_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_delete.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lb_delete.Location = new System.Drawing.Point(642, 84);
+            this.lb_delete.Location = new System.Drawing.Point(721, 83);
             this.lb_delete.Name = "lb_delete";
             this.lb_delete.Size = new System.Drawing.Size(24, 20);
             this.lb_delete.TabIndex = 64;
@@ -136,7 +136,7 @@ namespace BANGAS_TN
             // 
             // check_novo
             // 
-            this.check_novo.Location = new System.Drawing.Point(605, 214);
+            this.check_novo.Location = new System.Drawing.Point(684, 213);
             this.check_novo.Margin = new System.Windows.Forms.Padding(2);
             this.check_novo.Name = "check_novo";
             this.check_novo.Size = new System.Drawing.Size(54, 26);
@@ -144,7 +144,7 @@ namespace BANGAS_TN
             // 
             // check_travo
             // 
-            this.check_travo.Location = new System.Drawing.Point(605, 180);
+            this.check_travo.Location = new System.Drawing.Point(684, 179);
             this.check_travo.Margin = new System.Windows.Forms.Padding(2);
             this.check_travo.Name = "check_travo";
             this.check_travo.Size = new System.Drawing.Size(54, 26);
@@ -152,7 +152,7 @@ namespace BANGAS_TN
             // 
             // check_notien
             // 
-            this.check_notien.Location = new System.Drawing.Point(446, 214);
+            this.check_notien.Location = new System.Drawing.Point(525, 213);
             this.check_notien.Margin = new System.Windows.Forms.Padding(2);
             this.check_notien.Name = "check_notien";
             this.check_notien.Size = new System.Drawing.Size(53, 26);
@@ -160,7 +160,7 @@ namespace BANGAS_TN
             // 
             // check_tratien
             // 
-            this.check_tratien.Location = new System.Drawing.Point(446, 180);
+            this.check_tratien.Location = new System.Drawing.Point(525, 179);
             this.check_tratien.Margin = new System.Windows.Forms.Padding(2);
             this.check_tratien.Name = "check_tratien";
             this.check_tratien.Size = new System.Drawing.Size(53, 26);
@@ -169,7 +169,7 @@ namespace BANGAS_TN
             // labelX10
             // 
             this.labelX10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX10.Location = new System.Drawing.Point(515, 214);
+            this.labelX10.Location = new System.Drawing.Point(594, 213);
             this.labelX10.Margin = new System.Windows.Forms.Padding(2);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(76, 26);
@@ -179,7 +179,7 @@ namespace BANGAS_TN
             // labelX11
             // 
             this.labelX11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX11.Location = new System.Drawing.Point(515, 180);
+            this.labelX11.Location = new System.Drawing.Point(594, 179);
             this.labelX11.Margin = new System.Windows.Forms.Padding(2);
             this.labelX11.Name = "labelX11";
             this.labelX11.Size = new System.Drawing.Size(76, 26);
@@ -189,7 +189,7 @@ namespace BANGAS_TN
             // labelX12
             // 
             this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.Location = new System.Drawing.Point(356, 214);
+            this.labelX12.Location = new System.Drawing.Point(435, 213);
             this.labelX12.Margin = new System.Windows.Forms.Padding(2);
             this.labelX12.Name = "labelX12";
             this.labelX12.Size = new System.Drawing.Size(76, 26);
@@ -199,7 +199,7 @@ namespace BANGAS_TN
             // labelX13
             // 
             this.labelX13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX13.Location = new System.Drawing.Point(356, 180);
+            this.labelX13.Location = new System.Drawing.Point(435, 179);
             this.labelX13.Margin = new System.Windows.Forms.Padding(2);
             this.labelX13.Name = "labelX13";
             this.labelX13.Size = new System.Drawing.Size(76, 26);
@@ -211,7 +211,7 @@ namespace BANGAS_TN
             this.btn_Exit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Image = global::BANGAS_TN.Properties.Resources.ql;
-            this.btn_Exit.Location = new System.Drawing.Point(776, 207);
+            this.btn_Exit.Location = new System.Drawing.Point(855, 206);
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(99, 33);
@@ -226,7 +226,7 @@ namespace BANGAS_TN
             // 
             this.txt_ngaythang.Border.Class = "TextBoxBorder";
             this.txt_ngaythang.Enabled = false;
-            this.txt_ngaythang.Location = new System.Drawing.Point(443, 142);
+            this.txt_ngaythang.Location = new System.Drawing.Point(522, 141);
             this.txt_ngaythang.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ngaythang.Name = "txt_ngaythang";
             this.txt_ngaythang.Size = new System.Drawing.Size(124, 26);
@@ -236,7 +236,7 @@ namespace BANGAS_TN
             // 
             this.labelX5.Enabled = false;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(356, 142);
+            this.labelX5.Location = new System.Drawing.Point(435, 141);
             this.labelX5.Margin = new System.Windows.Forms.Padding(2);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(82, 26);
@@ -247,7 +247,7 @@ namespace BANGAS_TN
             // 
             this.txt_ghichu.Enabled = false;
             this.txt_ghichu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ghichu.Location = new System.Drawing.Point(130, 141);
+            this.txt_ghichu.Location = new System.Drawing.Point(209, 140);
             this.txt_ghichu.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ghichu.Name = "txt_ghichu";
             this.txt_ghichu.Size = new System.Drawing.Size(202, 99);
@@ -256,7 +256,7 @@ namespace BANGAS_TN
             // labelX6
             // 
             this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX6.Location = new System.Drawing.Point(21, 141);
+            this.labelX6.Location = new System.Drawing.Point(100, 140);
             this.labelX6.Margin = new System.Windows.Forms.Padding(2);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(74, 23);
@@ -270,7 +270,7 @@ namespace BANGAS_TN
             // 
             this.txt_Magas.Border.Class = "TextBoxBorder";
             this.txt_Magas.Enabled = false;
-            this.txt_Magas.Location = new System.Drawing.Point(443, 48);
+            this.txt_Magas.Location = new System.Drawing.Point(522, 47);
             this.txt_Magas.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Magas.Name = "txt_Magas";
             this.txt_Magas.Size = new System.Drawing.Size(126, 26);
@@ -280,7 +280,7 @@ namespace BANGAS_TN
             // 
             this.labelX4.Enabled = false;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(356, 46);
+            this.labelX4.Location = new System.Drawing.Point(435, 45);
             this.labelX4.Margin = new System.Windows.Forms.Padding(2);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(76, 26);
@@ -294,7 +294,7 @@ namespace BANGAS_TN
             // 
             this.txt_Dongia.Border.Class = "TextBoxBorder";
             this.txt_Dongia.Enabled = false;
-            this.txt_Dongia.Location = new System.Drawing.Point(443, 77);
+            this.txt_Dongia.Location = new System.Drawing.Point(522, 76);
             this.txt_Dongia.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Dongia.Name = "txt_Dongia";
             this.txt_Dongia.Size = new System.Drawing.Size(124, 26);
@@ -304,7 +304,7 @@ namespace BANGAS_TN
             // 
             this.labelX8.Enabled = false;
             this.labelX8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX8.Location = new System.Drawing.Point(356, 77);
+            this.labelX8.Location = new System.Drawing.Point(435, 76);
             this.labelX8.Margin = new System.Windows.Forms.Padding(2);
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(76, 26);
@@ -318,7 +318,7 @@ namespace BANGAS_TN
             // 
             this.txt_Soluong.Border.Class = "TextBoxBorder";
             this.txt_Soluong.Enabled = false;
-            this.txt_Soluong.Location = new System.Drawing.Point(443, 111);
+            this.txt_Soluong.Location = new System.Drawing.Point(522, 110);
             this.txt_Soluong.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Soluong.Name = "txt_Soluong";
             this.txt_Soluong.Size = new System.Drawing.Size(124, 26);
@@ -328,7 +328,7 @@ namespace BANGAS_TN
             // 
             this.labelX9.Enabled = false;
             this.labelX9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX9.Location = new System.Drawing.Point(355, 111);
+            this.labelX9.Location = new System.Drawing.Point(434, 110);
             this.labelX9.Margin = new System.Windows.Forms.Padding(2);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(76, 26);
@@ -343,7 +343,7 @@ namespace BANGAS_TN
             this.txt_Manv.Border.Class = "TextBoxBorder";
             this.txt_Manv.Enabled = false;
             this.txt_Manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Manv.Location = new System.Drawing.Point(130, 112);
+            this.txt_Manv.Location = new System.Drawing.Point(209, 111);
             this.txt_Manv.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Manv.Name = "txt_Manv";
             this.txt_Manv.Size = new System.Drawing.Size(104, 24);
@@ -357,7 +357,7 @@ namespace BANGAS_TN
             this.txt_Mahd.Border.Class = "TextBoxBorder";
             this.txt_Mahd.Enabled = false;
             this.txt_Mahd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Mahd.Location = new System.Drawing.Point(130, 53);
+            this.txt_Mahd.Location = new System.Drawing.Point(209, 52);
             this.txt_Mahd.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Mahd.Name = "txt_Mahd";
             this.txt_Mahd.Size = new System.Drawing.Size(104, 24);
@@ -371,7 +371,7 @@ namespace BANGAS_TN
             this.txt_Makh.Border.Class = "TextBoxBorder";
             this.txt_Makh.Enabled = false;
             this.txt_Makh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Makh.Location = new System.Drawing.Point(130, 82);
+            this.txt_Makh.Location = new System.Drawing.Point(209, 81);
             this.txt_Makh.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Makh.Name = "txt_Makh";
             this.txt_Makh.Size = new System.Drawing.Size(104, 24);
@@ -385,7 +385,7 @@ namespace BANGAS_TN
             this.txt_tongtien.Border.Class = "TextBoxBorder";
             this.txt_tongtien.Enabled = false;
             this.txt_tongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tongtien.Location = new System.Drawing.Point(756, 53);
+            this.txt_tongtien.Location = new System.Drawing.Point(835, 52);
             this.txt_tongtien.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tongtien.Name = "txt_tongtien";
             this.txt_tongtien.Size = new System.Drawing.Size(143, 24);
@@ -395,7 +395,7 @@ namespace BANGAS_TN
             // 
             this.labelX7.Enabled = false;
             this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX7.Location = new System.Drawing.Point(646, 53);
+            this.labelX7.Location = new System.Drawing.Point(725, 52);
             this.labelX7.Margin = new System.Windows.Forms.Padding(2);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(94, 23);
@@ -405,7 +405,7 @@ namespace BANGAS_TN
             // labelX3
             // 
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(21, 53);
+            this.labelX3.Location = new System.Drawing.Point(100, 52);
             this.labelX3.Margin = new System.Windows.Forms.Padding(2);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(74, 23);
@@ -415,7 +415,7 @@ namespace BANGAS_TN
             // labelX2
             // 
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(21, 111);
+            this.labelX2.Location = new System.Drawing.Point(100, 110);
             this.labelX2.Margin = new System.Windows.Forms.Padding(2);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(74, 23);
@@ -425,7 +425,7 @@ namespace BANGAS_TN
             // labelX1
             // 
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(21, 80);
+            this.labelX1.Location = new System.Drawing.Point(100, 79);
             this.labelX1.Margin = new System.Windows.Forms.Padding(2);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(74, 23);
@@ -444,7 +444,7 @@ namespace BANGAS_TN
             this.data_lichsumua.Name = "data_lichsumua";
             this.data_lichsumua.ReadOnly = true;
             this.data_lichsumua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_lichsumua.Size = new System.Drawing.Size(1085, 258);
+            this.data_lichsumua.Size = new System.Drawing.Size(1133, 258);
             this.data_lichsumua.TabIndex = 63;
             this.data_lichsumua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_lichsumua_CellClick);
             // 
@@ -452,7 +452,7 @@ namespace BANGAS_TN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 533);
+            this.ClientSize = new System.Drawing.Size(1133, 533);
             this.Controls.Add(this.data_lichsumua);
             this.Controls.Add(this.groupPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
