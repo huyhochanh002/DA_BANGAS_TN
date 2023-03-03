@@ -65,6 +65,8 @@ namespace BANGAS_TN
                 da.Fill(dt);
                 bin.DataSource = dt;
                 data_KhachHang.DataSource = bin;
+
+                btn_lichsumua.Enabled = false;
                 cnn.Close();
             }
             catch (Exception e2)
@@ -82,6 +84,7 @@ namespace BANGAS_TN
             txt_DiachiKH.Text = "";
             txt_GhichuKH.Text = "";
             btn_themKH.Enabled=true;
+            btn_lichsumua.Enabled = false;
             dt.Clear();
             da.Fill(dt);
         }
@@ -176,6 +179,7 @@ namespace BANGAS_TN
                     txt_DiachiKH.Text = Convert.ToString(data_KhachHang.CurrentRow.Cells["Diachi"].Value);
                     txt_GhichuKH.Text = Convert.ToString(data_KhachHang.CurrentRow.Cells["Ghichu"].Value);
                     btn_themKH.Enabled = false;
+                    btn_lichsumua.Enabled = true;
                 }
             }
             catch (Exception e2)
@@ -186,6 +190,18 @@ namespace BANGAS_TN
         private void btn_Clear_Click(object sender, EventArgs e)
         {
             ClearvaLoad();
+        }
+
+        private void btn_lichsumua_Click(object sender, EventArgs e)
+        {
+            if(txt_Makh.Text.Equals(""))
+            {
+                return;
+            }else
+            {
+                FrmXemHD xemHD=new FrmXemHD(int.Parse(txt_Makh.Text));
+                xemHD.ShowDialog();
+            }
         }
     }
 }
