@@ -81,6 +81,8 @@ namespace BANGAS_TN
             this.txt_MaHD = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.data_HD = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.txt_ngaythang = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_HD)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +91,8 @@ namespace BANGAS_TN
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.txt_ngaythang);
+            this.groupPanel1.Controls.Add(this.labelX15);
             this.groupPanel1.Controls.Add(this.label9);
             this.groupPanel1.Controls.Add(this.label2);
             this.groupPanel1.Controls.Add(this.label6);
@@ -142,7 +146,7 @@ namespace BANGAS_TN
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(960, 295);
+            this.groupPanel1.Size = new System.Drawing.Size(960, 302);
             // 
             // 
             // 
@@ -682,16 +686,40 @@ namespace BANGAS_TN
             this.data_HD.DefaultCellStyle = dataGridViewCellStyle1;
             this.data_HD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data_HD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.data_HD.Location = new System.Drawing.Point(0, 295);
+            this.data_HD.Location = new System.Drawing.Point(0, 302);
             this.data_HD.Margin = new System.Windows.Forms.Padding(2);
             this.data_HD.Name = "data_HD";
             this.data_HD.ReadOnly = true;
             this.data_HD.RowHeadersWidth = 51;
             this.data_HD.RowTemplate.Height = 24;
             this.data_HD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_HD.Size = new System.Drawing.Size(960, 290);
+            this.data_HD.Size = new System.Drawing.Size(960, 283);
             this.data_HD.TabIndex = 1;
             this.data_HD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_HD_CellClick);
+            // 
+            // txt_ngaythang
+            // 
+            // 
+            // 
+            // 
+            this.txt_ngaythang.Border.Class = "TextBoxBorder";
+            this.txt_ngaythang.Enabled = false;
+            this.txt_ngaythang.Location = new System.Drawing.Point(116, 251);
+            this.txt_ngaythang.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ngaythang.Name = "txt_ngaythang";
+            this.txt_ngaythang.Size = new System.Drawing.Size(124, 26);
+            this.txt_ngaythang.TabIndex = 55;
+            // 
+            // labelX15
+            // 
+            this.labelX15.Enabled = false;
+            this.labelX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX15.Location = new System.Drawing.Point(29, 251);
+            this.labelX15.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.Size = new System.Drawing.Size(82, 26);
+            this.labelX15.TabIndex = 54;
+            this.labelX15.Text = "Ngày tháng";
             // 
             // FrmHoaDon
             // 
@@ -765,5 +793,7 @@ namespace BANGAS_TN
         private System.Windows.Forms.TextBox txt_ngay1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_ngaythang;
+        private DevComponents.DotNetBar.LabelX labelX15;
     }
 }
