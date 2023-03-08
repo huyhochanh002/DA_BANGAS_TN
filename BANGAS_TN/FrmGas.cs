@@ -229,5 +229,10 @@ namespace BANGAS_TN
         {
             ClearvaLoad();
         }
+
+        private void cb_Ncc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

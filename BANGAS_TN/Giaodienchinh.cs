@@ -233,5 +233,63 @@ namespace BANGAS_TN
                 MessageBox.Show("Lỗi Khi Mở Tab Hóa Đơn !");
             }
         }
+
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.trangThai = true;
+                this.tentabmo = "Backup";
+                if (!Kiemtramotab(tentabmo))
+                {
+                    TabItem t = tab_main.CreateTab(tentabmo);
+                    t.Name = "Backup";
+
+                    FrmBackup ba = new FrmBackup()
+                    {
+                        DongTap = new FrmBackup._dongTap(DongTab),
+                        frm = this,
+                        TopLevel = false,
+                        Dock = DockStyle.Fill,
+                    };
+                    t.AttachedControl.Controls.Add(ba);
+                    ba.Show();
+                    tab_main.SelectedTabIndex = tab_main.Tabs.Count - 1;
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show("Lỗi Khi Mở Tab Backup !");
+            }
+        }
+
+        private void buttonItem6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.trangThai = true;
+                this.tentabmo = "Phiếu Nhập";
+                if (!Kiemtramotab(tentabmo))
+                {
+                    TabItem t = tab_main.CreateTab(tentabmo);
+                    t.Name = "PhieuNhap";
+
+                    FrmPN ba = new FrmPN()
+                    {
+                        DongTap = new FrmPN._dongTap(DongTab),
+                        frm = this,
+                        TopLevel = false,
+                        Dock = DockStyle.Fill,
+                    };
+                    t.AttachedControl.Controls.Add(ba);
+                    ba.Show();
+                    tab_main.SelectedTabIndex = tab_main.Tabs.Count - 1;
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show("Lỗi Khi Mở Tab Phiếu nhập !");
+            }
+        }
     }
 }

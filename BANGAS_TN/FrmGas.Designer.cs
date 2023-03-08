@@ -122,17 +122,18 @@ namespace BANGAS_TN
             this.cb_Ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ncc.FormattingEnabled = true;
             this.cb_Ncc.Location = new System.Drawing.Point(161, 119);
-            this.cb_Ncc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Ncc.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Ncc.Name = "cb_Ncc";
             this.cb_Ncc.Size = new System.Drawing.Size(289, 33);
             this.cb_Ncc.TabIndex = 44;
+            this.cb_Ncc.SelectedIndexChanged += new System.EventHandler(this.cb_Ncc_SelectedIndexChanged);
             // 
             // cb_LoaiGas
             // 
             this.cb_LoaiGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_LoaiGas.FormattingEnabled = true;
             this.cb_LoaiGas.Location = new System.Drawing.Point(161, 69);
-            this.cb_LoaiGas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_LoaiGas.Margin = new System.Windows.Forms.Padding(4);
             this.cb_LoaiGas.Name = "cb_LoaiGas";
             this.cb_LoaiGas.Size = new System.Drawing.Size(289, 33);
             this.cb_LoaiGas.TabIndex = 43;

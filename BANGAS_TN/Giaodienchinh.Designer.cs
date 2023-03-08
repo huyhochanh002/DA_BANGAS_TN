@@ -44,12 +44,14 @@
             this.btnGas = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnBackup = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.tab_main = new DevComponents.DotNetBar.TabControl();
+            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tab_main)).BeginInit();
@@ -184,7 +186,8 @@
             this.btnKH,
             this.btnNV,
             this.btnGas,
-            this.buttonItem4});
+            this.buttonItem4,
+            this.btnBackup});
             this.buttonItem1.Text = "Chức năng";
             this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
             // 
@@ -230,6 +233,14 @@
             this.buttonItem4.Text = "Nhà cung cấp";
             this.buttonItem4.Click += new System.EventHandler(this.buttonItem4_Click);
             // 
+            // btnBackup
+            // 
+            this.btnBackup.Image = global::BANGAS_TN.Properties.Resources.backup_35px;
+            this.btnBackup.ImagePaddingHorizontal = 8;
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Text = "Backup";
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            // 
             // buttonItem2
             // 
             this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
@@ -256,6 +267,8 @@
             this.buttonItem8.Image = global::BANGAS_TN.Properties.Resources.bcao;
             this.buttonItem8.ImagePaddingHorizontal = 8;
             this.buttonItem8.Name = "buttonItem8";
+            this.buttonItem8.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem6});
             this.buttonItem8.Text = "Báo cáo";
             // 
             // buttonItem3
@@ -292,9 +305,16 @@
             this.tab_main.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.tab_main.Text = "tabControl_main";
             // 
+            // buttonItem6
+            // 
+            this.buttonItem6.ImagePaddingHorizontal = 8;
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.Text = "Phiếu Nhập";
+            this.buttonItem6.Click += new System.EventHandler(this.buttonItem6_Click);
+            // 
             // Giaodienchinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1407, 773);
@@ -343,6 +363,8 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem8;
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
+        private DevComponents.DotNetBar.ButtonItem btnBackup;
+        private DevComponents.DotNetBar.ButtonItem buttonItem6;
     }
 }
 

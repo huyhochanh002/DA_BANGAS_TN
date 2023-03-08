@@ -480,5 +480,10 @@ namespace BANGAS_TN
         {
 
         }
+
+        private void txt_ngaythang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
