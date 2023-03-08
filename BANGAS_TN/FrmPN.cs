@@ -112,7 +112,7 @@ namespace BANGAS_TN
             da.Fill(dt);
             ComboMaGas();
             ComboDaiLi();
-           
+
         }
 
         private void data_PN_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -129,6 +129,8 @@ namespace BANGAS_TN
                     txt_ngaythang.Text = Convert.ToString(data_PN.CurrentRow.Cells["Ngaythang"].Value);
                     cb_daili.SelectedValue = Convert.ToInt32(data_PN.CurrentRow.Cells["Tendaili"].Value);
 
+                    btn_Them.Enabled = false;
+
 
                     //soluonggasthuhoi = int.Parse(Convert.ToString(data_PN.CurrentRow.Cells["Soluong"].Value));
 
@@ -143,7 +145,6 @@ namespace BANGAS_TN
         private void btn_Them_Click(object sender, EventArgs e)
         {
             // cập nhật số tồn của gas
-
             try
             {
 
@@ -153,20 +154,21 @@ namespace BANGAS_TN
                 cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
                 int sltonkho = (int)cmd.ExecuteScalar();
                 cnn.Close();
-                // Kiểm tra đủ sl để bán không
+                // Kiểm tra sl nhập
                 int soluongnhap = int.Parse(txt_sl.Text);
-                
-                    Runnow();
-                    s = "Update Gas set Slton =" + (sltonkho + soluongnhap) + " where Magas = @Magas ";
-                    cmd = new SqlCommand(s, cnn);
-                    cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
-                    cmd.ExecuteNonQuery();
-                    cnn.Close();
-                
+
+                Runnow();
+                s = "Update Gas set Slton =" + (sltonkho + soluongnhap) + " where Magas = @Magas ";
+                cmd = new SqlCommand(s, cnn);
+                cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+
 
             }
             catch (Exception e3)
             {
+                return; // thêm sl ko được thì ko làm bước thêm phiếu
                 cnn.Close();
             }
             try
@@ -175,15 +177,13 @@ namespace BANGAS_TN
                 string s = "insert into PhieuNhap (Magas,Soluong,Ngaythang,Tendaili) values " +
                     "(@Magas,@Soluong,@Ngaythang,@Tendaili)";
                 SqlCommand cmd = new SqlCommand(s, cnn);
-                //cmd.Parameters.Add("@Manhap", SqlDbType.Int).Value = int.Parse(txt_MaPN.Text);
                 cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.SelectedValue.ToString());
                 cmd.Parameters.Add("@Soluong", SqlDbType.Int).Value = int.Parse(txt_sl.Text);
                 cmd.Parameters.Add("@Ngaythang", SqlDbType.DateTime).Value = DateTime.Now;
                 cmd.Parameters.Add("@Tendaili", SqlDbType.NVarChar).Value = int.Parse(cb_daili.SelectedValue.ToString());
-             
+
                 cmd.ExecuteNonQuery();
                 cnn.Close();
-
                 ClearvaLoad();
                 MessageBox.Show("Thêm Thành Công");
 
@@ -193,59 +193,38 @@ namespace BANGAS_TN
                 cnn.Close();
                 MessageBox.Show("Vui Lòng Kiểm Tra Lại Dữ Liệu nhập ! ");
             }
-            
+
 
         }
-        int soluonggasthuhoi = 0;
         private void btn_suaPN_Click(object sender, EventArgs e)
         {
             // cập nhật số tồn của gas
-
             try
             {
                 Runnow();
-                string s = "Select Soluong From PhieuNhap where Manhap = @Manhap";
+                string s = "Select MAX(Soluong) From PhieuNhap where Manhap = @Manhap";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 cmd.Parameters.Add("@Manhap", SqlDbType.Int).Value = int.Parse(txt_MaPN.Text);
-                int slcu = (int)cmd.ExecuteScalar();
+                // lấy sl gás cũ
+                int slgasdanhap = (int)cmd.ExecuteScalar(); //50
                 cnn.Close();
-                if(slcu< int.Parse(txt_sl.Text))
-                {
-                    Runnow();
-                    s = "Select MAX(Slton) From Gas where Magas = @Magas";
-                    cmd = new SqlCommand(s, cnn);
-                    cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
-                    int sltonkho = (int)cmd.ExecuteScalar();
-                    cnn.Close();
-                    
-                    int soluongthem = int.Parse(txt_sl.Text)-slcu;
 
-                    Runnow();
-                    s = "Update Gas set Slton =" + (sltonkho + soluongthem) + " where Magas = @Magas ";
-                    cmd = new SqlCommand(s, cnn);
-                    cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
-                    cmd.ExecuteNonQuery();
-                    cnn.Close();
-                }
-                        else
-                {
-                    Runnow();
-                    s = "Select MAX(Slton) From Gas where Magas = @Magas";
-                    cmd = new SqlCommand(s, cnn);
-                    cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
-                    int sltonkho = (int)cmd.ExecuteScalar();
-                    cnn.Close();
+                // lấy sl gá tồn kho
+                Runnow();
+                s = "Select MAX(Slton) From Gas where Magas = @Magas";
+                cmd = new SqlCommand(s, cnn);
+                cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
+                int sltonkho = (int)cmd.ExecuteScalar(); //100
+                cnn.Close();
 
-                    int soluongbo = slcu- int.Parse(txt_sl.Text);
+                // update lại sl tồn
+                Runnow();
+                s = "Update Gas set Slton =" + (sltonkho - slgasdanhap + int.Parse(txt_sl.Text)) + " where Magas = @Magas "; //110
+                cmd = new SqlCommand(s, cnn);
+                cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.SelectedValue.ToString());
 
-                    Runnow();
-                    s = "Update Gas set Slton =" + (sltonkho -soluongbo) + " where Magas = @Magas ";
-                    cmd = new SqlCommand(s, cnn);
-                    cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
-                    cmd.ExecuteNonQuery();
-                    cnn.Close();
-                }
-
+                cmd.ExecuteNonQuery();
+                cnn.Close();
 
             }
             catch (Exception e3)
@@ -256,13 +235,12 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "Update PhieuNhap set Magas=@Magas,Soluong=@Soluong,Tendaili=@Tendaili, Ngaythang=@Ngaythang where Manhap=@Manhap";
+                string s = "Update PhieuNhap set Magas=@Magas,Soluong=@Soluong,Tendaili=@Tendaili where Manhap=@Manhap";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 cmd.Parameters.Add("@Manhap", SqlDbType.Int).Value = int.Parse(txt_MaPN.Text);
                 cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.SelectedValue.ToString());
                 cmd.Parameters.Add("@Soluong", SqlDbType.Int).Value = int.Parse(txt_sl.Text);
                 cmd.Parameters.Add("@Tendaili", SqlDbType.NVarChar).Value = int.Parse(cb_daili.SelectedValue.ToString());
-                cmd.Parameters.Add("@Ngaythang", SqlDbType.DateTime).Value = DateTime.Now;
                 cmd.ExecuteNonQuery();
                 cnn.Close();
                 ClearvaLoad();
@@ -280,33 +258,42 @@ namespace BANGAS_TN
 
         private void btn_xoaPN_Click(object sender, EventArgs e)
         {
-            // cập nhật số tồn của gas
+            //
 
             try
             {
+                // lấy sl trong phiếu
                 Runnow();
                 string s = "Select Soluong From PhieuNhap where Manhap = @Manhap";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 cmd.Parameters.Add("@Manhap", SqlDbType.Int).Value = int.Parse(txt_MaPN.Text);
-                int sl = (int)cmd.ExecuteScalar();
+                int slphieunhap = (int)cmd.ExecuteScalar();
                 cnn.Close();
+
+                //lấy sl trong tồn kho
                 Runnow();
                 s = "Select MAX(Slton) From Gas where Magas = @Magas";
                 cmd = new SqlCommand(s, cnn);
-                cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
+                cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.SelectedValue.ToString());
                 int sltonkho = (int)cmd.ExecuteScalar();
                 cnn.Close();
-                // Kiểm tra đủ sl để bán không
-                int soluongnhap = int.Parse(txt_sl.Text);
 
-                Runnow();
-                s = "Update Gas set Slton =" + (sltonkho -sl) + " where Magas = @Magas ";
-                cmd = new SqlCommand(s, cnn);
-                cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.Text);
-                cmd.ExecuteNonQuery();
-                cnn.Close();
-                try
+                if(sltonkho<slphieunhap)
                 {
+                    MessageBox.Show("Khổng thể chỉnh sữa số lượng khi gas tồn ít hơn sl nhập !");
+
+                }
+                else {
+
+                    //Update sl khi xóa
+                    Runnow();
+                     s = "Update Gas set Slton="+(sltonkho-slphieunhap)+" where Magas=@Magas";
+                    cmd = new SqlCommand(s, cnn);
+                    cmd.Parameters.Add("@Magas", SqlDbType.Int).Value = int.Parse(cb_Magas.SelectedValue.ToString());
+                    cmd.ExecuteNonQuery();
+                    cnn.Close();
+
+                    // Tiến hành xóa phiếu nhập
                     Runnow();
                     s = "DELETE FROM PhieuNhap Where Manhap = @Manhap";
                     cmd = new SqlCommand(s, cnn);
@@ -315,21 +302,17 @@ namespace BANGAS_TN
                     cnn.Close();
                     ClearvaLoad();
                     MessageBox.Show("Đã Xóa Thành Công");
+                }
 
-                }
-                catch (Exception e2)
-                {
-                    cnn.Close();
-                    MessageBox.Show("Xóa Thất Bại ! ");
-                }
 
 
             }
             catch (Exception e3)
             {
                 cnn.Close();
+                MessageBox.Show("Đã Xóa Thất Bại");
             }
-            
+
         }
 
         private void btn_lammoi_Click(object sender, EventArgs e)
@@ -337,10 +320,10 @@ namespace BANGAS_TN
             ClearvaLoad();
         }
 
-     
-        
 
-  
+
+
+
 
         private void txt_sl_KeyPress(object sender, KeyPressEventArgs e)
         {

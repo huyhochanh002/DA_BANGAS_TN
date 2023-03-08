@@ -282,7 +282,7 @@ namespace BANGAS_TN
             this.ClientSize = new System.Drawing.Size(1168, 544);
             this.Controls.Add(this.data_PN);
             this.Controls.Add(this.groupPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPN";
