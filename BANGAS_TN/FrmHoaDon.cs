@@ -146,6 +146,11 @@ namespace BANGAS_TN
             txt_ngay1.Text = "";
             txt_nam1.Text = "";
             txt_thang1.Text = "";
+
+
+            // reset nut in hoa don
+            btn_Report.Enabled = false;
+            btn_DT.Enabled = false;
         }
 
         // BIẾN GAS THU HỒI 
@@ -273,6 +278,7 @@ namespace BANGAS_TN
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     btn_suaHD.Enabled = true;
+                    btn_Report.Enabled = true;
                     
 
                     txt_MaHD.Text = Convert.ToString(data_HD.CurrentRow.Cells["Mahd"].Value);
@@ -323,8 +329,11 @@ namespace BANGAS_TN
                 ComboMaGas();
                 ComboKhachhang();
                 ComboNhanVien();
-               
-                
+                // reset nut in hoa don
+                btn_Report.Enabled = false;
+                btn_DT.Enabled = false;
+
+
             }
             catch (Exception e2)
             {
@@ -462,6 +471,9 @@ namespace BANGAS_TN
                     bin.DataSource = dt;
                     data_HD.DataSource = bin;
                     cnn.Close();
+                    // mở nút in
+                    btn_DT.Enabled = true;
+                    
                 }
                 else
                 {
@@ -477,6 +489,8 @@ namespace BANGAS_TN
                     bin.DataSource = dt;
                     data_HD.DataSource = bin;
                     cnn.Close();
+                    // mở nút in
+                    btn_DT.Enabled = true;
                 }
             }
             catch(Exception e2)

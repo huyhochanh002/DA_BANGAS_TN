@@ -31,6 +31,8 @@ namespace BANGAS_TN
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btn_DT = new DevComponents.DotNetBar.ButtonX();
+            this.btn_Report = new DevComponents.DotNetBar.ButtonX();
             this.txt_ngaythang = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,6 +43,7 @@ namespace BANGAS_TN
             this.txt_thang1 = new System.Windows.Forms.TextBox();
             this.txt_nam1 = new System.Windows.Forms.TextBox();
             this.txt_ngay1 = new System.Windows.Forms.TextBox();
+            this.btn_locngay = new DevComponents.DotNetBar.ButtonX();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,7 +58,11 @@ namespace BANGAS_TN
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.cb_Magas = new System.Windows.Forms.ComboBox();
+            this.btn_lammoi = new DevComponents.DotNetBar.ButtonX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.btn_xoaHD = new DevComponents.DotNetBar.ButtonX();
+            this.btn_suaHD = new DevComponents.DotNetBar.ButtonX();
+            this.btn_Banhang = new DevComponents.DotNetBar.ButtonX();
             this.check_novo = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.check_travo = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.check_notien = new DevComponents.DotNetBar.Controls.CheckBoxX();
@@ -78,13 +85,6 @@ namespace BANGAS_TN
             this.txt_MaHD = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.data_HD = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.btn_DT = new DevComponents.DotNetBar.ButtonX();
-            this.btn_Report = new DevComponents.DotNetBar.ButtonX();
-            this.btn_locngay = new DevComponents.DotNetBar.ButtonX();
-            this.btn_lammoi = new DevComponents.DotNetBar.ButtonX();
-            this.btn_xoaHD = new DevComponents.DotNetBar.ButtonX();
-            this.btn_suaHD = new DevComponents.DotNetBar.ButtonX();
-            this.btn_Banhang = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_HD)).BeginInit();
             this.SuspendLayout();
@@ -173,6 +173,35 @@ namespace BANGAS_TN
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "HÓA ĐƠN";
+            // 
+            // btn_DT
+            // 
+            this.btn_DT.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_DT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DT.Image = global::BANGAS_TN.Properties.Resources.scroll_35px;
+            this.btn_DT.Location = new System.Drawing.Point(557, 289);
+            this.btn_DT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DT.Name = "btn_DT";
+            this.btn_DT.ShowSubItems = false;
+            this.btn_DT.Size = new System.Drawing.Size(101, 40);
+            this.btn_DT.TabIndex = 57;
+            this.btn_DT.Text = "Báo cáo doanh thu";
+            this.btn_DT.Click += new System.EventHandler(this.btn_DT_Click);
+            // 
+            // btn_Report
+            // 
+            this.btn_Report.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.Image = global::BANGAS_TN.Properties.Resources.document_35px;
+            this.btn_Report.Location = new System.Drawing.Point(1091, 248);
+            this.btn_Report.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Report.Name = "btn_Report";
+            this.btn_Report.ShowSubItems = false;
+            this.btn_Report.Size = new System.Drawing.Size(137, 54);
+            this.btn_Report.SubItemsExpandWidth = 13;
+            this.btn_Report.TabIndex = 56;
+            this.btn_Report.Text = "Báo cáo theo hóa đơn";
+            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
             // 
             // txt_ngaythang
             // 
@@ -281,6 +310,19 @@ namespace BANGAS_TN
             this.txt_ngay1.Name = "txt_ngay1";
             this.txt_ngay1.Size = new System.Drawing.Size(37, 30);
             this.txt_ngay1.TabIndex = 46;
+            // 
+            // btn_locngay
+            // 
+            this.btn_locngay.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_locngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_locngay.Image = global::BANGAS_TN.Properties.Resources.SUA;
+            this.btn_locngay.Location = new System.Drawing.Point(557, 222);
+            this.btn_locngay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_locngay.Name = "btn_locngay";
+            this.btn_locngay.Size = new System.Drawing.Size(101, 42);
+            this.btn_locngay.TabIndex = 45;
+            this.btn_locngay.Text = "Tìm Theo Ngày";
+            this.btn_locngay.Click += new System.EventHandler(this.btn_locngay_Click);
             // 
             // label5
             // 
@@ -426,6 +468,19 @@ namespace BANGAS_TN
             this.cb_Magas.SelectionChangeCommitted += new System.EventHandler(this.cb_Magas_SelectionChangeCommitted);
             this.cb_Magas.SelectedValueChanged += new System.EventHandler(this.cb_Magas_SelectedValueChanged);
             // 
+            // btn_lammoi
+            // 
+            this.btn_lammoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_lammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lammoi.Image = global::BANGAS_TN.Properties.Resources.THEM;
+            this.btn_lammoi.Location = new System.Drawing.Point(1091, 185);
+            this.btn_lammoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_lammoi.Name = "btn_lammoi";
+            this.btn_lammoi.Size = new System.Drawing.Size(137, 54);
+            this.btn_lammoi.TabIndex = 27;
+            this.btn_lammoi.Text = "Làm mới";
+            this.btn_lammoi.Click += new System.EventHandler(this.btn_lammoi_Click);
+            // 
             // labelX12
             // 
             this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -435,6 +490,45 @@ namespace BANGAS_TN
             this.labelX12.Size = new System.Drawing.Size(87, 50);
             this.labelX12.TabIndex = 26;
             this.labelX12.Text = "Tìm kiếm \r\n";
+            // 
+            // btn_xoaHD
+            // 
+            this.btn_xoaHD.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_xoaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoaHD.Image = global::BANGAS_TN.Properties.Resources.XOA;
+            this.btn_xoaHD.Location = new System.Drawing.Point(1091, 124);
+            this.btn_xoaHD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_xoaHD.Name = "btn_xoaHD";
+            this.btn_xoaHD.Size = new System.Drawing.Size(137, 54);
+            this.btn_xoaHD.TabIndex = 25;
+            this.btn_xoaHD.Text = "Xóa";
+            this.btn_xoaHD.Click += new System.EventHandler(this.btn_xoaHD_Click);
+            // 
+            // btn_suaHD
+            // 
+            this.btn_suaHD.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_suaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suaHD.Image = global::BANGAS_TN.Properties.Resources.SUA;
+            this.btn_suaHD.Location = new System.Drawing.Point(1091, 64);
+            this.btn_suaHD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_suaHD.Name = "btn_suaHD";
+            this.btn_suaHD.Size = new System.Drawing.Size(137, 54);
+            this.btn_suaHD.TabIndex = 24;
+            this.btn_suaHD.Text = "Sửa";
+            this.btn_suaHD.Click += new System.EventHandler(this.btn_suaHD_Click);
+            // 
+            // btn_Banhang
+            // 
+            this.btn_Banhang.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_Banhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Banhang.Image = global::BANGAS_TN.Properties.Resources.sale;
+            this.btn_Banhang.Location = new System.Drawing.Point(1091, 4);
+            this.btn_Banhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Banhang.Name = "btn_Banhang";
+            this.btn_Banhang.Size = new System.Drawing.Size(137, 54);
+            this.btn_Banhang.TabIndex = 22;
+            this.btn_Banhang.Text = "Bán hàng";
+            this.btn_Banhang.Click += new System.EventHandler(this.btn_Banhang_Click);
             // 
             // check_novo
             // 
@@ -679,100 +773,6 @@ namespace BANGAS_TN
             this.data_HD.Size = new System.Drawing.Size(1280, 348);
             this.data_HD.TabIndex = 1;
             this.data_HD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_HD_CellClick);
-            // 
-            // btn_DT
-            // 
-            this.btn_DT.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_DT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DT.Image = global::BANGAS_TN.Properties.Resources.scroll_35px;
-            this.btn_DT.Location = new System.Drawing.Point(557, 287);
-            this.btn_DT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_DT.Name = "btn_DT";
-            this.btn_DT.ShowSubItems = false;
-            this.btn_DT.Size = new System.Drawing.Size(101, 40);
-            this.btn_DT.TabIndex = 57;
-            this.btn_DT.Text = "Báo cáo doanh thu";
-            this.btn_DT.Click += new System.EventHandler(this.btn_DT_Click);
-            // 
-            // btn_Report
-            // 
-            this.btn_Report.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Report.Image = global::BANGAS_TN.Properties.Resources.document_35px;
-            this.btn_Report.Location = new System.Drawing.Point(1091, 248);
-            this.btn_Report.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Report.Name = "btn_Report";
-            this.btn_Report.ShowSubItems = false;
-            this.btn_Report.Size = new System.Drawing.Size(137, 54);
-            this.btn_Report.SubItemsExpandWidth = 13;
-            this.btn_Report.TabIndex = 56;
-            this.btn_Report.Text = "Báo cáo theo hóa đơn";
-            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
-            // 
-            // btn_locngay
-            // 
-            this.btn_locngay.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_locngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_locngay.Image = global::BANGAS_TN.Properties.Resources.SUA;
-            this.btn_locngay.Location = new System.Drawing.Point(557, 222);
-            this.btn_locngay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_locngay.Name = "btn_locngay";
-            this.btn_locngay.Size = new System.Drawing.Size(101, 42);
-            this.btn_locngay.TabIndex = 45;
-            this.btn_locngay.Text = "Tìm Theo Ngày";
-            this.btn_locngay.Click += new System.EventHandler(this.btn_locngay_Click);
-            // 
-            // btn_lammoi
-            // 
-            this.btn_lammoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_lammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_lammoi.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.btn_lammoi.Location = new System.Drawing.Point(1091, 185);
-            this.btn_lammoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_lammoi.Name = "btn_lammoi";
-            this.btn_lammoi.Size = new System.Drawing.Size(137, 54);
-            this.btn_lammoi.TabIndex = 27;
-            this.btn_lammoi.Text = "Làm mới";
-            this.btn_lammoi.Click += new System.EventHandler(this.btn_lammoi_Click);
-            // 
-            // btn_xoaHD
-            // 
-            this.btn_xoaHD.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_xoaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoaHD.Image = global::BANGAS_TN.Properties.Resources.XOA;
-            this.btn_xoaHD.Location = new System.Drawing.Point(1091, 124);
-            this.btn_xoaHD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_xoaHD.Name = "btn_xoaHD";
-            this.btn_xoaHD.Size = new System.Drawing.Size(137, 54);
-            this.btn_xoaHD.TabIndex = 25;
-            this.btn_xoaHD.Text = "Xóa";
-            this.btn_xoaHD.Click += new System.EventHandler(this.btn_xoaHD_Click);
-            // 
-            // btn_suaHD
-            // 
-            this.btn_suaHD.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_suaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suaHD.Image = global::BANGAS_TN.Properties.Resources.SUA;
-            this.btn_suaHD.Location = new System.Drawing.Point(1091, 64);
-            this.btn_suaHD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_suaHD.Name = "btn_suaHD";
-            this.btn_suaHD.Size = new System.Drawing.Size(137, 54);
-            this.btn_suaHD.TabIndex = 24;
-            this.btn_suaHD.Text = "Sửa";
-            this.btn_suaHD.Click += new System.EventHandler(this.btn_suaHD_Click);
-            // 
-            // btn_Banhang
-            // 
-            this.btn_Banhang.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_Banhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Banhang.Image = global::BANGAS_TN.Properties.Resources.sale;
-            this.btn_Banhang.Location = new System.Drawing.Point(1091, 4);
-            this.btn_Banhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Banhang.Name = "btn_Banhang";
-            this.btn_Banhang.Size = new System.Drawing.Size(137, 54);
-            this.btn_Banhang.TabIndex = 22;
-            this.btn_Banhang.Text = "Bán hàng";
-            this.btn_Banhang.Click += new System.EventHandler(this.btn_Banhang_Click);
             // 
             // FrmHoaDon
             // 
