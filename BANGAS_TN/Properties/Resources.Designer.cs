@@ -93,6 +93,16 @@ namespace BANGAS_TN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap document_35px {
+            get {
+                object obj = ResourceManager.GetObject("document_35px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fire_35px {
             get {
                 object obj = ResourceManager.GetObject("fire_35px", resourceCulture);
@@ -206,6 +216,16 @@ namespace BANGAS_TN.Properties {
         internal static System.Drawing.Bitmap sale1 {
             get {
                 object obj = ResourceManager.GetObject("sale1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scroll_35px {
+            get {
+                object obj = ResourceManager.GetObject("scroll_35px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

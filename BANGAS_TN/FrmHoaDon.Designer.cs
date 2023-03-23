@@ -31,6 +31,8 @@ namespace BANGAS_TN
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btn_DT = new DevComponents.DotNetBar.ButtonX();
+            this.btn_Report = new DevComponents.DotNetBar.ButtonX();
             this.txt_ngaythang = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.label9 = new System.Windows.Forms.Label();
@@ -91,6 +93,8 @@ namespace BANGAS_TN
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.btn_DT);
+            this.groupPanel1.Controls.Add(this.btn_Report);
             this.groupPanel1.Controls.Add(this.txt_ngaythang);
             this.groupPanel1.Controls.Add(this.labelX15);
             this.groupPanel1.Controls.Add(this.label9);
@@ -169,6 +173,35 @@ namespace BANGAS_TN
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "HÓA ĐƠN";
+            // 
+            // btn_DT
+            // 
+            this.btn_DT.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_DT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DT.Image = global::BANGAS_TN.Properties.Resources.scroll_35px;
+            this.btn_DT.Location = new System.Drawing.Point(557, 289);
+            this.btn_DT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DT.Name = "btn_DT";
+            this.btn_DT.ShowSubItems = false;
+            this.btn_DT.Size = new System.Drawing.Size(101, 40);
+            this.btn_DT.TabIndex = 57;
+            this.btn_DT.Text = "Báo cáo doanh thu";
+            this.btn_DT.Click += new System.EventHandler(this.btn_DT_Click);
+            // 
+            // btn_Report
+            // 
+            this.btn_Report.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.Image = global::BANGAS_TN.Properties.Resources.document_35px;
+            this.btn_Report.Location = new System.Drawing.Point(1091, 248);
+            this.btn_Report.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Report.Name = "btn_Report";
+            this.btn_Report.ShowSubItems = false;
+            this.btn_Report.Size = new System.Drawing.Size(137, 54);
+            this.btn_Report.SubItemsExpandWidth = 13;
+            this.btn_Report.TabIndex = 56;
+            this.btn_Report.Text = "Báo cáo theo hóa đơn";
+            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
             // 
             // txt_ngaythang
             // 
@@ -255,7 +288,7 @@ namespace BANGAS_TN
             // 
             this.txt_thang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_thang1.Location = new System.Drawing.Point(880, 268);
-            this.txt_thang1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_thang1.Margin = new System.Windows.Forms.Padding(4);
             this.txt_thang1.Name = "txt_thang1";
             this.txt_thang1.Size = new System.Drawing.Size(37, 30);
             this.txt_thang1.TabIndex = 48;
@@ -264,7 +297,7 @@ namespace BANGAS_TN
             // 
             this.txt_nam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nam1.Location = new System.Drawing.Point(975, 266);
-            this.txt_nam1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nam1.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nam1.Name = "txt_nam1";
             this.txt_nam1.Size = new System.Drawing.Size(37, 30);
             this.txt_nam1.TabIndex = 47;
@@ -273,7 +306,7 @@ namespace BANGAS_TN
             // 
             this.txt_ngay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ngay1.Location = new System.Drawing.Point(769, 268);
-            this.txt_ngay1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ngay1.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ngay1.Name = "txt_ngay1";
             this.txt_ngay1.Size = new System.Drawing.Size(37, 30);
             this.txt_ngay1.TabIndex = 46;
@@ -328,7 +361,7 @@ namespace BANGAS_TN
             // 
             this.txt_thang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_thang.Location = new System.Drawing.Point(880, 222);
-            this.txt_thang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_thang.Margin = new System.Windows.Forms.Padding(4);
             this.txt_thang.Name = "txt_thang";
             this.txt_thang.Size = new System.Drawing.Size(37, 30);
             this.txt_thang.TabIndex = 40;
@@ -337,7 +370,7 @@ namespace BANGAS_TN
             // 
             this.txt_nam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nam.Location = new System.Drawing.Point(975, 222);
-            this.txt_nam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nam.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nam.Name = "txt_nam";
             this.txt_nam.Size = new System.Drawing.Size(37, 30);
             this.txt_nam.TabIndex = 39;
@@ -346,7 +379,7 @@ namespace BANGAS_TN
             // 
             this.txt_ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ngay.Location = new System.Drawing.Point(769, 222);
-            this.txt_ngay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ngay.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ngay.Name = "txt_ngay";
             this.txt_ngay.Size = new System.Drawing.Size(37, 30);
             this.txt_ngay.TabIndex = 38;
@@ -355,7 +388,7 @@ namespace BANGAS_TN
             // 
             this.txt_timkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_timkiem.Location = new System.Drawing.Point(680, 171);
-            this.txt_timkiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_timkiem.Margin = new System.Windows.Forms.Padding(4);
             this.txt_timkiem.Name = "txt_timkiem";
             this.txt_timkiem.Size = new System.Drawing.Size(185, 30);
             this.txt_timkiem.TabIndex = 37;
@@ -387,7 +420,7 @@ namespace BANGAS_TN
             this.cb_nhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_nhanvien.FormattingEnabled = true;
             this.cb_nhanvien.Location = new System.Drawing.Point(680, 121);
-            this.cb_nhanvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_nhanvien.Margin = new System.Windows.Forms.Padding(4);
             this.cb_nhanvien.Name = "cb_nhanvien";
             this.cb_nhanvien.Size = new System.Drawing.Size(185, 33);
             this.cb_nhanvien.TabIndex = 32;
@@ -397,7 +430,7 @@ namespace BANGAS_TN
             this.cb_khach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_khach.FormattingEnabled = true;
             this.cb_khach.Location = new System.Drawing.Point(680, 73);
-            this.cb_khach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_khach.Margin = new System.Windows.Forms.Padding(4);
             this.cb_khach.Name = "cb_khach";
             this.cb_khach.Size = new System.Drawing.Size(185, 33);
             this.cb_khach.TabIndex = 31;
@@ -427,7 +460,7 @@ namespace BANGAS_TN
             this.cb_Magas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Magas.FormattingEnabled = true;
             this.cb_Magas.Location = new System.Drawing.Point(472, 23);
-            this.cb_Magas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Magas.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Magas.Name = "cb_Magas";
             this.cb_Magas.Size = new System.Drawing.Size(185, 33);
             this.cb_Magas.TabIndex = 28;
@@ -815,5 +848,7 @@ namespace BANGAS_TN
         private System.Windows.Forms.Label label9;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_ngaythang;
         private DevComponents.DotNetBar.LabelX labelX15;
+        private DevComponents.DotNetBar.ButtonX btn_Report;
+        private DevComponents.DotNetBar.ButtonX btn_DT;
     }
 }

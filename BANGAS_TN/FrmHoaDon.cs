@@ -17,9 +17,13 @@ namespace BANGAS_TN
         {
             InitializeComponent();
         }
+        public String MAHD;
+        public String Sql;
+        public int status;
         public Giaodienchinh frm;
         public delegate void _dongTap();
         public _dongTap DongTap;
+        
 
         // Khai báo các biến cần thiết;
         Khaibao kb = new Khaibao();
@@ -142,6 +146,11 @@ namespace BANGAS_TN
             txt_ngay1.Text = "";
             txt_nam1.Text = "";
             txt_thang1.Text = "";
+
+
+            // reset nut in hoa don
+            btn_Report.Enabled = false;
+            btn_DT.Enabled = false;
         }
 
         // BIẾN GAS THU HỒI 
@@ -269,7 +278,11 @@ namespace BANGAS_TN
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     btn_suaHD.Enabled = true;
+                    btn_Report.Enabled = true;
+                    
+
                     txt_MaHD.Text = Convert.ToString(data_HD.CurrentRow.Cells["Mahd"].Value);
+                    MAHD = txt_MaHD.Text;
                     txt_dongia.Text = Convert.ToString(data_HD.CurrentRow.Cells["Dgia"].Value);
                     txt_soluong.Text = Convert.ToString(data_HD.CurrentRow.Cells["Soluong"].Value);
                     // lấy số lượng gas
@@ -316,8 +329,11 @@ namespace BANGAS_TN
                 ComboMaGas();
                 ComboKhachhang();
                 ComboNhanVien();
-               
-                
+                // reset nut in hoa don
+                btn_Report.Enabled = false;
+                btn_DT.Enabled = false;
+
+
             }
             catch (Exception e2)
             {
@@ -447,6 +463,7 @@ namespace BANGAS_TN
                     string s = "Select *  From CTHD LEFT JOIN HoaDon on CTHD.Mahd = HoaDon.Mahd Where (NgaylapHD>=" + "'" + txt_nam.Text + "-" + txt_thang.Text + "-" + txt_ngay.Text + " 00:00:00.000" + "'"
                         + " )and " + "(NgaylapHD <= " + "'" + txt_nam.Text + "-" + txt_thang.Text + "-" + txt_ngay.Text + " 23:59:59.999" + "'"
                         + " )";
+                    Sql = s;
                     SqlCommand cmd = new SqlCommand(s, cnn);
                     da.SelectCommand = cmd;
                     dt.Clear();
@@ -454,6 +471,9 @@ namespace BANGAS_TN
                     bin.DataSource = dt;
                     data_HD.DataSource = bin;
                     cnn.Close();
+                    // mở nút in
+                    btn_DT.Enabled = true;
+                    
                 }
                 else
                 {
@@ -461,6 +481,7 @@ namespace BANGAS_TN
                     string s1 = "Select *  From CTHD LEFT JOIN HoaDon on CTHD.Mahd = HoaDon.Mahd Where (NgaylapHD>=" + "'" + txt_nam.Text + "-" + txt_thang.Text + "-" + txt_ngay.Text + " 00:00:00.00" + "'"
                         + " )and " + "(NgaylapHD <= " + "'" + txt_nam1.Text + "-" + txt_thang1.Text + "-" + txt_ngay1.Text + " 23:59:59.999" + "'"
                         + " )";
+                    Sql = s1;
                     SqlCommand cmd1 = new SqlCommand(s1, cnn);
                     da.SelectCommand = cmd1;
                     dt.Clear();
@@ -468,6 +489,8 @@ namespace BANGAS_TN
                     bin.DataSource = dt;
                     data_HD.DataSource = bin;
                     cnn.Close();
+                    // mở nút in
+                    btn_DT.Enabled = true;
                 }
             }
             catch(Exception e2)
@@ -484,6 +507,20 @@ namespace BANGAS_TN
         private void txt_ngaythang_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Report_Click(object sender, EventArgs e)
+        {
+            status = 1;
+            FrmReport re = new FrmReport(MAHD,status,Sql);
+            re.ShowDialog();
+        }
+
+        private void btn_DT_Click(object sender, EventArgs e)
+        {
+            status = 2;
+            FrmReport re = new FrmReport(MAHD,status,Sql);
+            re.ShowDialog();
         }
     }
 }
