@@ -291,5 +291,11 @@ namespace BANGAS_TN
                 MessageBox.Show("Lỗi Khi Mở Tab Phiếu nhập !");
             }
         }
+        bool isThoat = true;
+        private void btn_thoat_Click(object sender, EventArgs e)
+        {
+            if (isThoat)
+                Application.Exit();
+        }
     }
 }
