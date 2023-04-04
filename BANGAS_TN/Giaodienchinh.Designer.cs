@@ -38,8 +38,6 @@
             this.dockSite6 = new DevComponents.DotNetBar.DockSite();
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.bar1 = new DevComponents.DotNetBar.Bar();
-            this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-            this.tab_main = new DevComponents.DotNetBar.TabControl();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.btnKH = new DevComponents.DotNetBar.ButtonItem();
             this.btnNV = new DevComponents.DotNetBar.ButtonItem();
@@ -53,6 +51,8 @@
             this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.btn_thoat = new DevComponents.DotNetBar.ButtonItem();
+            this.dockSite3 = new DevComponents.DotNetBar.DockSite();
+            this.tab_main = new DevComponents.DotNetBar.TabControl();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tab_main)).BeginInit();
@@ -158,8 +158,8 @@
             // 
             // bar1
             // 
-            this.bar1.AccessibleDescription = "bar1 (bar1)";
-            this.bar1.AccessibleName = "bar1";
+            this.bar1.AccessibleDescription = "DotNetBar Bar (bar1)";
+            this.bar1.AccessibleName = "DotNetBar Bar";
             this.bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.bar1.DockSide = DevComponents.DotNetBar.eDockSide.Top;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -176,31 +176,6 @@
             this.bar1.TabIndex = 0;
             this.bar1.TabStop = false;
             this.bar1.Text = "bar1";
-            // 
-            // dockSite3
-            // 
-            this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite3.Location = new System.Drawing.Point(0, 53);
-            this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(1407, 0);
-            this.dockSite3.TabIndex = 3;
-            this.dockSite3.TabStop = false;
-            // 
-            // tab_main
-            // 
-            this.tab_main.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tab_main.CanReorderTabs = true;
-            this.tab_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_main.Location = new System.Drawing.Point(0, 53);
-            this.tab_main.Name = "tab_main";
-            this.tab_main.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.tab_main.SelectedTabIndex = 0;
-            this.tab_main.Size = new System.Drawing.Size(1407, 720);
-            this.tab_main.TabIndex = 0;
-            this.tab_main.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.tab_main.Text = "tabControl_main";
             // 
             // buttonItem1
             // 
@@ -325,6 +300,31 @@
             this.btn_thoat.Text = "Thoát";
             this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
+            // dockSite3
+            // 
+            this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite3.Location = new System.Drawing.Point(0, 53);
+            this.dockSite3.Name = "dockSite3";
+            this.dockSite3.Size = new System.Drawing.Size(1407, 0);
+            this.dockSite3.TabIndex = 3;
+            this.dockSite3.TabStop = false;
+            // 
+            // tab_main
+            // 
+            this.tab_main.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tab_main.CanReorderTabs = true;
+            this.tab_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_main.Location = new System.Drawing.Point(0, 53);
+            this.tab_main.Name = "tab_main";
+            this.tab_main.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.tab_main.SelectedTabIndex = 0;
+            this.tab_main.Size = new System.Drawing.Size(1407, 720);
+            this.tab_main.TabIndex = 0;
+            this.tab_main.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
+            this.tab_main.Text = "tabControl_main";
+            // 
             // Giaodienchinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -341,7 +341,7 @@
             this.Controls.Add(this.dockSite7);
             this.Controls.Add(this.dockSite8);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Giaodienchinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

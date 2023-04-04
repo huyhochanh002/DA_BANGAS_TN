@@ -26,18 +26,7 @@ namespace BANGAS_TN
         bool isThoat = true;
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if(Kiemtradangnhap(txt_name.Text, txt_pass.Text))
-            {
-                isThoat = false;
-                Giaodienchinh g = new Giaodienchinh();
-                g.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu rồi!");
-                txt_name.Focus();
-            }    
+             
               
           
         }
@@ -46,8 +35,7 @@ namespace BANGAS_TN
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            if(isThoat)
-            Application.Exit();
+            
         }
 
         bool Kiemtradangnhap(string tentaikhoan, string matkhau)
@@ -63,6 +51,28 @@ namespace BANGAS_TN
         private void txt_name_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_login_Click_1(object sender, EventArgs e)
+        {
+            if (Kiemtradangnhap(txt_name.Text, txt_pass.Text))
+            {
+                isThoat = false;
+                Giaodienchinh g = new Giaodienchinh();
+                g.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu rồi!");
+                txt_name.Focus();
+            }
+        }
+
+        private void btn_exit_Click_1(object sender, EventArgs e)
+        {
+            if (isThoat)
+                Application.Exit();
         }
     }
 }
