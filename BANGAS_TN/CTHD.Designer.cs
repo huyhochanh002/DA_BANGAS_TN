@@ -33,6 +33,10 @@ namespace BANGAS_TN
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.cb_Ncc = new System.Windows.Forms.ComboBox();
+            this.cb_LoaiGas = new System.Windows.Forms.ComboBox();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.txt_ghichu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.txt_Magas = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -64,6 +68,8 @@ namespace BANGAS_TN
             this.data_khachang = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.data_nhanvien = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.data_gas = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.cb_tenkh = new System.Windows.Forms.ComboBox();
+            this.cb_tennv = new System.Windows.Forms.ComboBox();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_khachang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_nhanvien)).BeginInit();
@@ -74,6 +80,12 @@ namespace BANGAS_TN
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.cb_tennv);
+            this.groupPanel1.Controls.Add(this.cb_tenkh);
+            this.groupPanel1.Controls.Add(this.cb_Ncc);
+            this.groupPanel1.Controls.Add(this.cb_LoaiGas);
+            this.groupPanel1.Controls.Add(this.labelX6);
+            this.groupPanel1.Controls.Add(this.labelX15);
             this.groupPanel1.Controls.Add(this.txt_ghichu);
             this.groupPanel1.Controls.Add(this.labelX5);
             this.groupPanel1.Controls.Add(this.txt_Magas);
@@ -131,6 +143,48 @@ namespace BANGAS_TN
             this.groupPanel1.Text = "CHI TIẾT HÓA ĐƠN";
             this.groupPanel1.Click += new System.EventHandler(this.groupPanel1_Click);
             // 
+            // cb_Ncc
+            // 
+            this.cb_Ncc.Enabled = false;
+            this.cb_Ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Ncc.FormattingEnabled = true;
+            this.cb_Ncc.Location = new System.Drawing.Point(669, 68);
+            this.cb_Ncc.Name = "cb_Ncc";
+            this.cb_Ncc.Size = new System.Drawing.Size(263, 28);
+            this.cb_Ncc.TabIndex = 48;
+            // 
+            // cb_LoaiGas
+            // 
+            this.cb_LoaiGas.Enabled = false;
+            this.cb_LoaiGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_LoaiGas.FormattingEnabled = true;
+            this.cb_LoaiGas.Location = new System.Drawing.Point(669, 27);
+            this.cb_LoaiGas.Name = "cb_LoaiGas";
+            this.cb_LoaiGas.Size = new System.Drawing.Size(263, 28);
+            this.cb_LoaiGas.TabIndex = 47;
+            // 
+            // labelX6
+            // 
+            this.labelX6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX6.Location = new System.Drawing.Point(571, 36);
+            this.labelX6.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.Size = new System.Drawing.Size(82, 19);
+            this.labelX6.TabIndex = 46;
+            this.labelX6.Text = "Mã Loại";
+            // 
+            // labelX15
+            // 
+            this.labelX15.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX15.Location = new System.Drawing.Point(571, 77);
+            this.labelX15.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.Size = new System.Drawing.Size(82, 19);
+            this.labelX15.TabIndex = 45;
+            this.labelX15.Text = "Mã NCC";
+            // 
             // txt_ghichu
             // 
             // 
@@ -138,7 +192,7 @@ namespace BANGAS_TN
             // 
             this.txt_ghichu.Border.Class = "TextBoxBorder";
             this.txt_ghichu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ghichu.Location = new System.Drawing.Point(782, 61);
+            this.txt_ghichu.Location = new System.Drawing.Point(1084, 56);
             this.txt_ghichu.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ghichu.Name = "txt_ghichu";
             this.txt_ghichu.Size = new System.Drawing.Size(181, 52);
@@ -148,7 +202,7 @@ namespace BANGAS_TN
             // 
             this.labelX5.Enabled = false;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(673, 61);
+            this.labelX5.Location = new System.Drawing.Point(975, 56);
             this.labelX5.Margin = new System.Windows.Forms.Padding(2);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(94, 51);
@@ -184,7 +238,7 @@ namespace BANGAS_TN
             this.btn_lammoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_lammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lammoi.Image = global::BANGAS_TN.Properties.Resources.THEM;
-            this.btn_lammoi.Location = new System.Drawing.Point(810, 124);
+            this.btn_lammoi.Location = new System.Drawing.Point(804, 121);
             this.btn_lammoi.Margin = new System.Windows.Forms.Padding(2);
             this.btn_lammoi.Name = "btn_lammoi";
             this.btn_lammoi.Size = new System.Drawing.Size(115, 47);
@@ -197,7 +251,7 @@ namespace BANGAS_TN
             this.btn_banhang.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_banhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_banhang.Image = global::BANGAS_TN.Properties.Resources.sale1;
-            this.btn_banhang.Location = new System.Drawing.Point(691, 124);
+            this.btn_banhang.Location = new System.Drawing.Point(685, 121);
             this.btn_banhang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_banhang.Name = "btn_banhang";
             this.btn_banhang.Size = new System.Drawing.Size(115, 47);
@@ -404,7 +458,7 @@ namespace BANGAS_TN
             this.txt_Tongtien.Border.Class = "TextBoxBorder";
             this.txt_Tongtien.Enabled = false;
             this.txt_Tongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Tongtien.Location = new System.Drawing.Point(782, 32);
+            this.txt_Tongtien.Location = new System.Drawing.Point(1084, 27);
             this.txt_Tongtien.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Tongtien.Name = "txt_Tongtien";
             this.txt_Tongtien.Size = new System.Drawing.Size(143, 24);
@@ -414,7 +468,7 @@ namespace BANGAS_TN
             // 
             this.labelX7.Enabled = false;
             this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX7.Location = new System.Drawing.Point(673, 32);
+            this.labelX7.Location = new System.Drawing.Point(975, 27);
             this.labelX7.Margin = new System.Windows.Forms.Padding(2);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(94, 23);
@@ -535,6 +589,26 @@ namespace BANGAS_TN
             this.data_gas.TabIndex = 3;
             this.data_gas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_gas_CellClick);
             // 
+            // cb_tenkh
+            // 
+            this.cb_tenkh.Enabled = false;
+            this.cb_tenkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_tenkh.FormattingEnabled = true;
+            this.cb_tenkh.Location = new System.Drawing.Point(235, 60);
+            this.cb_tenkh.Name = "cb_tenkh";
+            this.cb_tenkh.Size = new System.Drawing.Size(111, 28);
+            this.cb_tenkh.TabIndex = 49;
+            // 
+            // cb_tennv
+            // 
+            this.cb_tennv.Enabled = false;
+            this.cb_tennv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_tennv.FormattingEnabled = true;
+            this.cb_tennv.Location = new System.Drawing.Point(235, 94);
+            this.cb_tennv.Name = "cb_tennv";
+            this.cb_tennv.Size = new System.Drawing.Size(111, 28);
+            this.cb_tennv.TabIndex = 50;
+            // 
             // CTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,5 +664,11 @@ namespace BANGAS_TN
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_ghichu;
         private DevComponents.DotNetBar.LabelX labelX5;
+        private System.Windows.Forms.ComboBox cb_Ncc;
+        private System.Windows.Forms.ComboBox cb_LoaiGas;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private DevComponents.DotNetBar.LabelX labelX15;
+        private System.Windows.Forms.ComboBox cb_tennv;
+        private System.Windows.Forms.ComboBox cb_tenkh;
     }
 }

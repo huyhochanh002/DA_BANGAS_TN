@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevComponents.DotNetBar.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,6 +75,9 @@ namespace BANGAS_TN
                 da.Fill(dt);
                 bin.DataSource = dt;
                 data_LoaiGas.DataSource = bin;
+
+                data_LoaiGas.Columns[0].HeaderText = "Mã Loại";
+                data_LoaiGas.Columns[1].HeaderText = "Tên Loại";
                 cnn.Close();
             }
             catch (Exception e2)

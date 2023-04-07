@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevComponents.DotNetBar.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,14 +60,20 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "Select * From KhachHang";
+                string s = "Select [Makh],[Tenkh],[Dienthoai],[Diachi],[Ghichu] From KhachHang";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 da.SelectCommand = cmd;
                 da.Fill(dt);
                 bin.DataSource = dt;
                 data_KhachHang.DataSource = bin;
-
                 btn_lichsumua.Enabled = false;
+
+
+                data_KhachHang.Columns[0].HeaderText = "Mã Khách";
+                data_KhachHang.Columns[1].HeaderText = "Tên Khách";
+                data_KhachHang.Columns[2].HeaderText = "Diện Thoại";
+                data_KhachHang.Columns[3].HeaderText = "Địa Chỉ";
+                data_KhachHang.Columns[4].HeaderText = "Ghi Chú";
                 cnn.Close();
             }
             catch (Exception e2)
@@ -201,6 +208,45 @@ namespace BANGAS_TN
             {
                 FrmXemHD xemHD=new FrmXemHD(int.Parse(txt_Makh.Text));
                 xemHD.ShowDialog();
+            }
+        }
+
+        private void txt_timkiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_timkiem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                try
+                {
+                    DataView dv = new DataView(dt);
+                    string value = "CONVERT(Dienthoai, System.String) LIKE '%{0}%'";
+
+                    dv.RowFilter = string.Format(value, txt_timkiem.Text);
+                    data_KhachHang.DataSource = dv;
+
+                }
+                catch (Exception e2)
+                {
+                    ClearvaLoad();
+                }
+            }
+        }
+
+        private void txt_SdtKH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+(e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }

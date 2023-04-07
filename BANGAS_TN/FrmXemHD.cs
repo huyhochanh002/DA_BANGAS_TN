@@ -52,6 +52,27 @@ namespace BANGAS_TN
                 da.Fill(dt);
                 bin.DataSource = dt;
                 data_lichsumua.DataSource = bin;
+
+                // dổi ten
+
+                data_lichsumua.Columns[0].HeaderText = "Mã HD";
+                data_lichsumua.Columns[1].HeaderText = "Mã GAS";
+                data_lichsumua.Columns[2].HeaderText = "Đơn Giá";
+                data_lichsumua.Columns[3].HeaderText = "Số Lượng";
+                data_lichsumua.Columns[4].HeaderText = "Tổng Tiền";
+                data_lichsumua.Columns[5].HeaderText = "Ghi Chú";
+                data_lichsumua.Columns[6].HeaderText = "Ghi Chú";
+                data_lichsumua.Columns[7].HeaderText = "Trả Tiền";
+                data_lichsumua.Columns[8].HeaderText = "Nợ Tiền";
+                data_lichsumua.Columns[9].HeaderText = "Trả Vỏ";
+                data_lichsumua.Columns[10].HeaderText = "Nợ Vỏ";
+                //ẩn
+                data_lichsumua.Columns[11].HeaderText = "Mã HD Phụ";
+                data_lichsumua.Columns[11].Visible = false;
+                //-----
+                data_lichsumua.Columns[12].HeaderText = "Mã NV";
+                data_lichsumua.Columns[13].HeaderText = "Mã KH";
+                data_lichsumua.Columns[14].HeaderText = "Ngày Tháng";
                 cnn.Close();
             }
             catch (Exception e2)
@@ -114,6 +135,12 @@ namespace BANGAS_TN
             {
 
             }
+        }
+
+        private void btn_banhang_Click(object sender, EventArgs e)
+        {
+            CTHD cthd=new CTHD();  
+            cthd.ShowDialog();
         }
     }
 }

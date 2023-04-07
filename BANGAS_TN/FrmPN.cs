@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevComponents.DotNetBar.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,21 @@ namespace BANGAS_TN
             cb_Magas.ValueMember = "Magas";
 
         }
+        public void ComboLoaiGas()
+        {
+            Runnow();
+            SqlCommand cmd = new SqlCommand("select * from LoaiGas", cnn);
+            SqlDataAdapter daLoaiGas = new SqlDataAdapter(cmd);
+            DataSet dsLoaiGas = new DataSet();
+            daLoaiGas.Fill(dsLoaiGas);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            cb_LoaiGas.DataSource = null;
+            cb_LoaiGas.DataSource = dsLoaiGas.Tables[0];
+            cb_LoaiGas.DisplayMember = "Tenloai";
+            cb_LoaiGas.ValueMember = "Maloai";
+
+        }
         private void ComboDaiLi()
         {
             Runnow();
@@ -79,6 +95,7 @@ namespace BANGAS_TN
             ComboMaGas();
             ComboDaiLi();
             ondataviewPN();
+            
         }
 
         public void ondataviewPN()
@@ -86,12 +103,41 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "Select * From PhieuNhap";
+                string s = "select * from PhieuNhap LEFT JOIN Gas on PhieuNhap.Magas = Gas.Magas";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 da.SelectCommand = cmd;
                 da.Fill(dt);
                 bin.DataSource = dt;
                 data_PN.DataSource = bin;
+
+                data_PN.Columns[0].HeaderText = "Mã Nhập";
+                data_PN.Columns[1].HeaderText = "Mã Gas";
+                data_PN.Columns[2].HeaderText = "Số Lượng";
+                data_PN.Columns[3].HeaderText = "Ngày Tháng";
+                data_PN.Columns[4].HeaderText = "Tên Đại Lí";
+                // ẩn
+                data_PN.Columns[5].HeaderText = "Mã Gas 1";
+                data_PN.Columns[5].Visible = false;
+                //--
+                data_PN.Columns[6].HeaderText = "Mã Loại";
+                //------ hiện mã loại lấy tên
+                //--
+                data_PN.Columns[7].HeaderText = "Mã NCC";
+                data_PN.Columns[7].Visible = false;
+                //---
+                data_PN.Columns[8].HeaderText = "SIZE";
+                data_PN.Columns[8].Visible = false;
+                //--
+                data_PN.Columns[9].HeaderText = "Số Lượng Tồn";
+                data_PN.Columns[9].Visible = false;
+                //--
+                data_PN.Columns[10].HeaderText = "Đơn Giá";
+                data_PN.Columns[10].Visible = false;
+                //---
+                data_PN.Columns[11].HeaderText = "ISDELETE";
+                data_PN.Columns[11].Visible = false;
+                //---
+
                 cnn.Close();
             }
             catch (Exception e2)
@@ -112,6 +158,8 @@ namespace BANGAS_TN
             da.Fill(dt);
             ComboMaGas();
             ComboDaiLi();
+            //-- xoa cbb
+            cb_LoaiGas.DataSource = null;
 
         }
 
@@ -121,6 +169,7 @@ namespace BANGAS_TN
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
+                    ComboLoaiGas();
                     txt_MaPN.Text = Convert.ToString(data_PN.CurrentRow.Cells["Manhap"].Value);
                     cb_Magas.SelectedValue = Convert.ToInt32(data_PN.CurrentRow.Cells["Magas"].Value);
 
@@ -128,6 +177,8 @@ namespace BANGAS_TN
 
                     txt_ngaythang.Text = Convert.ToString(data_PN.CurrentRow.Cells["Ngaythang"].Value);
                     cb_daili.SelectedValue = Convert.ToInt32(data_PN.CurrentRow.Cells["Tendaili"].Value);
+
+                    cb_LoaiGas.SelectedValue = Convert.ToInt32(data_PN.CurrentRow.Cells["Maloai"].Value);
 
                     btn_Them.Enabled = false;
 
