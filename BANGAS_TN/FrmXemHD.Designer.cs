@@ -59,6 +59,7 @@ namespace BANGAS_TN
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.data_lichsumua = new System.Windows.Forms.DataGridView();
+            this.btn_banhang = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_lichsumua)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +68,7 @@ namespace BANGAS_TN
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.btn_banhang);
             this.groupPanel1.Controls.Add(this.lb_delete);
             this.groupPanel1.Controls.Add(this.check_novo);
             this.groupPanel1.Controls.Add(this.check_travo);
@@ -448,6 +450,19 @@ namespace BANGAS_TN
             this.data_lichsumua.TabIndex = 63;
             this.data_lichsumua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_lichsumua_CellClick);
             // 
+            // btn_banhang
+            // 
+            this.btn_banhang.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_banhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_banhang.Image = global::BANGAS_TN.Properties.Resources.ql;
+            this.btn_banhang.Location = new System.Drawing.Point(855, 158);
+            this.btn_banhang.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_banhang.Name = "btn_banhang";
+            this.btn_banhang.Size = new System.Drawing.Size(99, 33);
+            this.btn_banhang.TabIndex = 65;
+            this.btn_banhang.Text = "Bán Hàng";
+            this.btn_banhang.Click += new System.EventHandler(this.btn_banhang_Click);
+            // 
             // FrmXemHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,5 +514,6 @@ namespace BANGAS_TN
         private DevComponents.DotNetBar.LabelX labelX13;
         private System.Windows.Forms.DataGridView data_lichsumua;
         private System.Windows.Forms.Label lb_delete;
+        private DevComponents.DotNetBar.ButtonX btn_banhang;
     }
 }

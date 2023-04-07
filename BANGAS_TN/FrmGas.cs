@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevComponents.DotNetBar.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -97,12 +98,21 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "Select * From Gas";
+                string s = "Select [Magas],[Maloai],[Mancc],[Size],[Slton],[Dgia] From Gas";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 da.SelectCommand = cmd;
                 da.Fill(dt);
                 bin.DataSource = dt;
                 data_Gas.DataSource = bin;
+
+                data_Gas.Columns[0].HeaderText = "Mã Gas";
+                data_Gas.Columns[1].HeaderText = "Mã Loại";
+                data_Gas.Columns[2].HeaderText = "Mã NCC";
+                data_Gas.Columns[3].HeaderText = "SIZE";
+                data_Gas.Columns[4].HeaderText = "Số Lượng Tồn";
+                data_Gas.Columns[5].HeaderText = "Đơn Giá";
+
+
                 cnn.Close();
             }
             catch (Exception e2)

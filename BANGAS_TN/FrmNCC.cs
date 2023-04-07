@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevComponents.DotNetBar.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,12 +58,16 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "Select * From NhaCungCap";
+                string s = "Select [Mancc],[Tenncc],[Diachi] From NhaCungCap";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 da.SelectCommand = cmd;
                 da.Fill(dt);
                 bin.DataSource = dt;
                 data_NCC.DataSource = bin;
+
+                data_NCC.Columns[0].HeaderText = "Mã NCC";
+                data_NCC.Columns[1].HeaderText = "Tên NCC";
+                data_NCC.Columns[2].HeaderText = "Địa Chỉ";
                 cnn.Close();
             }
             catch (Exception e2)

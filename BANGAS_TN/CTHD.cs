@@ -36,6 +36,10 @@ namespace BANGAS_TN
                 ondataviewGas();
                 ondataviewKH();
                 ondataviewNV();
+                ComboLoaiGas();
+                ComboNCC();
+                ComboKH();
+                ComboNV();
             }
             catch (Exception e2)
             {
@@ -63,6 +67,70 @@ namespace BANGAS_TN
         SqlDataAdapter daGAS = new SqlDataAdapter();
         DataTable dtGAS = new DataTable();
         BindingSource binGAS = new BindingSource();
+
+        // ON COBOBOX
+        public void ComboLoaiGas()
+        {
+            Runnow();
+            SqlCommand cmd = new SqlCommand("select * from LoaiGas", cnn);
+            SqlDataAdapter daLoaiGas = new SqlDataAdapter(cmd);
+            DataSet dsLoaiGas = new DataSet();
+            daLoaiGas.Fill(dsLoaiGas);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            cb_LoaiGas.DataSource = null;
+            cb_LoaiGas.DataSource = dsLoaiGas.Tables[0];
+            cb_LoaiGas.DisplayMember = "Tenloai";
+            cb_LoaiGas.ValueMember = "Maloai";
+
+        }
+        public void ComboNCC()
+        {
+            Runnow();
+            SqlCommand cmd = new SqlCommand("select * from NhaCungCap", cnn);
+            SqlDataAdapter daNCC = new SqlDataAdapter(cmd);
+            DataSet dsNCC = new DataSet();
+            daNCC.Fill(dsNCC);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            cb_Ncc.DataSource = null;
+            cb_Ncc.DataSource = dsNCC.Tables[0];
+            cb_Ncc.DisplayMember = "Tenncc";
+            cb_Ncc.ValueMember = "Mancc";
+        }
+
+        public void ComboKH()
+        {
+            Runnow();
+            SqlCommand cmd = new SqlCommand("select * from KhachHang", cnn);
+            SqlDataAdapter dakh = new SqlDataAdapter(cmd);
+            DataSet dskh = new DataSet();
+            dakh.Fill(dskh);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            cb_tenkh.DataSource = null;
+            cb_tenkh.DataSource = dskh.Tables[0];
+            cb_tenkh.DisplayMember = "Tenkh";
+            cb_tenkh.ValueMember = "Makh";
+
+        }
+
+        public void ComboNV()
+        {
+            Runnow();
+            SqlCommand cmd = new SqlCommand("select * from NhanVien", cnn);
+            SqlDataAdapter danv = new SqlDataAdapter(cmd);
+            DataSet dsnv = new DataSet();
+            danv.Fill(dsnv);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            cb_tennv.DataSource = null;
+            cb_tennv.DataSource = dsnv.Tables[0];
+            cb_tennv.DisplayMember = "Tennv";
+            cb_tennv.ValueMember = "Manv";
+
+        }
+        //-------
 
         public void Runnow()
         {
@@ -99,6 +167,10 @@ namespace BANGAS_TN
             daNV.Fill(dtNV);
             dtGAS.Clear();
             daGAS.Fill(dtGAS);
+            ComboLoaiGas();
+            ComboNCC();
+            ComboKH();
+            ComboNV();
 
         }
         // On view data lên list
@@ -107,12 +179,18 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "Select * From KhachHang";
+                string s = "Select [Makh],[Tenkh],[Dienthoai],[Diachi],[Ghichu] From KhachHang";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 daKH.SelectCommand = cmd;
                 daKH.Fill(dtKH);
                 binKH.DataSource = dtKH;
                 data_khachang.DataSource = binKH;
+
+                data_khachang.Columns[0].HeaderText = "Mã Khách";
+                data_khachang.Columns[1].HeaderText = "Tên Khách";
+                data_khachang.Columns[2].HeaderText = "Diện Thoại";
+                data_khachang.Columns[3].HeaderText = "Địa Chỉ";
+                data_khachang.Columns[4].HeaderText = "Ghi Chú";
                 cnn.Close();
             }
             catch (Exception e2)
@@ -126,12 +204,19 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "Select * From NhanVien";
+                string s = "Select [Manv],[Tennv],[Diachi],[Dienthoai],[Ghichu] From NhanVien";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 daNV.SelectCommand = cmd;
                 daNV.Fill(dtNV);
                 binNV.DataSource = dtNV;
                 data_nhanvien.DataSource = binNV;
+
+
+                data_nhanvien.Columns[0].HeaderText = "Mã Nhân Viên";
+                data_nhanvien.Columns[1].HeaderText = "Tên Nhân viên";
+                data_nhanvien.Columns[2].HeaderText = "Địa Chỉ";
+                data_nhanvien.Columns[3].HeaderText = "Điện Thoại";
+                data_nhanvien.Columns[4].HeaderText = "Ghi Chú";
                 cnn.Close();
             }
             catch (Exception e2)
@@ -145,12 +230,19 @@ namespace BANGAS_TN
             try
             {
                 Runnow();
-                string s = "Select * From Gas";
+                string s = "Select [Magas],[Maloai],[Mancc],[Size],[Slton],[Dgia] From Gas";
                 SqlCommand cmd = new SqlCommand(s, cnn);
                 daGAS.SelectCommand = cmd;
                 daGAS.Fill(dtGAS);
                 binGAS.DataSource = dtGAS;
                 data_gas.DataSource = binGAS;
+
+                data_gas.Columns[0].HeaderText = "Mã Gas";
+                data_gas.Columns[1].HeaderText = "Mã Loại";
+                data_gas.Columns[2].HeaderText = "Mã NCC";
+                data_gas.Columns[3].HeaderText = "SIZE";
+                data_gas.Columns[4].HeaderText = "Số Lượng Tồn";
+                data_gas.Columns[5].HeaderText = "Đơn Giá";
                 cnn.Close();
             }
             catch (Exception e2)
@@ -264,6 +356,7 @@ namespace BANGAS_TN
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     txt_Makh.Text = Convert.ToString(data_khachang.CurrentRow.Cells["Makh"].Value);
+                    cb_tenkh.SelectedValue = Convert.ToInt32(data_khachang.CurrentRow.Cells["Makh"].Value);
 
                 }
             }
@@ -279,6 +372,7 @@ namespace BANGAS_TN
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     txt_Manv.Text = Convert.ToString(data_nhanvien.CurrentRow.Cells["Manv"].Value);
+                    cb_tennv.SelectedValue = Convert.ToInt32(data_nhanvien.CurrentRow.Cells["Manv"].Value);
 
                 }
             }
@@ -299,6 +393,10 @@ namespace BANGAS_TN
                     txt_Soluong.Text = "1";
                     thanhtien = 1000 * double.Parse(txt_Dgia.Text);
                     txt_Tongtien.Text = thanhtien.ToString();
+
+                    cb_LoaiGas.SelectedValue = Convert.ToInt32(data_gas.CurrentRow.Cells["Maloai"].Value);
+                    cb_Ncc.SelectedValue = Convert.ToInt32(data_gas.CurrentRow.Cells["Mancc"].Value);
+
 
 
                 }
