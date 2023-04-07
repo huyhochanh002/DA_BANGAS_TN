@@ -48,10 +48,11 @@
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
+            this.btn_thoat = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.tab_main = new DevComponents.DotNetBar.TabControl();
-            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tab_main)).BeginInit();
@@ -164,7 +165,8 @@
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem1,
             this.buttonItem2,
-            this.buttonItem3});
+            this.buttonItem3,
+            this.btn_thoat});
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.MenuBar = true;
             this.bar1.Name = "bar1";
@@ -271,6 +273,13 @@
             this.buttonItem6});
             this.buttonItem8.Text = "Báo cáo";
             // 
+            // buttonItem6
+            // 
+            this.buttonItem6.ImagePaddingHorizontal = 8;
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.Text = "Phiếu Nhập";
+            this.buttonItem6.Click += new System.EventHandler(this.buttonItem6_Click);
+            // 
             // buttonItem3
             // 
             this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
@@ -279,6 +288,17 @@
             this.buttonItem3.ImagePaddingVertical = 15;
             this.buttonItem3.Name = "buttonItem3";
             this.buttonItem3.Text = "Help";
+            // 
+            // btn_thoat
+            // 
+            this.btn_thoat.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btn_thoat.Image = global::BANGAS_TN.Properties.Resources.nv_15px;
+            this.btn_thoat.ImagePaddingHorizontal = 20;
+            this.btn_thoat.ImagePaddingVertical = 15;
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.PopupWidth = 500;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // dockSite3
             // 
@@ -305,13 +325,6 @@
             this.tab_main.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.tab_main.Text = "tabControl_main";
             // 
-            // buttonItem6
-            // 
-            this.buttonItem6.ImagePaddingHorizontal = 8;
-            this.buttonItem6.Name = "buttonItem6";
-            this.buttonItem6.Text = "Phiếu Nhập";
-            this.buttonItem6.Click += new System.EventHandler(this.buttonItem6_Click);
-            // 
             // Giaodienchinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -328,7 +341,7 @@
             this.Controls.Add(this.dockSite7);
             this.Controls.Add(this.dockSite8);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Giaodienchinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -365,6 +378,7 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
         private DevComponents.DotNetBar.ButtonItem btnBackup;
         private DevComponents.DotNetBar.ButtonItem buttonItem6;
+        private DevComponents.DotNetBar.ButtonItem btn_thoat;
     }
 }
 
