@@ -227,7 +227,7 @@ namespace BANGAS_TN
             // 
             // labelX5
             // 
-            this.labelX5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX5.Location = new System.Drawing.Point(32, 80);
             this.labelX5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -238,7 +238,7 @@ namespace BANGAS_TN
             // 
             // labelX4
             // 
-            this.labelX4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX4.Location = new System.Drawing.Point(32, 130);
             this.labelX4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -249,7 +249,7 @@ namespace BANGAS_TN
             // 
             // labelX3
             // 
-            this.labelX3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX3.Location = new System.Drawing.Point(32, 181);
             this.labelX3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -260,7 +260,7 @@ namespace BANGAS_TN
             // 
             // labelX2
             // 
-            this.labelX2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.Location = new System.Drawing.Point(483, 30);
             this.labelX2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -271,7 +271,7 @@ namespace BANGAS_TN
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.Location = new System.Drawing.Point(32, 30);
             this.labelX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

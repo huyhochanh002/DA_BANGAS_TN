@@ -119,23 +119,23 @@ namespace BANGAS_TN
             // 
             // cb_Ncc
             // 
-            this.cb_Ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ncc.FormattingEnabled = true;
-            this.cb_Ncc.Location = new System.Drawing.Point(161, 119);
+            this.cb_Ncc.Location = new System.Drawing.Point(161, 117);
             this.cb_Ncc.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Ncc.Name = "cb_Ncc";
-            this.cb_Ncc.Size = new System.Drawing.Size(289, 33);
+            this.cb_Ncc.Size = new System.Drawing.Size(289, 44);
             this.cb_Ncc.TabIndex = 44;
             this.cb_Ncc.SelectedIndexChanged += new System.EventHandler(this.cb_Ncc_SelectedIndexChanged);
             // 
             // cb_LoaiGas
             // 
-            this.cb_LoaiGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_LoaiGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_LoaiGas.FormattingEnabled = true;
-            this.cb_LoaiGas.Location = new System.Drawing.Point(161, 69);
+            this.cb_LoaiGas.Location = new System.Drawing.Point(163, 68);
             this.cb_LoaiGas.Margin = new System.Windows.Forms.Padding(4);
             this.cb_LoaiGas.Name = "cb_LoaiGas";
-            this.cb_LoaiGas.Size = new System.Drawing.Size(289, 33);
+            this.cb_LoaiGas.Size = new System.Drawing.Size(289, 44);
             this.cb_LoaiGas.TabIndex = 43;
             // 
             // txt_SltonGAS
@@ -144,7 +144,7 @@ namespace BANGAS_TN
             // 
             // 
             this.txt_SltonGAS.Border.Class = "TextBoxBorder";
-            this.txt_SltonGAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SltonGAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_SltonGAS.Location = new System.Drawing.Point(628, 69);
             this.txt_SltonGAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SltonGAS.Name = "txt_SltonGAS";
@@ -154,7 +154,7 @@ namespace BANGAS_TN
             // 
             // labelX7
             // 
-            this.labelX7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX7.BackColor = System.Drawing.Color.Transparent;
             this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX7.Location = new System.Drawing.Point(496, 80);
             this.labelX7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -211,7 +211,7 @@ namespace BANGAS_TN
             // 
             // 
             this.txt_SizeGAS.Border.Class = "TextBoxBorder";
-            this.txt_SizeGAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SizeGAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_SizeGAS.Location = new System.Drawing.Point(628, 17);
             this.txt_SizeGAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SizeGAS.Name = "txt_SizeGAS";
@@ -225,11 +225,11 @@ namespace BANGAS_TN
             // 
             // 
             this.txt_DgiaGAS.Border.Class = "TextBoxBorder";
-            this.txt_DgiaGAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DgiaGAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DgiaGAS.Location = new System.Drawing.Point(161, 169);
             this.txt_DgiaGAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_DgiaGAS.Name = "txt_DgiaGAS";
-            this.txt_DgiaGAS.Size = new System.Drawing.Size(291, 34);
+            this.txt_DgiaGAS.Size = new System.Drawing.Size(291, 35);
             this.txt_DgiaGAS.TabIndex = 34;
             this.txt_DgiaGAS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -240,16 +240,16 @@ namespace BANGAS_TN
             // 
             this.txt_MagasGAS.Border.Class = "TextBoxBorder";
             this.txt_MagasGAS.Enabled = false;
-            this.txt_MagasGAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MagasGAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MagasGAS.Location = new System.Drawing.Point(161, 17);
             this.txt_MagasGAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MagasGAS.Name = "txt_MagasGAS";
-            this.txt_MagasGAS.Size = new System.Drawing.Size(291, 34);
+            this.txt_MagasGAS.Size = new System.Drawing.Size(291, 36);
             this.txt_MagasGAS.TabIndex = 31;
             // 
             // labelX5
             // 
-            this.labelX5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX5.Location = new System.Drawing.Point(31, 80);
             this.labelX5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -260,7 +260,7 @@ namespace BANGAS_TN
             // 
             // labelX4
             // 
-            this.labelX4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX4.Location = new System.Drawing.Point(31, 130);
             this.labelX4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -271,7 +271,7 @@ namespace BANGAS_TN
             // 
             // labelX3
             // 
-            this.labelX3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX3.Location = new System.Drawing.Point(31, 181);
             this.labelX3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -282,7 +282,7 @@ namespace BANGAS_TN
             // 
             // labelX2
             // 
-            this.labelX2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.Location = new System.Drawing.Point(496, 30);
             this.labelX2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -293,7 +293,7 @@ namespace BANGAS_TN
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.Location = new System.Drawing.Point(31, 30);
             this.labelX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
