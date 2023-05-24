@@ -253,7 +253,10 @@ namespace BANGAS_TN
         private void btn_sell_Click(object sender, EventArgs e)
         {
             FrmHoaDon see = new FrmHoaDon();
-            see.Show();
+            see.FormBorderStyle = FormBorderStyle.Fixed3D;
+            see.ShowDialog();
+            
+
         }
     }
 }

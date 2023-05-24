@@ -115,16 +115,18 @@ namespace BANGAS_TN
                 data_HD.Columns[3].HeaderText = "Số Lượng";
                 data_HD.Columns[4].HeaderText = "Tổng Tiền";
                 data_HD.Columns[5].HeaderText = "Ghi Chú";
-                data_HD.Columns[6].HeaderText = "Ghi Chú";
-                data_HD.Columns[7].HeaderText = "Trả Tiền";
-                data_HD.Columns[8].HeaderText = "Nợ Tiền";
-                data_HD.Columns[9].HeaderText = "Trả Vỏ";
-                data_HD.Columns[10].HeaderText = "Nợ Vỏ";
+                data_HD.Columns[6].HeaderText = "Trả Tiền";
+                data_HD.Columns[7].HeaderText = "Nợ Tiền";
+                data_HD.Columns[8].HeaderText = "Trả Vỏ";
+                data_HD.Columns[9].HeaderText = "Nợ Vỏ";
                 //ẩn
-                data_HD.Columns[11].HeaderText = "Mã HD Phụ";
-                data_HD.Columns[11].Visible = false;
-                //-----
+                data_HD.Columns[10].HeaderText = "Ghi Chú";
+                data_HD.Columns[10].Visible = false;
                 data_HD.Columns[12].HeaderText = "Mã HD";
+                data_HD.Columns[12].Visible = false;
+                //-----
+
+                data_HD.Columns[11].HeaderText = "DELETE";
                 data_HD.Columns[13].HeaderText = "Mã NV";
                 data_HD.Columns[14].HeaderText = "Mã KH";
                 cnn.Close();
