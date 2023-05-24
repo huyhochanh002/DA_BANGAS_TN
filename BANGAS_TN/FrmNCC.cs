@@ -132,7 +132,7 @@ namespace BANGAS_TN
                 cmd.ExecuteNonQuery();
                 cnn.Close();
                 ClearvaLoad();
-                MessageBox.Show("Đã Sữa Thành Công");
+                MessageBox.Show("Đã Sửa Thành Công");
 
 
             }
@@ -185,6 +185,11 @@ namespace BANGAS_TN
             catch (Exception e2)
             {
             }
+        }
+
+        private void groupPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

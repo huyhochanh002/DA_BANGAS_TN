@@ -249,5 +249,14 @@ namespace BANGAS_TN
                 e.Handled = true;
             }
         }
+        
+        private void btn_sell_Click(object sender, EventArgs e)
+        {
+            FrmHoaDon see = new FrmHoaDon();
+            see.FormBorderStyle = FormBorderStyle.Fixed3D;
+            see.ShowDialog();
+            
+
+        }
     }
 }
