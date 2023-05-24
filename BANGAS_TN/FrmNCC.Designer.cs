@@ -87,6 +87,7 @@ namespace BANGAS_TN
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "NHÀ CUNG CẤP";
+            this.groupPanel1.Click += new System.EventHandler(this.groupPanel1_Click);
             // 
             // btn_clearNCC
             // 

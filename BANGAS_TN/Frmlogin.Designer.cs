@@ -78,12 +78,11 @@ namespace BANGAS_TN
             this.txt_pass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pass.Location = new System.Drawing.Point(524, 323);
-            this.txt_pass.Multiline = true;
+            this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pass.Location = new System.Drawing.Point(524, 324);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.PasswordChar = '*';
-            this.txt_pass.Size = new System.Drawing.Size(237, 43);
+            this.txt_pass.Size = new System.Drawing.Size(237, 41);
             this.txt_pass.TabIndex = 11;
             this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_pass.UseSystemPasswordChar = true;

@@ -110,7 +110,7 @@ namespace BANGAS_TN
                 // dổi ten
 
                 data_HD.Columns[0].HeaderText = "Mã HD";
-                data_HD.Columns[1].HeaderText = "Mã GAS";
+                data_HD.Columns[1].HeaderText = "Mã Gas";
                 data_HD.Columns[2].HeaderText = "Đơn Giá";
                 data_HD.Columns[3].HeaderText = "Số Lượng";
                 data_HD.Columns[4].HeaderText = "Tổng Tiền";
@@ -124,9 +124,9 @@ namespace BANGAS_TN
                 data_HD.Columns[11].HeaderText = "Mã HD Phụ";
                 data_HD.Columns[11].Visible = false;
                 //-----
-                data_HD.Columns[12].HeaderText = "Mã NV";
-                data_HD.Columns[13].HeaderText = "Mã KH";
-                data_HD.Columns[14].HeaderText = "Ngày Tháng";
+                data_HD.Columns[12].HeaderText = "Mã HD";
+                data_HD.Columns[13].HeaderText = "Mã NV";
+                data_HD.Columns[14].HeaderText = "Mã KH";
                 cnn.Close();
             }
             catch (Exception e2)
@@ -542,6 +542,16 @@ namespace BANGAS_TN
             status = 2;
             FrmReport re = new FrmReport(MAHD,status,Sql);
             re.ShowDialog();
+        }
+
+        private void groupPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void data_HD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

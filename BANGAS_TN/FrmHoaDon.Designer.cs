@@ -29,7 +29,7 @@ namespace BANGAS_TN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btn_DT = new DevComponents.DotNetBar.ButtonX();
             this.btn_Report = new DevComponents.DotNetBar.ButtonX();
@@ -150,7 +150,7 @@ namespace BANGAS_TN
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1280, 372);
+            this.groupPanel1.Size = new System.Drawing.Size(1280, 368);
             // 
             // 
             // 
@@ -173,6 +173,7 @@ namespace BANGAS_TN
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "HÓA ĐƠN";
+            this.groupPanel1.Click += new System.EventHandler(this.groupPanel1_Click);
             // 
             // btn_DT
             // 
@@ -260,7 +261,7 @@ namespace BANGAS_TN
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(773, 274);
+            this.label6.Location = new System.Drawing.Point(797, 278);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 20);
@@ -272,7 +273,7 @@ namespace BANGAS_TN
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(662, 276);
+            this.label7.Location = new System.Drawing.Point(675, 277);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
@@ -294,7 +295,7 @@ namespace BANGAS_TN
             // txt_thang1
             // 
             this.txt_thang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_thang1.Location = new System.Drawing.Point(726, 276);
+            this.txt_thang1.Location = new System.Drawing.Point(752, 276);
             this.txt_thang1.Margin = new System.Windows.Forms.Padding(4);
             this.txt_thang1.Name = "txt_thang1";
             this.txt_thang1.Size = new System.Drawing.Size(37, 30);
@@ -303,7 +304,7 @@ namespace BANGAS_TN
             // txt_nam1
             // 
             this.txt_nam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nam1.Location = new System.Drawing.Point(821, 274);
+            this.txt_nam1.Location = new System.Drawing.Point(867, 274);
             this.txt_nam1.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nam1.Name = "txt_nam1";
             this.txt_nam1.Size = new System.Drawing.Size(37, 30);
@@ -312,7 +313,7 @@ namespace BANGAS_TN
             // txt_ngay1
             // 
             this.txt_ngay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ngay1.Location = new System.Drawing.Point(615, 276);
+            this.txt_ngay1.Location = new System.Drawing.Point(630, 274);
             this.txt_ngay1.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ngay1.Name = "txt_ngay1";
             this.txt_ngay1.Size = new System.Drawing.Size(37, 30);
@@ -336,7 +337,7 @@ namespace BANGAS_TN
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(773, 227);
+            this.label5.Location = new System.Drawing.Point(797, 231);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 20);
@@ -348,7 +349,7 @@ namespace BANGAS_TN
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(662, 230);
+            this.label4.Location = new System.Drawing.Point(675, 231);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 20);
@@ -370,7 +371,7 @@ namespace BANGAS_TN
             // txt_thang
             // 
             this.txt_thang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_thang.Location = new System.Drawing.Point(726, 230);
+            this.txt_thang.Location = new System.Drawing.Point(752, 230);
             this.txt_thang.Margin = new System.Windows.Forms.Padding(4);
             this.txt_thang.Name = "txt_thang";
             this.txt_thang.Size = new System.Drawing.Size(37, 30);
@@ -379,7 +380,7 @@ namespace BANGAS_TN
             // txt_nam
             // 
             this.txt_nam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nam.Location = new System.Drawing.Point(821, 230);
+            this.txt_nam.Location = new System.Drawing.Point(867, 230);
             this.txt_nam.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nam.Name = "txt_nam";
             this.txt_nam.Size = new System.Drawing.Size(37, 30);
@@ -388,7 +389,7 @@ namespace BANGAS_TN
             // txt_ngay
             // 
             this.txt_ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ngay.Location = new System.Drawing.Point(615, 230);
+            this.txt_ngay.Location = new System.Drawing.Point(630, 228);
             this.txt_ngay.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ngay.Name = "txt_ngay";
             this.txt_ngay.Size = new System.Drawing.Size(37, 30);
@@ -791,26 +792,27 @@ namespace BANGAS_TN
             this.data_HD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_HD.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.data_HD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data_HD.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_HD.DefaultCellStyle = dataGridViewCellStyle3;
             this.data_HD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data_HD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.data_HD.Location = new System.Drawing.Point(0, 372);
+            this.data_HD.Location = new System.Drawing.Point(0, 368);
             this.data_HD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_HD.Name = "data_HD";
             this.data_HD.ReadOnly = true;
             this.data_HD.RowHeadersWidth = 51;
             this.data_HD.RowTemplate.Height = 24;
             this.data_HD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_HD.Size = new System.Drawing.Size(1280, 348);
+            this.data_HD.Size = new System.Drawing.Size(1280, 352);
             this.data_HD.TabIndex = 1;
             this.data_HD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_HD_CellClick);
+            this.data_HD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_HD_CellContentClick);
             // 
             // FrmHoaDon
             // 
@@ -819,10 +821,12 @@ namespace BANGAS_TN
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.data_HD);
             this.Controls.Add(this.groupPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FrmHoaDon";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmHoaDon_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel1.PerformLayout();

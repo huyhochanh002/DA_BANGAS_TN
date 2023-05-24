@@ -253,7 +253,7 @@
             this.buttonItem2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem7,
             this.buttonItem8});
-            this.buttonItem2.Text = "Thu chi";
+            this.buttonItem2.Text = "Tác vụ";
             this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
             // buttonItem7

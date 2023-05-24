@@ -297,5 +297,9 @@ namespace BANGAS_TN
             if (isThoat)
                 Application.Exit();
         }
+
+       
+          
+        
     }
 }

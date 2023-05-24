@@ -31,6 +31,7 @@ namespace BANGAS_TN
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btn_sell = new DevComponents.DotNetBar.ButtonX();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.btn_lichsumua = new DevComponents.DotNetBar.ButtonX();
@@ -57,6 +58,7 @@ namespace BANGAS_TN
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.btn_sell);
             this.groupPanel1.Controls.Add(this.txt_timkiem);
             this.groupPanel1.Controls.Add(this.labelX12);
             this.groupPanel1.Controls.Add(this.btn_lichsumua);
@@ -103,10 +105,26 @@ namespace BANGAS_TN
             this.groupPanel1.Text = "KHÁCH HÀNG";
             this.groupPanel1.Click += new System.EventHandler(this.groupPanel1_Click);
             // 
+            // btn_sell
+            // 
+            this.btn_sell.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_sell.BackColor = System.Drawing.Color.SeaShell;
+            this.btn_sell.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_sell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sell.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_sell.Image = global::BANGAS_TN.Properties.Resources.sale1;
+            this.btn_sell.Location = new System.Drawing.Point(738, 80);
+            this.btn_sell.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_sell.Name = "btn_sell";
+            this.btn_sell.Size = new System.Drawing.Size(177, 49);
+            this.btn_sell.TabIndex = 58;
+            this.btn_sell.Text = "Quản lý Bán Hàng";
+            this.btn_sell.Click += new System.EventHandler(this.btn_sell_Click);
+            // 
             // txt_timkiem
             // 
             this.txt_timkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_timkiem.Location = new System.Drawing.Point(612, 139);
+            this.txt_timkiem.Location = new System.Drawing.Point(613, 159);
             this.txt_timkiem.Margin = new System.Windows.Forms.Padding(4);
             this.txt_timkiem.Name = "txt_timkiem";
             this.txt_timkiem.Size = new System.Drawing.Size(196, 41);
@@ -118,7 +136,7 @@ namespace BANGAS_TN
             // 
             this.labelX12.BackColor = System.Drawing.Color.Transparent;
             this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.Location = new System.Drawing.Point(492, 130);
+            this.labelX12.Location = new System.Drawing.Point(493, 150);
             this.labelX12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelX12.Name = "labelX12";
             this.labelX12.Size = new System.Drawing.Size(87, 50);
@@ -130,7 +148,7 @@ namespace BANGAS_TN
             this.btn_lichsumua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_lichsumua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lichsumua.Image = global::BANGAS_TN.Properties.Resources.ql;
-            this.btn_lichsumua.Location = new System.Drawing.Point(492, 68);
+            this.btn_lichsumua.Location = new System.Drawing.Point(493, 80);
             this.btn_lichsumua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_lichsumua.Name = "btn_lichsumua";
             this.btn_lichsumua.Size = new System.Drawing.Size(212, 49);
@@ -393,5 +411,6 @@ namespace BANGAS_TN
         private DevComponents.DotNetBar.ButtonX btn_lichsumua;
         private System.Windows.Forms.TextBox txt_timkiem;
         private DevComponents.DotNetBar.LabelX labelX12;
+        private DevComponents.DotNetBar.ButtonX btn_sell;
     }
 }

@@ -124,6 +124,7 @@ namespace BANGAS_TN
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "XEM HÓA ĐƠN";
+            this.groupPanel1.Click += new System.EventHandler(this.groupPanel1_Click);
             // 
             // btn_banhang
             // 
@@ -470,7 +471,7 @@ namespace BANGAS_TN
             this.data_lichsumua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_lichsumua.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.data_lichsumua.Location = new System.Drawing.Point(0, 338);
-            this.data_lichsumua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.data_lichsumua.Margin = new System.Windows.Forms.Padding(4);
             this.data_lichsumua.Name = "data_lichsumua";
             this.data_lichsumua.ReadOnly = true;
             this.data_lichsumua.RowHeadersWidth = 51;

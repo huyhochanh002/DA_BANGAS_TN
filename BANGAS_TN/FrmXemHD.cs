@@ -19,6 +19,9 @@ namespace BANGAS_TN
             laymakh = makh;
             InitializeComponent();
         }
+
+     
+
         // Khai báo các biến cần thiết;
         Khaibao kb = new Khaibao();
 
@@ -141,6 +144,11 @@ namespace BANGAS_TN
         {
             CTHD cthd=new CTHD();  
             cthd.ShowDialog();
+        }
+
+        private void groupPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
